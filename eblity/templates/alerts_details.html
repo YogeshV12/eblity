@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+	<!-- Latest compiled and minified CSS -->
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+	<!-- Icons -->
+	<link href="./argon-design-system-master/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+	<link href="./argon-design-system-master/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+	<!-- Theme CSS -->
+	<link type="text/css" href="./argon-design-system-master/assets/css/argon.min.css" rel="stylesheet">
+
+	<!-- Core -->
+	<script src="./argon-design-system-master/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="./argon-design-system-master/assets/vendor/popper/popper.min.js"></script>
+	<script src="./argon-design-system-master/assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+	<!-- Theme JS -->
+	<script src="./argon-design-system-master/assets/js/argon.min.js"></script>
+
+	<!--Optional Plugins-->
+	<script src="./argon-design-system-master/assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+
+	<!--Filter Script-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $("#myInput").on("keyup", function() {
+		    var value = $(this).val().toLowerCase();
+		    $("#table tr").filter(function() {
+		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		  });
+		});
+	</script>
+
+	<!--Styling table-->
+	<style type="text/css">
+		.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+		    background-color:   #34495e;
+		    color: white;
+		    font-weight: bold;
+		}
+		/*body{
+			background-image: linear-gradient(#000000,#434343);
+		}*/
+	</style>
+</head>
+<body>
+	<!--Navigation Bar-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-default">
+	    <div class="container">
+	        <a class="navbar-brand" href="#">
+	        	<img src="Eblity.jpeg" alt="Eblity" style="width: 70px ; height: 50px">
+	        </a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbar-default">
+	            <div class="navbar-collapse-header">
+	                <div class="row">
+	                    <div class="col-6 collapse-brand">
+	                        <a href="index.html">
+	                            <img src="Eblity.jpeg">
+	                        </a>
+	                    </div>
+	                    <div class="col-6 collapse-close">
+	                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+	                            <span></span>
+	                            <span></span>
+	                        </button>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <ul class="navbar-nav ml-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#" style="font-weight: bold">HOME</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#" style="font-weight: bold;">DASHBOARD</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#" style="font-weight: bold;">STUDENT PROFILE</a>
+		      </li>
+		      <li>
+		      	<a class="nav-link" href="#" style="font-weight: bold;">ABOUT US</a>
+		      </li>   
+		    </ul>
+		    <a href="#"><i class="fa fa-facebook-square float-right ml-4 text-white"></i></a>
+		    <a href="#"><i class="fa fa-twitter-square float-right ml-3 text-white"></i></a>
+		    <a href="#"><i class="fa fa-whatsapp float-right ml-3 text-white"></i></a>
+
+	        </div>
+	    </div>
+	</nav>
+	<br>
+	<div class="container">
+		<div class="card bg-secondary float-left" style="width: 30%">
+			<img src="img-avatar1.png" style="border-radius: 50%; width: 40%; margin-left: 15px; margin-top: 15px">
+			<div class="card-body float-right">
+				<div class="card-title"><strong>Name</strong></div>
+				<div class="card-text"><strong>Grade</strong></div>
+				<a href="#" class="btn btn-primary stretched-link mt-3">See Profile</a>
+			</div>
+		</div>
+		<div style="width: 45%; margin-left: 30%">
+			<span class="badge badge-pill" id="topic" style="width: 35%; font-weight: bold; font-size: 100%">Topic</span>
+			<span class="badge badge-pill" id="subtopic" style="width: 50%; font-weight: bold; font-size: 100%">Subtopic</span>
+		</div>
+		<br>
+		<div class="card float-right" style="width: 65%">
+			<div class="card-body">
+				<div class="card-title text-center"><strong>Alert Description</strong></div>
+				<div class="card-text">She made an attempt to straighten her tawny hair. Her voice quavered with emotion. “You must be a very lonely man, Judge Seagrave.” Then she turned a gaze on him that might have ignited a rain-sodden haystack. “And I’m a lonely woman.”</div>
+			</div>
+		</div>
+		<br>
+		<div style="width: 50%; margin-left: 35%; margin-top: 20%">
+			<h4><strong>Status:</strong><span class="badge badge-pill bg-success ml-2 text-white" id="status">completed</span></h4>
+		</div>
+	</div>
+	<br><br>
+
+	<!--Alert Table-->
+	<div class="container pagebody">
+	<input class="form-control float-right" id="myInput" type="text" placeholder="Search.." style="width: 30%; margin-bottom: 10px">
+	<br>
+	<div class="table-responsive">
+		<table id="table" class="table align-items-center table-light table-hover">
+		<thead class="tablehead">
+		    <tr class="filters">
+		        <th scope="col">Intervention</th>
+		        <th scope="col">Assigned To</th>
+		        <th scope="col">Follow up by</th>
+		        <th scope="col">Status</th>
+		        <th scope="col">Rating</th>
+		    </tr>
+		</thead>
+		<tbody class="tablebody">
+		    <tr>
+		        <th scope="row">
+		                <div class="media align-items-center">
+		                  
+		                    <div class="media-body">
+		                        <span class="mb-0 text-sm">A</span>
+		                    <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                	</div>
+		                    </div>
+		                </div>
+		            </th>
+		        <td>
+		            Rahul
+		        </td>
+		        <td>
+		            Topic
+		        </td>
+		        <td class="justify-content-center">
+		        	<span class="badge badge-pill mr-3 bg-success text-white">
+		        		Completed
+		        	</span>
+		            
+		        </td>
+		        <td>
+		        	Date
+		        </td>
+		    </tr>
+		    <tr>
+		        <th scope="row">
+		            <div class="media align-items-center">
+		                <div class="media-body">
+		                    <span class="mb-0 text-sm">B</span>
+		                    <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                </div>
+		            </div>
+		        </th>
+		        <td>
+		            Rahul
+		        </td>
+		        <td>
+		            Topic
+		        </td>
+		        <td class="justify-content-center">
+		        	<span class="badge badge-pill mr-3 bg-danger text-white">
+		        		pending
+		        	</span>
+		            
+		        </td>
+		        <td>
+		        	Date
+		        </td>
+		    </tr>
+		    <tr>
+		        <th scope="row">
+		            <div class="media align-items-center">
+		                <div class="media-body">
+		                    <span class="mb-0 text-sm">A</span>
+		                    <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                </div>
+		            </div>
+		        </th>
+		        <td>
+		            Pradeep
+		        </td>
+		        <td>
+		            Topic
+		        </td>
+		        <td class="justify-content-center">
+		        	<span class="badge badge-pill mr-3 bg-success text-white">
+		        		completed
+		        	</span>
+		            
+		        </td>
+		        <td>
+		        	Date
+		        </td>
+		    </tr>
+		    <tr>
+		        <th scope="row">
+		            <div class="media align-items-center">
+		                
+		                <div class="media-body">
+		                    <span class="mb-0 text-sm">A</span>
+		                    <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                </div>
+		            </div>
+		        </th>
+		        <td>
+		            Yogesh
+		        </td>
+		        <td>
+		            Topic
+		        </td>
+		        <td class="justify-content-center">
+		        	<span class="badge badge-pill mr-3 bg-success text-white">
+		        		completed
+		        	</span>
+		            
+		        </td>
+		        <td>
+		        	Date
+		        </td>
+		    </tr>
+		    <tr>
+		        <th scope="row">
+		            <div class="media align-items-center">
+		              
+		                <div class="media-body">
+		                    <span class="mb-0 text-sm">B</span>
+		                    <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                </div>
+		            </div>
+		        </th>
+		        <td>
+		            Arsh
+		        </td>
+
+		        <td>
+		            Topic
+		        </td>
+		    
+		        <td class="justify-content-center">
+		        	<span class="badge badge-pill mr-3 bg-danger text-white">
+		        		pending
+		        	</span>
+		            
+		        </td>
+		        <td>
+		        	Date
+		        </td>
+		    </tr>
+		    <tr>
+		        <th scope="row">
+		            <div class="media align-items-center">
+		              
+		                <div class="media-body">
+		                    <span class="mb-0 text-sm">A</span>
+		                    <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                </div>
+		            </div>
+		        </th>
+		        <td>
+		            XYZ
+		        </td>
+		        <td>
+		            Topic
+		        </td>
+		        <td class="justify-content-center">
+		            	<span class="badge badge-pill mr-3 bg-danger text-white">
+		            		pending
+		            	</span>
+		                
+		            </td>
+		            <td>
+		            	Date
+		            </td>
+		        </tr>
+		        <tr>
+		            <th scope="row">
+		                <div class="media align-items-center">
+		                  
+		                    <div class="media-body">
+		                        <span class="mb-0 text-sm">A</span>
+		                    <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                	</div>
+		                    </div>
+		                </div>
+		            </th>
+		            <td>
+		                Name
+		            </td>
+		            <td>
+		                Topic
+		            </td>
+		       
+		            <td class="justify-content-center">
+		            	<span class="badge badge-pill mr-3 bg-danger text-white">
+		            		pending
+		            	</span>
+		               
+		            </td>
+		            <td>
+		            	Date
+		            </td>
+		        </tr>
+		        <tr>
+		            <th scope="row">
+		                <div class="media align-items-center">
+		                  
+		                    <div class="media-body">
+		                        <span class="mb-0 text-sm">A</span>
+		                        <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                    </div>
+		                </div>
+		            </th>
+		            <td>
+		                Name
+		            </td>
+		            <td>
+		                Topic
+		            </td>
+		            
+		            <td class="justify-content-center">
+		            	<span class="badge badge-pill mr-3 bg-danger text-white">
+		            		pending
+		            	</span>
+		                
+		            </td>
+		            <td>
+		            	Date
+		            </td>
+		        </tr>
+		        <tr>
+		            <th scope="row">
+		                <div class="media align-items-center">
+		                  
+		                    <div class="media-body">
+		                        <span class="mb-0 text-sm">A</span>
+		                        <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                    </div>
+		                </div>
+		            </th>
+		            <td>
+		                Name
+		            </td>
+		            <td>
+		                Topic
+		            </td>
+		            
+		            <td class="justify-content-center">
+		            	<span class="badge badge-pill mr-3 bg-danger text-white">
+		            		pending
+		            	</span>
+		                
+		            </td>
+		            <td>
+		            	Date
+		            </td>
+		        </tr>
+		        <tr>
+		            <th scope="row">
+		                <div class="media align-items-center">
+		                  
+		                    <div class="media-body">
+		                        <span class="mb-0 text-sm">A</span>
+		                        <div class="dropdown">
+		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                      <i class="material-icons">expand_more</i>
+		                    </a>
+		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                        <a class="dropdown-item" href="#">Video</a>
+		                        <a class="dropdown-item" href="#">Consult Tutor</a>
+		                        <a class="dropdown-item" href="#">Games</a>
+		                    </div>
+		                </div>
+		                    </div>
+		                </div>
+		            </th>
+		            <td>
+		                Name
+		            </td>
+		            <td>
+		                Topic
+		            </td>
+		            
+		            <td class="justify-content-center">
+		            	<span class="badge badge-pill mr-3 bg-danger text-white">
+		            		pending
+		            	</span>
+		            </td>
+		            <td>
+		            	Date
+		            </td>
+		        </tr>
+		    </tbody>
+		</table>
+		<nav aria-label="Page navigation example" style="padding-bottom: 10px; padding-top: 10px">
+		  <ul class="pagination justify-content-center">
+		    <li class="page-item disabled">
+		      <a class="page-link" href="#" tabindex="-1">
+		        <i class="fa fa-angle-left"></i>
+		        <span class="sr-only">Previous</span>
+		      </a>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="#">1</a></li>
+		    <li class="page-item"><a class="page-link" href="#">2</a></li>
+		    <li class="page-item"><a class="page-link" href="#">3</a></li>
+		    <li class="page-item"><a class="page-link" href="#">4</a></li>
+		    <li class="page-item"><a class="page-link" href="#">5</a></li>
+		    <li class="page-item">
+		      <a class="page-link" href="#">
+		        <i class="fa fa-angle-right"></i>
+		        <span class="sr-only">Next</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	</div>
+</div>
+
+<!--Carousel for comments-->
+<div class="container">
+	<h4><strong>Comments</strong></h4>
+	<div class="media border p-3">
+	  <img src="img-avatar1.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+	  <div class="media-body">
+	    <h4>ABC <small><i>Posted on May 23 2019</i></small></h4>
+	    <p>Comments...</p>
+	    <button class="btn btn-primary btn-sm" style="margin-top: 1%"><i class="fa fa-reply" style="margin-right: 1%"></i>reply</button>
+	    <div class="media p-3">
+	      <img src="img-avatar2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+	      <div class="media-body">
+	        <h4>XYZ <small><i>Posted on May 23 2019</i></small></h4>
+	        <p>Comments...</p>
+	        <button class="btn btn-primary btn-sm" style="margin-top: 1%"><i class="fa fa-reply" style="margin-right: 1%"></i>reply</button>
+	      </div>
+	    </div> 
+	  </div>
+	</div>
+	<button class="btn btn-primary btn-sm" style="margin-top: 3%"><i class="fa fa-comments"></i>
+comment</button>
+</div>
+<br><br>
+</body>

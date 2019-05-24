@@ -1,0 +1,16 @@
+<h1> Stitch today's data </h1>
+<div>
+    <button id="stitch_start" name="Start" value="Start" onclick = '
+    document.getElementById("stitch_stop").disabled = false;
+    document.getElementById("stitch_start").disabled = true;
+    location.href = {% url "stitched_start" %}
+    '>Start </button>  
+    <button id="stitch_stop" name="Stop" value="Stop" disabled onclick = '
+        document.getElementById("stitch_stop").disabled = true;
+    document.getElementById("stitch_start").disabled = false;'>Stop</button>
+</div>
+<h1> Schedule time series analysis </h1>
+<div>
+    <button id="time_series_start" name="Start" value="Start" onclick = "toggle()">Start</button>
+    <button id="time_series_stop" name="Stop" value="Stop" disabled onclick = "toggle()">Stop</button> 
+</div>

@@ -1,0 +1,191 @@
+StudentName,Grade,Date,Concept,ConceptProgress,SubConcept,SubConceptProgress,PerSolved,AverageTimePerQuestion,LGD,LGR,PerLearningGapResolved,comment
+Ansh Tandon,5,03-May-2019,Time,38,Addition of time,76,77,12,46,25,54.347826086956516%,Percentage Learning gap is below 75%
+Ansh Tandon,5,04-May-2019,Time,38,Addition of time,76,25,52,91,10,10.989010989010989%,Percentage Learning gap is below 75%
+Ansh Tandon,5,06-May-2019,Number System,91,Number Names,100,75,7,13,4,30.76923076923077%,Percentage Learning gap is below 75%
+Ansh Tandon,5,06-May-2019,Number System,91,Place Value of Numbers,100,91,4,9,6,66.66666666666666%,Percentage Learning gap is below 75%
+Ansh Tandon,5,09-May-2019,Number System,91,Number Names,100,67,23,8,2,25.0%,Percentage Learning gap is below 75%
+Ansh Tandon,5,10-May-2019,Number System,91,Comparing and Ordering Numbers,57,90,4,10,6,60.0%,Percentage Learning gap is below 75%
+Tanisha ,6,20-Apr-2019,Circles,100,Introduction to Circles,100,83,1,6,3,50.0%,Percentage Learning gap is below 75%
+Tanisha ,6,20-Apr-2019,Data Handling,100,Introduction to Data Handling,100,86,0,8,4,50.0%,Percentage Learning gap is below 75%
+Tanisha ,6,20-Apr-2019,Symmetry,100,Line and Reflection Symmetry,100,91,0,3,1,33.33333333333333%,Percentage Learning gap is below 75%
+Tanisha ,6,23-Apr-2019,Number System,100,Number Names,100,89,7,8,2,25.0%,Percentage Learning gap is below 75%
+Tanisha ,6,23-Apr-2019,Number System,100,Place Value of Numbers,100,92,1,9,4,44.44444444444444%,Percentage Learning gap is below 75%
+Tanisha ,6,30-Apr-2019,Factors and Multiples,17,Test of Divisibility,100,95,1,24,15,62.5%,Percentage Learning gap is below 75%
+Tanisha ,6,30-Apr-2019,Polygons,100,Introduction to polygons,100,80,1,14,7,50.0%,Percentage Learning gap is below 75%
+Tanisha ,6,03-May-2019,Whole numbers and Negative numbers,100,Introduction to Integers,100,91,1,6,2,33.33333333333333%,Percentage Learning gap is below 75%
+Tanisha ,6,06-May-2019,Concepts of Algebra,100,Expressions,100,95,2,12,7,58.333333333333336%,Percentage Learning gap is below 75%
+Tanisha ,6,06-May-2019,Fractions,80,Multiplication of fractions,100,78,3,9,3,33.33333333333333%,Percentage Learning gap is below 75%
+Tanisha ,6,06-May-2019,Quadrilaterals,100,Introduction to Parallelogram,100,90,2,2,1,50.0%,Percentage Learning gap is below 75%
+Tanisha ,6,06-May-2019,Whole numbers and Negative numbers,100,Operations on numbers,100,97,2,20,15,75.0%,Percentage Learning gap is below 75%
+Tanisha ,6,07-May-2019,Decimals,100,Operations on Decimals,100,94,2,23,13,56.52173913043478%,Percentage Learning gap is below 75%
+Tanisha ,6,07-May-2019,Averages,8,Introduction to Averages,16,50,6,10,1,10.0%,Percentage Learning gap is below 75%
+Tanisha ,6,08-May-2019,Area and Perimeter,100,Introduction to Area and Perimeter,100,82,3,33,16,48.484848484848484%,Percentage Learning gap is below 75%
+Tanisha ,6,09-May-2019,Area and Perimeter,100,Area and Perimeter of Kite,100,73,9,12,1,8.333333333333332%,Percentage Learning gap is below 75%
+Tanisha ,6,09-May-2019,Fractions,80,Division of fractions,100,94,1,5,2,40.0%,Percentage Learning gap is below 75%
+Divyansh ,6,20-Apr-2019,Number System,80,Place Value of Numbers,100,91,4,15,8,53.333333333333336%,Percentage Learning gap is below 75%
+Divyansh ,6,24-Apr-2019,Number System,80,Number Names,100,94,6,54,36,66.66666666666666%,Percentage Learning gap is below 75%
+Divyansh ,6,24-Apr-2019,Number System,80,Comparing and Ordering Numbers,78,92,3,19,12,63.1578947368421%,Percentage Learning gap is below 75%
+Praveen ,6,20-Apr-2019,Triangles,100,Introduction to triangles,100,65,1,34,7,20.588235294117645%,Percentage Learning gap is below 75%
+Praveen ,6,20-Apr-2019,Triangles,100,Classification of triangles,100,72,1,49,13,26.53061224489796%,Percentage Learning gap is below 75%
+Praveen ,6,20-Apr-2019,Decimals,13,Operations on Decimals,50,85,3,39,3,7.6923076923076925%,Percentage Learning gap is below 75%
+Praveen ,6,23-Apr-2019,Number System,85,Place Value of Numbers,100,67,7,24,2,8.333333333333332%,Percentage Learning gap is below 75%
+Praveen ,6,24-Apr-2019,Number System,85,Comparing and Ordering Numbers,100,93,3,36,13,36.11111111111111%,Percentage Learning gap is below 75%
+Praveen ,6,24-Apr-2019,Number System,85,Number Names,100,80,4,68,26,38.23529411764706%,Percentage Learning gap is below 75%
+Praveen ,6,25-Apr-2019,Number System,85,Rounding and Estimation of Numbers,10,76,3,50,7,14.000000000000002%,Percentage Learning gap is below 75%
+Praveen ,6,26-Apr-2019,Number System,85,Rounding and Estimation of Numbers,10,75,5,7,2,28.57142857142857%,Percentage Learning gap is below 75%
+Riddhi Anand ,6,02-May-2019,Number System,33,Place Value of Numbers,100,83,4,23,12,52.17391304347826%,Percentage Learning gap is below 75%
+Naman ,6,03-May-2019,Symmetry,50,Introduction to Symmetry,100,88,1,6,4,66.66666666666666%,Percentage Learning gap is below 75%
+Ayan ,6,03-May-2019,Number System,45,Number Facts,100,71,7,15,3,20.0%,Percentage Learning gap is below 75%
+Ayan ,6,10-May-2019,Number System,45,Place Value of Numbers,100,95,4,19,14,73.68421052631578%,Percentage Learning gap is below 75%
+Ayan ,6,11-May-2019,Number System,45,Number Names,67,94,8,20,10,50.0%,Percentage Learning gap is below 75%
+Ayan ,6,17-May-2019,Number System,80,Comparing and Ordering Numbers,80,93,9,20,15,75.0%,Percentage Learning gap is below 75%
+Ayan ,6,18-May-2019,Number System,80,Comparing and Ordering Numbers,80,75,7,8,6,75.0%,Percentage Learning gap is below 75%
+Ayan ,6,20-May-2019,Number System,86,Comparing and Ordering Numbers,100,88,6,8,3,37.5%,Percentage Learning gap is below 75%
+Ayan ,6,20-May-2019,Number System,86,Rounding and Estimation of Numbers,13,92,5,9,6,66.66666666666666%,Percentage Learning gap is below 75%
+Agam Singh ,6,02-May-2019,Number System,22,Number Names,33,75,26,23,9,39.130434782608695%,Percentage Learning gap is below 75%
+Agam Singh ,6,06-May-2019,Number System,22,Number Names,33,80,10,19,9,47.368421052631575%,Percentage Learning gap is below 75%
+Agam Singh ,6,07-May-2019,Number System,22,Number Names,33,82,15,25,16,64.0%,Percentage Learning gap is below 75%
+Nupur Chauhuan ,6,04-May-2019,Number System,100,Place Value of Numbers,100,68,6,30,4,13.333333333333334%,Percentage Learning gap is below 75%
+Nupur Chauhuan ,6,06-May-2019,Number System,100,Place Value of Numbers,100,94,2,10,7,70.0%,Percentage Learning gap is below 75%
+Nupur Chauhuan ,6,08-May-2019,Number System,100,Number Names,100,94,4,40,30,75.0%,Percentage Learning gap is below 75%
+Nupur Chauhuan ,6,09-May-2019,Number System,100,Comparing and Ordering Numbers,100,98,3,20,15,75.0%,Percentage Learning gap is below 75%
+Nupur Chauhuan ,6,10-May-2019,Number System,100,Rounding and Estimation of Numbers,100,78,6,52,21,40.38461538461539%,Percentage Learning gap is below 75%
+Advait ,7,02-May-2019,Area and Perimeter,7,Area and Perimeter of Rectangles and Squares,33,43,13,11,1,9.090909090909092%,Percentage Learning gap is below 75%
+Advait ,7,02-May-2019,Data Handling,0,Bar Graph,0,75,30,14,4,28.57142857142857%,Percentage Learning gap is below 75%
+Harshal ,7,20-Apr-2019,Variation,66,Introduction to Unitary Method,98,92,3,11,6,54.54545454545454%,Percentage Learning gap is below 75%
+Harshal ,7,22-Apr-2019,Whole numbers and Negative numbers,100,Operations on numbers,100,97,1,11,6,54.54545454545454%,Percentage Learning gap is below 75%
+Harshal ,7,22-Apr-2019,Whole numbers and Negative numbers,100,Word problems,100,91,2,7,2,28.57142857142857%,Percentage Learning gap is below 75%
+Harshal ,7,23-Apr-2019,Decimals,100,Operations on Decimals,100,93,3,10,7,70.0%,Percentage Learning gap is below 75%
+Harshal ,7,23-Apr-2019,Decimals,100,Introduction to Decimals,100,86,4,5,3,60.0%,Percentage Learning gap is below 75%
+Harshal ,7,25-Apr-2019,Fractions,100,Comparing and ordering fractions,100,95,4,9,6,66.66666666666666%,Percentage Learning gap is below 75%
+Harshal ,7,27-Apr-2019,Fractions,100,Multiple operations on  fractions,100,88,10,14,9,64.28571428571429%,Percentage Learning gap is below 75%
+Harshal ,7,28-Apr-2019,Fractions,100,Multiple operations on  fractions,100,69,9,13,1,7.6923076923076925%,Percentage Learning gap is below 75%
+Harshal ,7,28-Apr-2019,Fractions,100,Word problems on fractions,100,68,9,55,19,34.54545454545455%,Percentage Learning gap is below 75%
+Harshal ,7,29-Apr-2019,Fractions,100,Word problems on fractions,100,64,17,26,6,23.076923076923077%,Percentage Learning gap is below 75%
+Harshal ,7,30-Apr-2019,Data Handling,95,Bar Graph,100,86,8,30,18,60.0%,Percentage Learning gap is below 75%
+Harshal ,7,01-May-2019,Data Handling,95,Median,100,86,1,4,2,50.0%,Percentage Learning gap is below 75%
+Harshal ,7,01-May-2019,Data Handling,95,Mean Median and Mode,75,86,6,8,2,25.0%,Percentage Learning gap is below 75%
+Harshal ,7,03-May-2019,Percentage,78,Introduction to Percentage,100,80,0,9,1,11.11111111111111%,Percentage Learning gap is below 75%
+Harshal ,7,04-May-2019,Data Handling,95,Mean,96,75,9,7,4,57.14285714285714%,Percentage Learning gap is below 75%
+Harshal ,7,04-May-2019,Exponents,100,Laws of Exponents,100,96,1,12,9,75.0%,Percentage Learning gap is below 75%
+Harshal ,7,05-May-2019,Exponents,100,Laws of Exponents,100,90,1,22,6,27.27272727272727%,Percentage Learning gap is below 75%
+Harshal ,7,05-May-2019,Exponents,100,Introduction to Exponents,100,80,2,16,3,18.75%,Percentage Learning gap is below 75%
+Harshal ,7,06-May-2019,Exponents,100,Exponential Expressions and Equations,100,95,2,8,6,75.0%,Percentage Learning gap is below 75%
+Harshal ,7,06-May-2019,Exponents,100,Introduction to Exponents,100,88,1,3,2,66.66666666666666%,Percentage Learning gap is below 75%
+Harshal ,7,07-May-2019,Concepts of Algebra,100,Addition of Expressions and Polynomials,100,92,4,7,4,57.14285714285714%,Percentage Learning gap is below 75%
+Harshal ,7,07-May-2019,Data Handling,95,Mean,96,67,7,17,10,58.82352941176471%,Percentage Learning gap is below 75%
+Harshal ,7,08-May-2019,Concepts of Algebra,100,Algebraic Expressions,100,96,1,22,9,40.909090909090914%,Percentage Learning gap is below 75%
+Harshal ,7,08-May-2019,Concepts of Algebra,100,Multiplication of Expressions and Polynomials,100,81,5,28,4,14.285714285714285%,Percentage Learning gap is below 75%
+Harshal ,7,09-May-2019,Shapes,100,Introduction to basic 3D shapes,100,89,0,7,5,71.42857142857143%,Percentage Learning gap is below 75%
+Harshal ,7,09-May-2019,Concepts of Algebra,100,Simplification of Expressions and Polynomials,100,88,16,16,7,43.75%,Percentage Learning gap is below 75%
+Harshal ,7,11-May-2019,Percentage,78,Introduction to Percentage,100,92,0,11,6,54.54545454545454%,Percentage Learning gap is below 75%
+Harshal ,7,12-May-2019,Shapes,100,Introduction to basic 3D shapes,100,86,1,8,6,75.0%,Percentage Learning gap is below 75%
+Akruti ,7,03-May-2019,Fractions,96,Multiple operations on  fractions,100,83,9,4,2,50.0%,Percentage Learning gap is below 75%
+Akruti ,7,04-May-2019,Fractions,96,Comparing and ordering fractions,100,67,9,3,1,33.33333333333333%,Percentage Learning gap is below 75%
+Akruti ,7,04-May-2019,Real Numbers,23,Concept of Rational Numbers,38,80,4,16,3,18.75%,Percentage Learning gap is below 75%
+Akruti ,7,06-May-2019,Fractions,96,Multiplication of fractions,100,83,25,7,1,14.285714285714285%,Percentage Learning gap is below 75%
+Akruti ,7,06-May-2019,Fractions,96,Comparing and ordering fractions,100,90,10,5,2,40.0%,Percentage Learning gap is below 75%
+Akruti ,7,17-May-2019,Whole numbers and Negative numbers,29,Operations on numbers,87,94,4,14,8,57.14285714285714%,Percentage Learning gap is below 75%
+Akruti ,7,18-May-2019,Whole numbers and Negative numbers,80,Word problems,40,80,8,7,2,28.57142857142857%,Percentage Learning gap is below 75%
+Akruti ,7,20-May-2019,Whole numbers and Negative numbers,100,Word problems,100,86,14,19,14,73.68421052631578%,Percentage Learning gap is below 75%
+Akruti ,7,21-May-2019,Decimals,25,Introduction to Decimals,100,67,20,14,4,28.57142857142857%,Percentage Learning gap is below 75%
+Akruti ,7,24-May-2019,Data Handling,0,Bar Graph,0,50,12,3,2,66.66666666666666%,Percentage Learning gap is below 75%
+Akruti ,7,24-May-2019,Decimals,100,Operations on Decimals,100,86,5,13,2,15.384615384615385%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,02-May-2019,Fractions,77,Comparing and ordering fractions,100,67,7,10,2,20.0%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,02-May-2019,Data Handling,0,Bar Graph,0,57,12,26,6,23.076923076923077%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,03-May-2019,Fractions,77,Types of fractions,100,89,2,4,1,25.0%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,06-May-2019,Fractions,77,Comparing and ordering fractions,100,75,14,4,1,25.0%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,07-May-2019,Whole numbers and Negative numbers,100,Word problems,100,80,7,21,10,47.61904761904761%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,07-May-2019,Whole numbers and Negative numbers,100,Operations on numbers,100,96,2,15,10,66.66666666666666%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,08-May-2019,Fractions,77,Multiplication of fractions,100,89,3,10,3,30.0%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,09-May-2019,Fractions,77,Multiple operations on  fractions,64,85,4,7,2,28.57142857142857%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,10-May-2019,Fractions,77,Multiple operations on  fractions,64,75,20,6,3,50.0%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,14-May-2019,Fractions,80,Multiple operations on  fractions,82,88,11,11,8,72.72727272727273%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,17-May-2019,Fractions,95,Word problems on fractions,70,83,19,13,8,61.53846153846154%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,21-May-2019,Exponents,20,Introduction to Exponents,59,60,4,5,1,20.0%,Percentage Learning gap is below 75%
+Devshi Girdhar ,7,21-May-2019,Fractions,100,Word problems on fractions,100,83,19,9,4,44.44444444444444%,Percentage Learning gap is below 75%
+Sadiya ,7,02-May-2019,Data Handling,0,Bar Graph,0,29,61,35,5,14.285714285714285%,Percentage Learning gap is below 75%
+Sadiya ,7,04-May-2019,Data Handling,0,Bar Graph,0,57,21,27,6,22.22222222222222%,Percentage Learning gap is below 75%
+Sadiya ,7,14-May-2019,Fractions,8,Types of fractions,50,85,9,8,3,37.5%,Percentage Learning gap is below 75%
+Sadiya ,7,17-May-2019,Fractions,25,Comparing and ordering fractions,50,80,23,5,2,40.0%,Percentage Learning gap is below 75%
+Sadiya ,7,24-May-2019,Fractions,67,Multiple operations on  fractions,0,83,12,4,2,50.0%,Percentage Learning gap is below 75%
+Anushka ,8,20-Apr-2019,Exponents,25,Introduction to Exponents,50,61,2,36,7,19.444444444444446%,Percentage Learning gap is below 75%
+Anushka ,8,20-Apr-2019,Data Handling,9,Pie Chart,13,55,4,31,7,22.58064516129032%,Percentage Learning gap is below 75%
+Anushka ,8,25-Apr-2019,Real Numbers,100,Concept of Rational Numbers,100,90,1,14,7,50.0%,Percentage Learning gap is below 75%
+Anushka ,8,25-Apr-2019,Real Numbers,100,Properties of addition,100,71,7,6,1,16.666666666666664%,Percentage Learning gap is below 75%
+Anushka ,8,26-Apr-2019,Real Numbers,100,Properties of addition,100,83,2,22,8,36.36363636363637%,Percentage Learning gap is below 75%
+Anushka ,8,27-Apr-2019,Real Numbers,100,Properties of subtraction,100,65,3,37,3,8.108108108108109%,Percentage Learning gap is below 75%
+Anushka ,8,27-Apr-2019,Real Numbers,100,Properties of multiplication,100,85,1,22,12,54.54545454545454%,Percentage Learning gap is below 75%
+Anushka ,8,28-Apr-2019,Real Numbers,100,Properties of division,100,84,1,21,11,52.38095238095239%,Percentage Learning gap is below 75%
+Anushka ,8,28-Apr-2019,Real Numbers,100,Properties of Rational Numbers,100,75,8,5,3,60.0%,Percentage Learning gap is below 75%
+Anushka ,8,29-Apr-2019,Real Numbers,100,Properties of Rational Numbers,100,67,10,33,17,51.515151515151516%,Percentage Learning gap is below 75%
+Anushka ,8,01-May-2019,Real Numbers,100,Properties of Rational Numbers,100,89,2,13,5,38.46153846153847%,Percentage Learning gap is below 75%
+Anushka ,8,01-May-2019,Real Numbers,100,Rational Numbers on the Number Line,100,67,16,21,7,33.33333333333333%,Percentage Learning gap is below 75%
+Anushka ,8,06-May-2019,Real Numbers,100,Rational Numbers on the Number Line,100,50,32,4,1,25.0%,Percentage Learning gap is below 75%
+Anushka ,8,06-May-2019,Real Numbers,100,Operations on rational numbers,100,76,14,21,9,42.857142857142854%,Percentage Learning gap is below 75%
+Anushka ,8,07-May-2019,Real Numbers,100,Operations on rational numbers,100,73,7,39,11,28.205128205128204%,Percentage Learning gap is below 75%
+Anushka ,8,08-May-2019,Linear Equations,100,Solving Linear Equations in One Variable,100,89,3,6,3,50.0%,Percentage Learning gap is below 75%
+Anushka ,8,08-May-2019,Quadrilaterals,65,Introduction to Quadrilaterals,100,85,2,27,13,48.148148148148145%,Percentage Learning gap is below 75%
+Anushka ,8,09-May-2019,Quadrilaterals,65,Introduction to Parallelogram,100,80,5,7,2,28.57142857142857%,Percentage Learning gap is below 75%
+Anushka ,8,09-May-2019,Quadrilaterals,65,Introduction to Rectangles,100,78,6,7,3,42.857142857142854%,Percentage Learning gap is below 75%
+Anushka ,8,13-May-2019,Quadrilaterals,75,Introduction to Squares,60,67,8,10,2,20.0%,Percentage Learning gap is below 75%
+Anushka ,8,14-May-2019,Data Handling,68,Pie Chart,34,50,14,16,1,6.25%,Percentage Learning gap is below 75%
+Anushka ,8,15-May-2019,Data Handling,68,Pie Chart,34,56,5,45,5,11.11111111111111%,Percentage Learning gap is below 75%
+Anushka ,8,15-May-2019,Data Handling,68,Histogram,70,67,4,39,6,15.384615384615385%,Percentage Learning gap is below 75%
+Anushka ,8,16-May-2019,Data Handling,79,Histogram,100,44,5,36,2,5.555555555555555%,Percentage Learning gap is below 75%
+Anushka ,8,16-May-2019,Data Handling,79,Pie Chart,38,44,12,22,2,9.090909090909092%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,20-Apr-2019,Triangles,100,Properties of triangles and proofs,100,86,2,3,1,33.33333333333333%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,23-Apr-2019,Triangles,100,Congruence of triangles,100,75,1,5,1,20.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,23-Apr-2019,Triangles,100,Properties of triangles and proofs,100,72,2,24,12,50.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,24-Apr-2019,Real Numbers,100,Concept of Rational Numbers,100,93,1,5,3,60.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,24-Apr-2019,Real Numbers,100,Properties of subtraction,100,89,2,16,8,50.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,24-Apr-2019,Real Numbers,100,Properties of addition,100,87,3,26,11,42.30769230769231%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,26-Apr-2019,Real Numbers,100,Properties of division,100,94,3,8,6,75.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,29-Apr-2019,Real Numbers,100,Properties of Rational Numbers,100,91,3,28,14,50.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,30-Apr-2019,Real Numbers,100,Rational Numbers on the Number Line,100,67,24,7,4,57.14285714285714%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,30-Apr-2019,Real Numbers,100,Operations on rational numbers,100,80,11,7,4,57.14285714285714%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,01-May-2019,Quadrilaterals,100,Introduction to Quadrilaterals,100,90,2,4,2,50.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,06-May-2019,Real Numbers,100,Operations on rational numbers,100,96,7,9,6,66.66666666666666%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,07-May-2019,Quadrilaterals,100,Introduction to Squares,100,86,9,6,1,16.666666666666664%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,08-May-2019,Nets and Visualization,36,Nets of Solids,100,90,1,4,2,50.0%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,08-May-2019,Data Handling,100,Pie Chart,100,95,8,19,13,68.42105263157895%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,09-May-2019,Triangles,100,Congruence of triangles,100,89,5,16,7,43.75%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,10-May-2019,Angles,100,Introduction to Angles,100,86,1,9,2,22.22222222222222%,Percentage Learning gap is below 75%
+Akshaya tripathi ,8,10-May-2019,Polygons,100,Properties of polygons,100,92,5,5,3,60.0%,Percentage Learning gap is below 75%
+Soumya ,8,02-May-2019,Quadrilaterals,12,Introduction to Quadrilaterals,74,52,4,31,1,3.225806451612903%,Percentage Learning gap is below 75%
+Soumya ,8,03-May-2019,Quadrilaterals,12,Introduction to Quadrilaterals,74,25,8,27,1,3.7037037037037033%,Percentage Learning gap is below 75%
+Arpan ,8,02-May-2019,Quadrilaterals,15,Introduction to Quadrilaterals,92,56,4,71,13,18.30985915492958%,Percentage Learning gap is below 75%
+Arpan ,8,03-May-2019,Angles,61,Introduction to Angles,100,85,3,15,6,40.0%,Percentage Learning gap is below 75%
+Divyanshi ,8,02-May-2019,Quadrilaterals,10,Introduction to Quadrilaterals,62,80,7,11,5,45.45454545454545%,Percentage Learning gap is below 75%
+Divyanshi ,8,03-May-2019,Quadrilaterals,10,Introduction to Quadrilaterals,62,67,8,7,4,57.14285714285714%,Percentage Learning gap is below 75%
+Divyanshi ,8,04-May-2019,Real Numbers,100,Properties of subtraction,100,80,2,3,1,33.33333333333333%,Percentage Learning gap is below 75%
+Divyanshi ,8,04-May-2019,Real Numbers,100,Properties of addition,100,96,2,9,6,66.66666666666666%,Percentage Learning gap is below 75%
+Divyanshi ,8,04-May-2019,Real Numbers,100,Concept of Rational Numbers,100,85,2,11,5,45.45454545454545%,Percentage Learning gap is below 75%
+Divyanshi ,8,06-May-2019,Real Numbers,100,Properties of subtraction,100,92,4,13,7,53.84615384615385%,Percentage Learning gap is below 75%
+Divyanshi ,8,06-May-2019,Real Numbers,100,Properties of multiplication,100,90,5,15,11,73.33333333333333%,Percentage Learning gap is below 75%
+Divyanshi ,8,07-May-2019,Real Numbers,100,Properties of multiplication,100,93,3,9,5,55.55555555555556%,Percentage Learning gap is below 75%
+Divyanshi ,8,08-May-2019,Real Numbers,100,Properties of Rational Numbers,100,89,5,15,6,40.0%,Percentage Learning gap is below 75%
+Divyanshi ,8,18-May-2019,Quadrilaterals,100,Introduction to Trapezium,100,93,1,3,2,66.66666666666666%,Percentage Learning gap is below 75%
+Divyanshi ,8,18-May-2019,Quadrilaterals,100,Introduction to Squares,100,88,3,7,5,71.42857142857143%,Percentage Learning gap is below 75%
+Divyanshi ,8,23-May-2019,Exponents,53,Introduction to Exponents,96,95,2,7,5,71.42857142857143%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,02-May-2019,Quadrilaterals,11,Introduction to Quadrilaterals,67,47,6,72,10,13.88888888888889%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,03-May-2019,Data Handling,6,Pie Chart,19,88,9,14,6,42.857142857142854%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,04-May-2019,Real Numbers,90,Concept of Rational Numbers,100,79,3,28,15,53.57142857142857%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,06-May-2019,Real Numbers,90,Properties of addition,100,78,2,32,4,12.5%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,07-May-2019,Real Numbers,90,Properties of subtraction,100,64,4,41,10,24.390243902439025%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,08-May-2019,Real Numbers,90,Properties of multiplication,100,91,2,23,17,73.91304347826086%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,08-May-2019,Real Numbers,90,Properties of division,100,76,2,27,8,29.629629629629626%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,11-May-2019,Real Numbers,90,Properties of Rational Numbers,100,76,1,25,12,48.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,11-May-2019,Real Numbers,90,Rational Numbers on the Number Line,100,56,7,20,4,20.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,12-May-2019,Real Numbers,90,Operations on rational numbers,17,50,13,9,3,33.33333333333333%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,13-May-2019,Real Numbers,90,Operations on rational numbers,22,62,12,36,11,30.555555555555557%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,14-May-2019,Real Numbers,100,Operations on rational numbers,100,48,5,59,7,11.864406779661017%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,16-May-2019,Linear Equations,0,Solving Linear Equations in One Variable,0,50,5,4,2,50.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,17-May-2019,Linear Equations,100,Solving Linear Equations in One Variable,100,75,4,20,8,40.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,17-May-2019,Quadrilaterals,21,Introduction to Quadrilaterals,100,92,2,12,9,75.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,18-May-2019,Quadrilaterals,45,Introduction to Rectangles,71,71,4,10,5,50.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,18-May-2019,Quadrilaterals,45,Introduction to Parallelogram,100,86,3,5,2,40.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,20-May-2019,Quadrilaterals,60,Introduction to Rhombus,58,70,6,13,3,23.076923076923077%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,22-May-2019,Quadrilaterals,89,Introduction to Trapezium,87,77,0,5,1,20.0%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,22-May-2019,Quadrilaterals,89,Introduction to Squares,47,60,2,8,1,12.5%,Percentage Learning gap is below 75%
+Jaimeet singh somal ,8,24-May-2019,Data Handling,95,Histogram,85,56,2,73,9,12.32876712328767%,Percentage Learning gap is below 75%
