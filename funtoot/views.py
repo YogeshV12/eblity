@@ -27,6 +27,9 @@ def alert(request):
     data = {'data': df}
     return render(request, 'alert_page.html', data)
 
+def alert_details(request):
+    return render(request, 'alert_details.html')
+
 def stitched_start(request):
     pass
     # # os.system('python schedule_tasks')

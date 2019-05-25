@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="index.html">
-                            <img src="{% static 'Eblity.jpeg' %}">
+                            <img src="{% static 'assets/img/Eblity.jpeg' %}">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -104,6 +104,16 @@
 		                </div>
 		            </div>
 		        </th>
+		        <th scope="col">Subtopic<div class="dropdown">
+		                <a href="#" role="button" data-toggle="dropdown">
+		                  <!--<i class="material-icons">expand_more</i>-->
+		                  <i class="fa fa-filter ml-2" style="color: white"></i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
+		                    <input type="text" id="filter3"/>
+		                </div>
+		            </div>
+		        </th>
 		        <th scope="col">Alert</i></th>
 		        <th scope="col">Intervention Required<div class="dropdown" style="float: right;">
 		                <a href="#" role="button" data-toggle="dropdown">
@@ -139,23 +149,27 @@
 		    </tr>
 		</thead>
 		<tbody class="tablebody">
+		{% for row in data %}	
 		    <tr>
 		        <td scope="row" class="col1">
 		            <div class="media align-items-center">
 		                <div class="media-body">
-		                    <span class="mb-0 text-sm">7-A</span>
+		                    <span class="mb-0 text-sm">{{row.Grade}}</span>
 		                </div>
 		            </div>
 		        </td>
 		        <td class="col2">
-		            Rahul
+				{{row.StudentName}}
 		        </td>
 		        <td class="col3">
-		            Roman Numbers
+				{{row.Concept}}
+		        </td>
+		        <td class="col3">
+				{{row.SubConcept}}
 		        </td>
 		        <td class="col4">
 		            <div class="avatar-group">
-							<a href="alert-details.html">Alert</a> 
+							<a href="alert_details.html">Alert</a> 
 					</div>
 
 		        </td>
@@ -180,9 +194,10 @@
 		            </div>
 		        </td>
 		        <td class="col7">
-		        	05-25-2019
+				{{row.Date}}
 		        </td>
 		    </tr>
+		{% endfor %}
 		    </tbody>
 		</table>
 		<nav aria-label="Page navigation example" style="padding-bottom: 10px; padding-top: 10px">
