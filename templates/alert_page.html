@@ -1,0 +1,276 @@
+{% include "template_header.html" %}
+{% load staticfiles %}
+	<!--Navigation Bar-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-default">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+        	<img src="{% static 'assets/img/Eblity.jpeg' %}" alt="Eblity" style="width: 70px ; height: 50px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-default">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a href="index.html">
+                            <img src="{% static 'Eblity.jpeg' %}">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="navbar-nav ml-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#" style="font-weight: bold">HOME</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#" style="font-weight: bold">DASHBOARD</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#" style="font-weight: bold">STUDENT PROFILE</a>
+	      </li>
+	      <li>
+	      	<a class="nav-link" href="#" style="font-weight: bold">ABOUT US</a>
+	      </li>    
+	    </ul>
+	    <a href="#"><i class="fa fa-facebook-square float-right ml-4 text-white"></i></a>
+	    <a href="#"><i class="fa fa-twitter-square float-right ml-3 text-white"></i></a>
+	    <a href="#"><i class="fa fa-whatsapp float-right ml-3 text-white"></i></a>
+
+        </div>
+    </div>
+</nav>
+	<br><br>
+	<!--datetime picker-->	
+		<div class="form-group float-left" style="width: 30% ; padding-left: 30px">
+	    	<div class="input-group input-group-alternative">
+		        <div class="input-group-prepend">
+		            <span class="input-group-text" style="background-color:  #154360 "><i class="ni ni-calendar-grid-58 datepicker"></i></span>
+		        </div>
+		        <input class="form-control datepicker text-white" placeholder="Select date" type="text" value="" style="background-color:  #154360 ">
+	    	</div>
+		</div>
+
+	<!--Alert-->
+	<div class="text-center" style="padding-right: 30%; text-shadow: 5px 5px 3px  #b3b6b7 ">
+		<h3 class="text-default"><strong>Alerts Page!</strong></h3>
+		</div>
+	<br><br>	
+
+	<!--Alert Table-->
+	
+<div class="container pagebody">
+	<input class="form-control float-right" id="myInput" type="text" placeholder="Search.." style="width: 30%; margin-bottom: 10px">
+	<br>
+	<div class="table-responsive">
+		<table id="table" class="table align-items-center table-light table-hover">
+		<thead class="tablehead">
+		    <tr class="filters">
+		        <th scope="col">Grade
+		        	<div class="dropdown">
+		                <a href="#" role="button" data-toggle="dropdown">
+		                  <!--<i class="material-icons">expand_more</i>-->
+		                  <i class="fa fa-filter ml-2" style="color: white"></i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
+		                    <input type="text" id="filter1"/>
+		                </div>
+		            </div>
+		        </th>
+		        <th scope="col">Student<div class="dropdown">
+		                <a href="#" role="button" data-toggle="dropdown">
+		                  <!--<i class="material-icons">expand_more</i>-->
+		                  <i class="fa fa-filter ml-2" style="color: white"></i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
+		                    <input type="text" id="filter2" value="" />
+		                </div>
+		            </div>
+		        </th>
+		        <th scope="col">Topic<div class="dropdown">
+		                <a href="#" role="button" data-toggle="dropdown">
+		                  <!--<i class="material-icons">expand_more</i>-->
+		                  <i class="fa fa-filter ml-2" style="color: white"></i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
+		                    <input type="text" id="filter3"/>
+		                </div>
+		            </div>
+		        </th>
+		        <th scope="col">Alert</i></th>
+		        <th scope="col">Intervention Required<div class="dropdown" style="float: right;">
+		                <a href="#" role="button" data-toggle="dropdown">
+		                  <!--<i class="material-icons">expand_more</i>-->
+		                  <i class="fa fa-filter ml-2" style="color: white"></i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
+		                    <input type="text" id="filter4"/>
+		                </div>
+		            </div>
+		        </th>
+		        <th scope="col" class="status">Status
+		        <div class="dropdown">
+		                <a href="#" role="button" data-toggle="dropdown">
+		                  <i class="fa fa-filter ml-2" style="color: white"></i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
+		                    <input type="text" id="filter5"/>
+		                </div>
+		           </div>
+		        </th>
+		        <th scope="col">Date
+		        	<div class="dropdown">
+		                <a href="#" role="button" data-toggle="dropdown">
+		                  <!--<i class="material-icons">expand_more</i>-->
+		                  <i class="fa fa-filter ml-2" style="color: white"></i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
+		                    <input type="text" id="filter6"/>
+		                </div>
+		            </div>
+		        </th>
+		    </tr>
+		</thead>
+		<tbody class="tablebody">
+		    <tr>
+		        <td scope="row" class="col1">
+		            <div class="media align-items-center">
+		                <div class="media-body">
+		                    <span class="mb-0 text-sm">7-A</span>
+		                </div>
+		            </div>
+		        </td>
+		        <td class="col2">
+		            Rahul
+		        </td>
+		        <td class="col3">
+		            Roman Numbers
+		        </td>
+		        <td class="col4">
+		            <div class="avatar-group">
+							<a href="alert-details.html">Alert</a> 
+					</div>
+
+		        </td>
+		        <td class="col5"> 
+		            <div class="d-flex align-items-center">
+		                <span class="mr-2">Not Required</span>
+		            </div>
+		        </td>
+		        <td class="justify-content-center" class="col6">
+		        	<span class="badge badge-pill mr-3 bg-success text-white">
+		        		Completed
+		        	</span>
+		            <div class="dropdown">
+		                <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                  <i class="material-icons">expand_more</i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                    <a class="dropdown-item" href="#">Action-1</a>
+		                    <a class="dropdown-item" href="#">Action-2</a>
+		                    <a class="dropdown-item" href="#">Action-3</a>
+		                </div>
+		            </div>
+		        </td>
+		        <td class="col7">
+		        	05-25-2019
+		        </td>
+		    </tr>
+		    </tbody>
+		</table>
+		<nav aria-label="Page navigation example" style="padding-bottom: 10px; padding-top: 10px">
+		  <ul class="pagination justify-content-center">
+		    <li class="page-item disabled">
+		      <a class="page-link" href="#" tabindex="-1">
+		        <i class="fa fa-angle-left"></i>
+		        <span class="sr-only">Previous</span>
+		      </a>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="#">1</a></li>
+		    <li class="page-item"><a class="page-link" href="#">2</a></li>
+		    <li class="page-item"><a class="page-link" href="#">3</a></li>
+		    <li class="page-item"><a class="page-link" href="#">4</a></li>
+		    <li class="page-item"><a class="page-link" href="#">5</a></li>
+		    <li class="page-item">
+		      <a class="page-link" href="#">
+		        <i class="fa fa-angle-right"></i>
+		        <span class="sr-only">Next</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+		$(document).ready(function(){
+		  $("#myInput").on("keyup", function() {
+		    var value = $(this).val().toLowerCase();
+		    $("#table tr").filter(function() {
+		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		    });
+		  });
+		});
+
+		//Column wise filters
+		$(function() {    
+		    $('#filter1').change(function() { 
+		        $("#table td.col1:contains('" + $(this).val() + "')").parent().show();
+		        $("#table td.col1:not(:contains('" + $(this).val() + "'))").parent().hide();
+		    });
+		    
+		});
+
+		$(function() {    
+		    $('#filter2').change(function() { 
+		        $("#table td.col2:contains('" + $(this).val() + "')").parent().show();
+		        $("#table td.col2:not(:contains('" + $(this).val() + "'))").parent().hide();
+		    });
+		    
+		});
+
+		$(function() {    
+		    $('#filter3').change(function() { 
+		        $("#table td.col3:contains('" + $(this).val() + "')").parent().show();
+		        $("#table td.col3:not(:contains('" + $(this).val() + "'))").parent().hide();
+		    });
+		    
+		});
+
+		$(function() {    
+		    $('#filter4').change(function() { 
+		        $("#table td.col5:contains('" + $(this).val() + "')").parent().show();
+		        $("#table td.col5:not(:contains('" + $(this).val() + "'))").parent().hide();
+		    });
+		    
+		});
+
+		$(function() {    
+		    $('#filter5').change(function() { 
+		    	console.log($(this).val())
+		        $("#table td.col6:contains('" + $(this).val() + "')").parent().show();
+		        $("#table td.col6:not(:contains('" + $(this).val() + "'))").parent().hide();
+		    });
+		    
+		});
+
+		$(function() {    
+		    $('#filter6').change(function() { 
+		        $("#table td.col7:contains('" + $(this).val() + "')").parent().show();
+		        $("#table td.col7:not(:contains('" + $(this).val() + "'))").parent().hide();
+		    });
+		    
+		});
+	</script>	
+
+
+{% include "template_footer.html" %}

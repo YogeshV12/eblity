@@ -42,18 +42,31 @@
 		    });
 		  });
 		});
+
+		$(document).ready(function(){
+	    $("#cmt-btn").click(function(){
+	        $("#form1").toggle();
+		    });
+		});
 	</script>
 
 	<!--Styling table-->
 	<style type="text/css">
 		.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-		    background-color:   #34495e;
+		    background-color: #424949 ;
 		    color: white;
 		    font-weight: bold;
+		}
+		form{
+			display: none;
 		}
 		/*body{
 			background-image: linear-gradient(#000000,#434343);
 		}*/
+		.tablehead{
+			background-color: #283747;
+			color: white;
+		}
 	</style>
 </head>
 <body>
@@ -529,25 +542,15 @@
 
 <!--Carousel for comments-->
 <div class="container">
-	<h4><strong>Comments</strong></h4>
-	<div class="media border p-3">
-	  <img src="img-avatar1.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-	  <div class="media-body">
-	    <h4>ABC <small><i>Posted on May 23 2019</i></small></h4>
-	    <p>Comments...</p>
-	    <button class="btn btn-primary btn-sm" style="margin-top: 1%"><i class="fa fa-reply" style="margin-right: 1%"></i>reply</button>
-	    <div class="media p-3">
-	      <img src="img-avatar2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
-	      <div class="media-body">
-	        <h4>XYZ <small><i>Posted on May 23 2019</i></small></h4>
-	        <p>Comments...</p>
-	        <button class="btn btn-primary btn-sm" style="margin-top: 1%"><i class="fa fa-reply" style="margin-right: 1%"></i>reply</button>
-	      </div>
-	    </div> 
-	  </div>
-	</div>
-	<button class="btn btn-primary btn-sm" style="margin-top: 3%"><i class="fa fa-comments"></i>
-comment</button>
+	<button class="btn btn-primary btn-sm" style="margin-top: 2%" id="cmt-btn"><i class="fa fa-comments" style="margin-right: 2%"></i>comment</button>
+	<form id="form1">
+    	<div class="form-group" id="reply1">
+      	<label for="comment">Comment:</label>
+      	<textarea class="form-control" rows="5" id="comment" name="text" id="user_input"></textarea>
+    	</div>
+    	<button type="submit" class="btn btn-primary btn-sm" style="float: right;">post</button>
+    </form>
+    <p><span id="display"></span></p>
 </div>
 <br><br>
 </body>
