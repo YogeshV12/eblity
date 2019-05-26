@@ -151,6 +151,8 @@
 		<tbody class="tablebody">
 		{% for row in data %}	
 		    <tr>
+			<form onsubmit = "return true" method = "post">
+			{% csrf_token %}
 		        <td scope="row" class="col1">
 		            <div class="media align-items-center">
 		                <div class="media-body">
@@ -169,7 +171,7 @@
 		        </td>
 		        <td class="col4">
 		            <div class="avatar-group">
-							<a href="alert_details.html">Alert</a> 
+					<button onclick = "post_alerts()" id ="show_alerts" name ="alert" value = "{{forloop.counter0}}">Alert</button>
 					</div>
 
 		        </td>
@@ -196,6 +198,7 @@
 		        <td class="col7">
 				{{row.Date}}
 		        </td>
+				</form>
 		    </tr>
 		{% endfor %}
 		    </tbody>
@@ -285,6 +288,30 @@
 		    });
 		    
 		});
+
+		function post_alerts(){
+				$.ajax({
+		type: "POST",
+		url: "http://127.0.0.1:8000/alerts/",
+		dataType: 'json',
+		async: true,
+		data: {
+			"alert": $("#show_alerts").val(),
+			csrfmiddlewaretoken : '{{ csrf_token }}'
+		},
+		success: function(data){
+			console.log("post alerts");
+			console.log("success");
+			console.log(data);
+		},
+		failure: function(data){
+			console.log("failure");
+			console.log(data);
+		},
+	});
+		}
+
+
 	</script>	
 
 

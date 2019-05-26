@@ -69,20 +69,20 @@
 		<div class="card bg-secondary float-left" style="width: 30%">
 			<img src="{% static 'assets/img/img-avatar1.png' %}" style="border-radius: 50%; width: 40%; margin-left: 15px; margin-top: 15px">
 			<div class="card-body float-right">
-				<div class="card-title"><strong>Name</strong></div>
-				<div class="card-text"><strong>Grade</strong></div>
+				<div class="card-title"><strong>Name: {{data.StudentName}}</strong></div>
+				<div class="card-text"><strong>Grade: {{data.Grade}}</strong></div>
 				<a href="#" class="btn btn-primary stretched-link mt-3">See Profile</a>
 			</div>
 		</div>
 		<div style="width: 45%; margin-left: 30%">
-			<span class="badge badge-pill" id="topic" style="width: 35%; font-weight: bold; font-size: 100%">Topic</span>
-			<span class="badge badge-pill" id="subtopic" style="width: 50%; font-weight: bold; font-size: 100%">Subtopic</span>
+			<span class="badge badge-pill" id="topic" style="width: 35%; font-weight: bold; font-size: 100%">Topic: {{data.Concept}}</span>
+			<span class="badge badge-pill" id="subtopic" style="width: 50%; font-weight: bold; font-size: 100%">Subtopic: {{data.SubConcept}}</span>
 		</div>
 		<br>
 		<div class="card float-right" style="width: 65%">
 			<div class="card-body">
 				<div class="card-title text-center"><strong>Alert Description</strong></div>
-				<div class="card-text">She made an attempt to straighten her tawny hair. Her voice quavered with emotion. “You must be a very lonely man, Judge Seagrave.” Then she turned a gaze on him that might have ignited a rain-sodden haystack. “And I’m a lonely woman.”</div>
+				<div class="card-text">{{data.comment}}</div>
 			</div>
 		</div>
 		<br>

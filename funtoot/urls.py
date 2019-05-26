@@ -7,5 +7,5 @@ urlpatterns = [
     path('schedule/', views.schedule),
     path('stitched_start/', views.stitched_start, name = "stitched_start"),
     path('alerts/', views.alert),
-    path('alerts/alert_details.html', views.alert_details)
+    path('alerts/alert_details', views.show_alerts_views, name = "show_alerts_views")
 ]

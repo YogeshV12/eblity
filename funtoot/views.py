@@ -7,6 +7,7 @@ import subprocess
 
 from funtoot.models import Buttons
 import pandas as pd
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
@@ -22,10 +23,18 @@ def schedule(request):
     }
     return render(request, 'schedule.html', data)
 
+@csrf_exempt
 def alert(request):
     df = pd.read_csv('all_alerts.csv').to_dict('r')
-    data = {'data': df}
-    return render(request, 'alert_page.html', data)
+    if request.method == 'POST':
+        print(request.POST.get('alert'))
+        print("post method called")
+        print(df[int(request.POST.get('alert'))])
+        # return HttpResponse("alert details page")
+        return render(request, 'alert_details.html', {'data' : df[int(request.POST.get('alert'))]} )
+    else:
+        data = {'data': df}
+        return render(request, 'alert_page.html', data)
 
 def alert_details(request):
     return render(request, 'alert_details.html')
@@ -41,4 +50,21 @@ def stitched_start(request):
     # return HttpResponse("Hello, world. You're at the polls index.")
     # print("killing the process")
     # os.killpg(os.getpgid(pro.pid), signal.SIGTERM)  # Send the signal to all the process groups
+import json
+def create_dict(data_rec):
+    diction = {}
+    for val in data_rec:
+        if(val['name'] =='' or val['value'] ==''):
+            continue
+        diction[val['name']] = val['value']
+    
+    return diction
 
+def show_alerts_views(request):
+    if request.method == 'POST':
+            # data_rec = json.loads(request.body)
+    # diction = create_dict(data_rec)
+    # print(diction)
+        print(request.POST.get("alert", None))
+        print("post method")
+    return render(request, 'alert_details.html')

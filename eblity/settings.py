@@ -124,3 +124,4 @@ STATICFILES_DIRS = ['static']
 
 
 
+CSRF_COOKIE_SECURE = True
