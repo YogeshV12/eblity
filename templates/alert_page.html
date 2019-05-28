@@ -1,10 +1,10 @@
 {% include "template_header.html" %}
-{% load staticfiles %}
+{% load static %}
 	<!--Navigation Bar-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-default">
     <div class="container">
         <a class="navbar-brand" href="#">
-        	<img src="{% static 'assets/img/Eblity.jpeg' %}" alt="Eblity" style="width: 70px ; height: 50px">
+        	<img src="{% static 'assets/img/Eblity.jpeg' %}" alt="Eblity">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,28 +28,28 @@
 
             <ul class="navbar-nav ml-auto">
 	      <li class="nav-item">
-	        <a class="nav-link" href="#" style="font-weight: bold">HOME</a>
+	        <a class="nav-link" href="#" style="font-weight: bold;font-size: 140%">HOME</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#" style="font-weight: bold">DASHBOARD</a>
+	        <a class="nav-link" href="#" style="font-weight: bold;font-size: 140%">DASHBOARD</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#" style="font-weight: bold">STUDENT PROFILE</a>
+	        <a class="nav-link" href="#" style="font-weight: bold;font-size: 140%">STUDENT PROFILE</a>
 	      </li>
 	      <li>
-	      	<a class="nav-link" href="#" style="font-weight: bold">ABOUT US</a>
+	      	<a class="nav-link" href="#" style="font-weight: bold;font-size: 140%">ABOUT US</a>
 	      </li>    
 	    </ul>
-	    <a href="#"><i class="fa fa-facebook-square float-right ml-4 text-white"></i></a>
-	    <a href="#"><i class="fa fa-twitter-square float-right ml-3 text-white"></i></a>
-	    <a href="#"><i class="fa fa-whatsapp float-right ml-3 text-white"></i></a>
+	    <a href="#"><i class="fa fa-lg fa-facebook-square float-right ml-4 text-white"></i></a>
+	    <a href="#"><i class="fa fa-lg fa-twitter-square float-right ml-3 text-white"></i></a>
+	    <a href="#"><i class="fa fa-lg fa-whatsapp float-right ml-3 text-white"></i></a>
 
         </div>
     </div>
 </nav>
 	<br><br>
 	<!--datetime picker-->	
-		<div class="form-group float-left" style="width: 30% ; padding-left: 30px">
+		<div class="form-group float-left" style="width: 20% ; padding-left: 30px">
 	    	<div class="input-group input-group-alternative">
 		        <div class="input-group-prepend">
 		            <span class="input-group-text" style="background-color:  #154360 "><i class="ni ni-calendar-grid-58 datepicker"></i></span>
@@ -74,77 +74,71 @@
 		<thead class="tablehead">
 		    <tr class="filters">
 		        <th scope="col">Grade
-		        	<div class="dropdown">
+		        	<!-- <div class="dropdown">
 		                <a href="#" role="button" data-toggle="dropdown">
-		                  <!--<i class="material-icons">expand_more</i>-->
+		                  
 		                  <i class="fa fa-filter ml-2" style="color: white"></i>
 		                </a>
 		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
 		                    <input type="text" id="filter1"/>
 		                </div>
-		            </div>
+		            </div> -->
 		        </th>
-		        <th scope="col">Student<div class="dropdown">
+		        <th scope="col">Student
+		        	<!-- <div class="dropdown">
 		                <a href="#" role="button" data-toggle="dropdown">
-		                  <!--<i class="material-icons">expand_more</i>-->
+		                  
 		                  <i class="fa fa-filter ml-2" style="color: white"></i>
 		                </a>
 		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
 		                    <input type="text" id="filter2" value="" />
 		                </div>
-		            </div>
+		            </div> -->
 		        </th>
-		        <th scope="col">Topic<div class="dropdown">
+		        <th scope="col">Topic
+		        	<!-- <div class="dropdown">
 		                <a href="#" role="button" data-toggle="dropdown">
-		                  <!--<i class="material-icons">expand_more</i>-->
+		                  
 		                  <i class="fa fa-filter ml-2" style="color: white"></i>
 		                </a>
 		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
 		                    <input type="text" id="filter3"/>
 		                </div>
-		            </div>
+		            </div> -->
 		        </th>
-		        <th scope="col">Subtopic<div class="dropdown">
+		        <th scope="col">Subtopic
+		        	<!-- <div class="dropdown">
 		                <a href="#" role="button" data-toggle="dropdown">
-		                  <!--<i class="material-icons">expand_more</i>-->
+		                  
 		                  <i class="fa fa-filter ml-2" style="color: white"></i>
 		                </a>
 		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
 		                    <input type="text" id="filter3"/>
 		                </div>
-		            </div>
+		            </div> -->
 		        </th>
 		        <th scope="col">Alert</i></th>
-		        <th scope="col">Intervention Required<div class="dropdown" style="float: right;">
-		                <a href="#" role="button" data-toggle="dropdown">
-		                  <!--<i class="material-icons">expand_more</i>-->
-		                  <i class="fa fa-filter ml-2" style="color: white"></i>
-		                </a>
-		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
-		                    <input type="text" id="filter4"/>
-		                </div>
-		            </div>
-		        </th>
+		     
 		        <th scope="col" class="status">Status
-		        <div class="dropdown">
+		        <!-- <div class="dropdown">
 		                <a href="#" role="button" data-toggle="dropdown">
 		                  <i class="fa fa-filter ml-2" style="color: white"></i>
 		                </a>
 		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
 		                    <input type="text" id="filter5"/>
 		                </div>
-		           </div>
+		           </div> -->
 		        </th>
 		        <th scope="col">Date
-		        	<div class="dropdown">
+		        	<!-- <div class="dropdown">
 		                <a href="#" role="button" data-toggle="dropdown">
-		                  <!--<i class="material-icons">expand_more</i>-->
+		                  
 		                  <i class="fa fa-filter ml-2" style="color: white"></i>
 		                </a>
 		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow" style="height: 0px; background-color: transparent;">
 		                    <input type="text" id="filter6"/>
 		                </div>
-		            </div>
+		            </div> -->
 		        </th>
 		    </tr>
 		</thead>
@@ -166,7 +160,7 @@
 		        <td class="col3">
 				{{row.Concept}}
 		        </td>
-		        <td class="col3">
+		        <td class="col3" style="white-space: nowrap;width: 5%">
 				{{row.SubConcept}}
 		        </td>
 		        <td class="col4">
@@ -175,17 +169,12 @@
 					</div>
 
 		        </td>
-		        <td class="col5"> 
-		            <div class="d-flex align-items-center">
-		                <span class="mr-2">Not Required</span>
-		            </div>
-		        </td>
 		        <td class="justify-content-center" class="col6">
 		        	<span class="badge badge-pill mr-3 bg-success text-white">
 		        		Completed
 		        	</span>
-		            <div class="dropdown">
-		                <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		            <!-- <div class="dropdown">
+		                <a class="text-white" href="#" role="button" data-toggle="dropdown">
 		                  <i class="material-icons">expand_more</i>
 		                </a>
 		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
@@ -193,7 +182,7 @@
 		                    <a class="dropdown-item" href="#">Action-2</a>
 		                    <a class="dropdown-item" href="#">Action-3</a>
 		                </div>
-		            </div>
+		            </div> -->
 		        </td>
 		        <td class="col7">
 				{{row.Date}}
@@ -203,27 +192,23 @@
 		{% endfor %}
 		    </tbody>
 		</table>
-		<nav aria-label="Page navigation example" style="padding-bottom: 10px; padding-top: 10px">
-		  <ul class="pagination justify-content-center">
-		    <li class="page-item disabled">
-		      <a class="page-link" href="#" tabindex="-1">
-		        <i class="fa fa-angle-left"></i>
-		        <span class="sr-only">Previous</span>
-		      </a>
-		    </li>
-		    <li class="page-item"><a class="page-link" href="#">1</a></li>
-		    <li class="page-item"><a class="page-link" href="#">2</a></li>
-		    <li class="page-item"><a class="page-link" href="#">3</a></li>
-		    <li class="page-item"><a class="page-link" href="#">4</a></li>
-		    <li class="page-item"><a class="page-link" href="#">5</a></li>
-		    <li class="page-item">
-		      <a class="page-link" href="#">
-		        <i class="fa fa-angle-right"></i>
-		        <span class="sr-only">Next</span>
-		      </a>
-		    </li>
-		  </ul>
-		</nav>
+		<div class="pagination">
+	    <span class="step-links">
+	        {% if data.has_previous %}
+	            <a href="?page=1">&laquo; first</a>
+	            <a href="?page={{ data.previous_page_number }}">previous</a>
+	        {% endif %}
+
+	        <span class="current">
+	            Page {{data.number }} of {{ data.paginator.num_pages }}.
+	        </span>
+
+	        {% if data.has_next %}
+	            <a href="?page={{ data.next_page_number }}">next</a>
+	            <a href="?page={{ data.paginator.num_pages }}">last &raquo;</a>
+	        {% endif %}
+	    </span>
+	</div> 
 	</div>
 </div>
 
@@ -240,7 +225,7 @@
 		});
 
 		//Column wise filters
-		$(function() {    
+		/*$(function() {    
 		    $('#filter1').change(function() { 
 		        $("#table td.col1:contains('" + $(this).val() + "')").parent().show();
 		        $("#table td.col1:not(:contains('" + $(this).val() + "'))").parent().hide();
@@ -287,7 +272,7 @@
 		        $("#table td.col7:not(:contains('" + $(this).val() + "'))").parent().hide();
 		    });
 		    
-		});
+		});*/
 
 		function post_alerts(){
 				$.ajax({

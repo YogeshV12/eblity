@@ -21,7 +21,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-default">
 	    <div class="container">
 	        <a class="navbar-brand" href="#">
-	        	<img src="{% static 'assets/img/Eblity.jpeg' %}" alt="Eblity" style="width: 70px ; height: 50px">
+	        	<img src="{% static 'assets/img/Eblity.jpeg' %}" alt="Eblity">
 	        </a>
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
 	            <span class="navbar-toggler-icon"></span>
@@ -45,56 +45,66 @@
 
 	            <ul class="navbar-nav ml-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="#" style="font-weight: bold">HOME</a>
+		        <a class="nav-link" href="#" style="font-weight: bold;font-size: 140%">HOME</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#" style="font-weight: bold;">DASHBOARD</a>
+		        <a class="nav-link" href="#" style="font-weight: bold;;font-size: 140%">DASHBOARD</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#" style="font-weight: bold;">STUDENT PROFILE</a>
+		        <a class="nav-link" href="#" style="font-weight: bold;;font-size: 140%">STUDENT PROFILE</a>
 		      </li>
 		      <li>
-		      	<a class="nav-link" href="#" style="font-weight: bold;">ABOUT US</a>
+		      	<a class="nav-link" href="#" style="font-weight: bold;;font-size: 140%">ABOUT US</a>
 		      </li>   
 		    </ul>
-		    <a href="#"><i class="fa fa-facebook-square float-right ml-4 text-white"></i></a>
-		    <a href="#"><i class="fa fa-twitter-square float-right ml-3 text-white"></i></a>
-		    <a href="#"><i class="fa fa-whatsapp float-right ml-3 text-white"></i></a>
+		    <a href="#"><i class="fa fa-lg fa-facebook-square float-right ml-4 text-white"></i></a>
+		    <a href="#"><i class="fa fa-lg fa-twitter-square float-right ml-3 text-white"></i></a>
+		    <a href="#"><i class="fa fa-lg fa-whatsapp float-right ml-3 text-white"></i></a>
 
 	        </div>
 	    </div>
 	</nav>
 	<br>
 	<div class="container">
-		<div class="card bg-secondary float-left" style="width: 30%">
-			<img src="{% static 'assets/img/img-avatar1.png' %}" style="border-radius: 50%; width: 40%; margin-left: 15px; margin-top: 15px">
+		<div class="card bg-secondary float-left" style="width: 30%;text-align: center;">
+			<img src="{% static 'assets/img/img-avatar1.png' %}" style="border-radius: 50%; width: 40%; margin-left: 30%; margin-top: 15px">
 			<div class="card-body float-right">
-				<div class="card-title"><strong>Name: {{data.StudentName}}</strong></div>
-				<div class="card-text"><strong>Grade: {{data.Grade}}</strong></div>
-				<a href="#" class="btn btn-primary stretched-link mt-3">See Profile</a>
+				<div class="card-title" style="font-size: 120%"><strong>Name: {{data.StudentName}}</strong></div>
+				<div class="card-text" style="font-size: 120%"><strong>Grade: {{data.Grade}}</strong></div>
+				<a href="#" class="btn btn-primary stretched-link mt-3" style="font-size: 120%">See Profile</a>
 			</div>
 		</div>
-		<div style="width: 45%; margin-left: 30%">
-			<span class="badge badge-pill" id="topic" style="width: 35%; font-weight: bold; font-size: 100%">Topic: {{data.Concept}}</span>
-			<span class="badge badge-pill" id="subtopic" style="width: 50%; font-weight: bold; font-size: 100%">Subtopic: {{data.SubConcept}}</span>
+		<div style="width: 45%; margin-left: 35%">
+			<span class="badge badge-pill" id="topic" style="width: 25%; font-weight: bold; font-size: 120%;background-color: #707b7c">Topic : {{data.Concept}}</span>
+			<span class="badge badge-pill" id="subtopic" style="width: 50%; font-weight: bold; font-size: 120%;margin-left: 20%;background-color: #707b7c">Subtopic : {{data.SubConcept}}</span>
 		</div>
 		<br>
 		<div class="card float-right" style="width: 65%">
 			<div class="card-body">
-				<div class="card-title text-center"><strong>Alert Description</strong></div>
-				<div class="card-text">{{data.comment}}</div>
+				<div class="card-title text-center" style="font-size: 140%"><strong>Alert Description</strong></div>
+				<div class="card-text" style="font-size: 120%;font-weight: bold;">{{data.comment}}</div>
 			</div>
 		</div>
 		<br>
-		<div style="width: 50%; margin-left: 35%; margin-top: 20%">
-			<h4><strong>Status:</strong><span class="badge badge-pill bg-success ml-2 text-white" id="status">completed</span></h4>
+		<div style="width: 50%; margin-left: 36%; margin-top: 15%">
+			<h4 style="font-size: 140%"><strong>Overall Status :</strong>
+				<span class="badge badge-lg badge-pill bg-success ml-2 text-white" id="status" style="width: 20%;font-size: 60%">completed</span>
+			<div class="dropdown pull-right" style="margin-right: 45%">
+                <a class="text-default" href="#" role="button" data-toggle="dropdown">
+                  <i class="material-icons">expand_more</i>
+
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="badge badge-pill bg-success text-white mb-2 dropdown-item" href="#" >COMPLETED</a>
+                    <a class="badge badge-pill bg-danger text-white dropdown-item" href="#">PENDING</a>
+                </div>
+            </div>
+	        </h4>	
 		</div>
 	</div>
 	<br><br>
-
 	<!--Alert Table-->
 	<div class="container pagebody">
-	<input class="form-control float-right" id="myInput" type="text" placeholder="Search.." style="width: 30%; margin-bottom: 10px">
+	<input class="form-control float-right" id="myInput" type="text" placeholder="Search.." style="width: 30%; margin-bottom: 10px;font-size: 120%">
 	<br>
 	<div class="table-responsive">
 		<table id="table" class="table align-items-center table-light table-hover">
@@ -109,24 +119,19 @@
 		</thead>
 		<tbody class="tablebody">
 		    <tr>
-		        <th scope="row">
-		                <div class="media align-items-center">
-		                  
-		                    <div class="media-body">
-		                        <span class="mb-0 text-sm">A</span>
-		                    <div class="dropdown">
-		                    <a class="btn btn-sm btn-icon-only text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		                      <i class="material-icons">expand_more</i>
-		                    </a>
-		                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-		                        <a class="dropdown-item" href="#">Video</a>
-		                        <a class="dropdown-item" href="#">Consult Tutor</a>
-		                        <a class="dropdown-item" href="#">Games</a>
-		                    </div>
-		                	</div>
-		                    </div>
+		        <td  class="col1">
+		        	Consult Tutor
+		            <div class="dropdown pull-right" style="margin-right: 25%">
+		                <a class="text-white" href="#" role="button" data-toggle="dropdown">
+		                  <i class="material-icons">expand_more</i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                    <a class="dropdown-item" href="#">Refer Videos</a>
+		                    <a class="dropdown-item" href="#">Consult Tutor</a>
+		                    <a class="dropdown-item" href="#">Refer Games</a>
 		                </div>
-		            </th>
+		            </div>
+		        </td>
 		        <td>
 		            Rahul
 		        </td>
@@ -134,10 +139,18 @@
 		            Topic
 		        </td>
 		        <td class="justify-content-center">
-		        	<span class="badge badge-pill mr-3 bg-success text-white">
+		        	<span class="badge badge-lg badge-pill mr-3 bg-success text-white">
 		        		Completed
 		        	</span>
-		            
+		            <div class="dropdown pull-right" style="margin-right: 30%">
+		                <a class="text-white" href="#" role="button" data-toggle="dropdown">
+		                  <i class="material-icons">expand_more</i>
+		                </a>
+		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+		                    <a class="dropdown-item badge badge-pill badge-lg bg-success text-white" href="#">COMPLETED</a>
+		                    <a class="dropdown-item badge badge-pill badge-lg bg-danger text-white mt-2" href="#">PENDING</a>
+		                </div>
+		            </div>
 		        </td>
 		        <td>
 		        	Date
@@ -145,39 +158,18 @@
 		    </tr>
 		    </tbody>
 		</table>
-		<nav aria-label="Page navigation example" style="padding-bottom: 10px; padding-top: 10px">
-		  <ul class="pagination justify-content-center">
-		    <li class="page-item disabled">
-		      <a class="page-link" href="#" tabindex="-1">
-		        <i class="fa fa-angle-left"></i>
-		        <span class="sr-only">Previous</span>
-		      </a>
-		    </li>
-		    <li class="page-item"><a class="page-link" href="#">1</a></li>
-		    <li class="page-item"><a class="page-link" href="#">2</a></li>
-		    <li class="page-item"><a class="page-link" href="#">3</a></li>
-		    <li class="page-item"><a class="page-link" href="#">4</a></li>
-		    <li class="page-item"><a class="page-link" href="#">5</a></li>
-		    <li class="page-item">
-		      <a class="page-link" href="#">
-		        <i class="fa fa-angle-right"></i>
-		        <span class="sr-only">Next</span>
-		      </a>
-		    </li>
-		  </ul>
-		</nav>
 	</div>
 </div>
-
-<!--Carousel for comments-->
+<br><br>
 <div class="container">
-	<button class="btn btn-primary btn-sm" style="margin-top: 2%" id="cmt-btn"><i class="fa fa-comments" style="margin-right: 2%"></i>comment</button>
-	<form id="form1">
+	<button class="btn btn-primary btn-md" style="margin-top: 2%;font-size: 100%" id="cmt-btn"><i class="fa fa-comments" style="margin-right: 2%"></i>comment</button>
+	<br>
+	<form id="form1" style="display: none;">
     	<div class="form-group" id="reply1">
-      	<label for="comment">Comment:</label>
+      	<label for="comment" style="font-size: 100%">Comment:</label>
       	<textarea class="form-control" rows="5" id="comment" name="text" id="user_input"></textarea>
     	</div>
-    	<button type="submit" class="btn btn-primary btn-sm" style="float: right;">post</button>
+    	<button type="submit" class="btn btn-primary btn-md" style="float: right;font-size: 100%">post</button>
     </form>
     <p><span id="display"></span></p>
 </div>

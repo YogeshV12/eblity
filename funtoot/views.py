@@ -10,6 +10,7 @@ import pandas as pd
 from django.views.decorators.csrf import csrf_exempt
 
 from funtoot.models import Alerts
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def index(request):
@@ -37,8 +38,10 @@ def alert(request):
         # return HttpResponse("alert details page")
         return render(request, 'alert_details.html', {'data' : Alerts.objects.get(id = int(request.POST.get('alert')))} )
     else:
-        data = {'data': data}
-        return render(request, 'alert_page.html', data)
+        paginator = Paginator(data,10)
+        page = request.GET.get('page')
+        data_var = paginator.get_page(page)
+        return render(request, 'alert_page.html', {'data':data_var})
 
 def alert_details(request):
     return render(request, 'alert_details.html')
