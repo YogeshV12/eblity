@@ -1,0 +1,13 @@
+<h1> Stitch today's data </h1>
+{% for row in data %}
+
+{% endfor %}
+<div>
+    <button id="stitch_start" name="Start" value="Start" disabled = "{{ data.stitch_start }}" >Start </button>  
+    <button id="stitch_stop" name="Stop" value="Stop" disabled = "{{data.stitch_stop}}" >Stop</button>
+</div>
+<h1> Schedule time series analysis </h1>
+<div>
+    <button id="time_series_start" name="Start" value="Start" disabled = "{{data.time_series_start}}" >Start</button>
+    <button id="time_series_stop" name="Stop" value="Stop" disabled = "{{data.time_series_stop}}" >Stop</button> 
+</div>

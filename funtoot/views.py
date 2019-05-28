@@ -9,6 +9,8 @@ from funtoot.models import Buttons
 import pandas as pd
 from django.views.decorators.csrf import csrf_exempt
 
+from funtoot.models import Alerts
+
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -21,19 +23,21 @@ def schedule(request):
         'time_series_start': row.time_series_start,
         'time_series_stop': row.time_series_stop
     }
+    print(data)
     return render(request, 'schedule.html', data)
 
 @csrf_exempt
 def alert(request):
-    df = pd.read_csv('all_alerts.csv').to_dict('r')
+    # df = pd.read_csv('all_alerts.csv').to_dict('r')
+    data = Alerts.objects.all()
     if request.method == 'POST':
         print(request.POST.get('alert'))
         print("post method called")
-        print(df[int(request.POST.get('alert'))])
+        # print(df[int(request.POST.get('alert'))])
         # return HttpResponse("alert details page")
-        return render(request, 'alert_details.html', {'data' : df[int(request.POST.get('alert'))]} )
+        return render(request, 'alert_details.html', {'data' : Alerts.objects.get(id = int(request.POST.get('alert')))} )
     else:
-        data = {'data': df}
+        data = {'data': data}
         return render(request, 'alert_page.html', data)
 
 def alert_details(request):
