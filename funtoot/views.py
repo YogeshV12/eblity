@@ -9,7 +9,7 @@ from funtoot.models import Buttons
 import pandas as pd
 from django.views.decorators.csrf import csrf_exempt
 
-from funtoot.models import Alerts, Comments
+from funtoot.models import Alerts, Comments, Interventions
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -30,24 +30,41 @@ def schedule(request):
 def alert(request):
     # df = pd.read_csv('all_alerts.csv').to_dict('r')
     if request.method == 'POST':
+        if (str(request.POST.get('add_intervention')) == "1"):
+            print("add intervention")
+            print("alert_id: ", int(request.POST.get('alert_id')))
+            print("intv_id: ", int(request.POST.get('interv_id')))
+            print("interv_type: ", int(request.POST.get('interv_type'))) 
+            print(int(request.POST.get('asgn_to')))
+            print(str(request.POST.get('follow_up_by')))
+            print(int(request.POST.get('interv_status')))
+            print(int(request.POST.get('rating')))
+            if ((Interventions.objects.filter(alert_id =int(request.POST.get('alert_id')), interv_id = int(request.POST.get('interv_id')))).exists()):
+                obj = Interventions.objects.get(alert_id =int(request.POST.get('alert_id')), interv_id = int(request.POST.get('interv_id'))) 
+                print("update")
+                obj = Interventions.objects.get(id = obj.id)
+                obj.interv_type = int(request.POST.get('interv_type'))
+                obj.asgn_to=int(request.POST.get('asgn_to')) 
+                obj.follow_up_by=str(request.POST.get('follow_up_by'))
+                obj.interv_status=int(request.POST.get('interv_status'))
+                obj.rating = int(request.POST.get('rating'))
+                obj.save(update_fields=['interv_type', 'asgn_to', 'follow_up_by', 'interv_status', 'rating'])
+            else:
+                Interventions(alert_id=int(request.POST.get('alert_id')), interv_id=int(request.POST.get('interv_id')), interv_type=int(request.POST.get('interv_type')), asgn_to=int(request.POST.get('asgn_to')), follow_up_by=str(request.POST.get('follow_up_by')), interv_status=int(request.POST.get('interv_status')), rating=int(request.POST.get('rating'))).save()
+            
         if (str(request.POST.get('update_alert_id')) == "1"):
-            # print(request.POST.get('id'))
-            # print(request.POST.get('alert_id'))
             obj = Alerts.objects.get(id=int(request.POST.get('id')))
-            print(obj)
             obj.status = int(request.POST.get('alert_id'))
             obj.save()
-            return
         if str(request.POST.get('post')) == "1":
             text = request.POST.get('comment')
-            print(text)
             cmt_id = request.POST.get('id')
-            print(cmt_id)
             Comments(cmt_id = int(cmt_id), text = str(text)).save()
             
         data = []
         data.append(Alerts.objects.get(id=int(request.POST.get('alert'))))
         data.append(Comments.objects.filter(cmt_id=int(request.POST.get('alert'))))
+        data.append(Interventions.objects.filter(alert_id=int(request.POST.get('alert'))))
         print(data)
         return render(request, 'alert_details.html', {'data' : data})
     else:

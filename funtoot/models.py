@@ -33,3 +33,11 @@ class Comments(models.Model):
     text = models.TextField()
     time_stamp = models.DateTimeField(timezone.now, auto_now=True)
 
+class Interventions(models.Model):
+    alert_id = models.IntegerField()
+    interv_id = models.IntegerField()
+    interv_type = models.IntegerField()
+    asgn_to = models.IntegerField()
+    follow_up_by = models.TextField()
+    interv_status = models.IntegerField()
+    rating = models.IntegerField()

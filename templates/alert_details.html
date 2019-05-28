@@ -1,6 +1,6 @@
 {% include "template_header.html" %}
 {% load static %}
-<!--Filter Script-->
+<link href="{% static 'bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#myInput").on("keyup", function() {
@@ -17,7 +17,7 @@
 		});
 	});
 </script>
-	<!--Navigation Bar-->
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-default">
 	    <div class="container">
 	        <a class="navbar-brand" href="#">
@@ -75,8 +75,8 @@
 			</div>
 		</div>
 		<div style="width: 45%; margin-left: 35%">
-			<span class="badge badge-pill" id="topic" style="width: 25%; font-weight: bold; font-size: 120%;background-color: #707b7c">Topic : {{data.Concept}}</span>
-			<span class="badge badge-pill" id="subtopic" style="width: 50%; font-weight: bold; font-size: 120%;margin-left: 20%;background-color: #707b7c">Subtopic : {{data.SubConcept}}</span>
+			<span class="badge badge-pill" id="topic" style="width: 25%; font-weight: bold; font-size: 120%;background-color: #707b7c">Topic : {{data.0.Concept}}</span>
+			<span class="badge badge-pill" id="subtopic" style="width: 50%; font-weight: bold; font-size: 120%;margin-left: 20%;background-color: #707b7c">Subtopic : {{data.0.SubConcept}}</span>
 		</div>
 		<br>
 		<div class="card float-right" style="width: 65%">
@@ -115,48 +115,80 @@
 		        <th scope="col">Follow up by</th>
 		        <th scope="col">Status</th>
 		        <th scope="col">Rating</th>
+		        <th scope="col"></th>
+		        <th scope="col"></th>
 		    </tr>
 		</thead>
 		<tbody class="tablebody">
-		    <tr>
+		{% if data.2 %}
+		{% for data in data.2 %}
+		    <tr >
 		        <td  class="col1">
-		        	Consult Tutor
-		            <div class="dropdown pull-right" style="margin-right: 25%">
-		                <a class="text-white" href="#" role="button" data-toggle="dropdown">
-		                  <i class="material-icons">expand_more</i>
-		                </a>
-		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-		                    <a class="dropdown-item" href="#">Refer Videos</a>
-		                    <a class="dropdown-item" href="#">Consult Tutor</a>
-		                    <a class="dropdown-item" href="#">Refer Games</a>
-		                </div>
-		            </div>
+								<select class="selectpicker" id = "interv_type_{{data.interv_id}}">
+								<option value = "0" {% if data.interv_type == 0 %}
+								selected
+								{% endif %}>Watch Learning Videos</option>
+								<option value = "1" {% if data.interv_type == 1 %}
+								selected
+								{% endif %}>Consult Tutor</option>
+								<option value = "2" {% if data.interv_type == 2 %}
+								selected
+								{% endif %}>Watch LG Video</option>
+								<option value = "3" {% if data.interv_type == 3 %}
+								selected
+								{% endif %}>Play a Game</option>
+								<option value = "4" {% if data.interv_type == 4 %}
+								selected
+								{% endif %}>Home Work</option>
+							</select>
 		        </td>
 		        <td>
-		            Rahul
+							<select class="selectpicker" id = "asgn_to_{{data.interv_id}}">
+								<option value = "0" {% if data.asgn_to == 0 %}
+								selected
+								{% endif %}>Manisha</option>
+								<option value = "1" {% if data.asgn_to == 1 %}
+								selected
+								{% endif %}>Gagan deep</option>
+								<option value = "2" {% if data.asgn_to == 2 %}
+								selected
+								{% endif %}>Shivendra</option>
+							</select>
 		        </td>
 		        <td>
-		            Topic
+            	<input type='text' type = "datetime" id='follow_up_by_0' value = "{{data.follow_up_by}}"/>
 		        </td>
 		        <td class="justify-content-center">
-		        	<span class="badge badge-lg badge-pill mr-3 bg-success text-white">
-		        		Completed
-		        	</span>
-		            <div class="dropdown pull-right" style="margin-right: 30%">
-		                <a class="text-white" href="#" role="button" data-toggle="dropdown">
-		                  <i class="material-icons">expand_more</i>
-		                </a>
-		                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-		                    <a class="dropdown-item badge badge-pill badge-lg bg-success text-white" href="#">COMPLETED</a>
-		                    <a class="dropdown-item badge badge-pill badge-lg bg-danger text-white mt-2" href="#">PENDING</a>
-		                </div>
-		            </div>
+							<select class="selectpicker" id = "interv_status_0">
+								<option value = "0" {% if data.interv_status == 0 %}
+								selected
+								{% endif %}>Pending</option>
+								<option value = "1" {% if data.interv_status == 1 %}
+								selected
+								{% endif %}>Complete</option>
+							</select>
 		        </td>
 		        <td>
-		        	Date
+		        	<input type = "number" min = "1" max = "5" id ="rating_0" value = "{{data.rating}}"> 
+		        </td>
+		        <td>
+					<button type= "submit" id = "{{data.interv_id}}" onclick ="add_intervention(this.id)"> Update </button>
 		        </td>
 		    </tr>
+		{% endfor %}
+		{% else %}
+		   
+		{% endif %}
 		    </tbody>
+				 <tfoot>
+        <tr>
+            <td colspan="5" style="text-align: left;">
+                <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </tfoot>
 		</table>
 	</div>
 </div>
@@ -224,6 +256,92 @@ function post_comment(){
 		},
 	});	
 }
+function add_intervention(add_button_id){
+	console.log("button id" + add_button_id); 
+			$.ajax({
+		type: "POST",
+		url: "http://127.0.0.1:8000/alerts/",
+		dataType: 'json',
+		async: true,
+		data: {
+			"add_intervention" : "1",
+			"interv_id" : add_button_id,
+			"interv_type" : $("#interv_type_" + add_button_id).val(),
+			"asgn_to" : $("#asgn_to_" + add_button_id).val(),
+			"follow_up_by" : $("#follow_up_by_" + add_button_id).val(),
+			"interv_status" : $("#interv_status_" + add_button_id).val(),
+			"rating" : $("#rating_" + add_button_id).val(),
+			"alert_id" : '{{data.0.id}}',
+			csrfmiddlewaretoken : '{{ csrf_token }}'
+		},
+		success: function(data){
+			console.log("post alerts");
+			console.log("success");
+			console.log(data);
+		},
+		failure: function(data){
+			console.log("failure");
+			console.log(data);
+		},
+	});	
+
+}
+$(document).ready(function () {
+    var counter = 0;
+	{% if data.2 %}
+	counter = {{data.2|length}}
+	{% endif %}
+    $("#addrow").on("click", function () {
+        var newRow = $("<tr>");
+        var cols = "";
+
+				cols = `<td  class="col1">
+								<select class="selectpicker" id = "interv_type_` + counter + `">
+								<option value = "0">Watch Learning Videos</option>
+								<option value = "1">Consult Tutor</option>
+								<option value = "2">Watch LG Video</option>
+								<option value = "3">Play a Game</option>
+								<option value = "4">Home Work</option>
+							</select>
+		        </td>
+		        <td>
+							<select class="selectpicker" id = "asgn_to_` + counter +`">
+								<option value = "0">Manisha</option>
+								<option value = "1">Gagan deep</option>
+								<option value = "2">Shivendra</option>
+							</select>
+		        </td>
+		        <td>
+            	<input type='text' type = "datetime" id="follow_up_by_` + counter + `"/>
+		        </td>
+		        <td class="justify-content-center">
+							<select class="selectpicker" id = "interv_status_` + counter + `">
+								<option value = "0">Pending</option>
+								<option value = "1">Complete</option>
+							</select>
+		        </td>
+		        <td>
+		        	<input type = "number" min = "1" max = "5" id = "rating_` + counter +`"> 
+		        </td>
+		        <td>
+						<button type= "submit" id = "` + counter + `" onclick ="add_intervention(this.id)"> Add </button>		    
+						    </td>`
+						cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td></tr>';
+        newRow.append(cols);
+        $("#table").append(newRow);
+        counter++;
+    });
+
+    $("#table").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+
+});
+
+
+
 </script>
 
 {% include "template_footer.html" %}
