@@ -9,7 +9,7 @@ from funtoot.models import Buttons
 import pandas as pd
 from django.views.decorators.csrf import csrf_exempt
 
-from funtoot.models import Alerts
+from funtoot.models import Alerts, Comments
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -29,7 +29,6 @@ def schedule(request):
 @csrf_exempt
 def alert(request):
     # df = pd.read_csv('all_alerts.csv').to_dict('r')
-    data = Alerts.objects.all()
     if request.method == 'POST':
         if (str(request.POST.get('update_alert_id')) == "1"):
             # print(request.POST.get('id'))
@@ -38,13 +37,21 @@ def alert(request):
             print(obj)
             obj.status = int(request.POST.get('alert_id'))
             obj.save()
-            return 
-        # print(request.POST.get('alert'))
-        print("post method called")
-        # print(df[int(request.POST.get('alert'))])
-        # return HttpResponse("alert details page")
-        return render(request, 'alert_details.html', {'data' : Alerts.objects.get(id = int(request.POST.get('alert')))} )
+            return
+        if str(request.POST.get('post')) == "1":
+            text = request.POST.get('comment')
+            print(text)
+            cmt_id = request.POST.get('id')
+            print(cmt_id)
+            Comments(cmt_id = int(cmt_id), text = str(text)).save()
+            
+        data = []
+        data.append(Alerts.objects.get(id=int(request.POST.get('alert'))))
+        data.append(Comments.objects.filter(cmt_id=int(request.POST.get('alert'))))
+        print(data)
+        return render(request, 'alert_details.html', {'data' : data})
     else:
+        data = Alerts.objects.all()
         paginator = Paginator(data,10)
         page = request.GET.get('page')
         data_var = paginator.get_page(page)

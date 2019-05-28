@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -25,4 +26,10 @@ class Alerts(models.Model):
     PerLearningGapResolved = models.TextField()
     comment = models.TextField()
     status = models.IntegerField(default=0)
+
+
+class Comments(models.Model):
+    cmt_id = models.IntegerField(unique = False)
+    text = models.TextField()
+    time_stamp = models.DateTimeField(timezone.now, auto_now=True)
 

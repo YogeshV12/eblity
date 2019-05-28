@@ -69,8 +69,8 @@
 		<div class="card bg-secondary float-left" style="width: 30%;text-align: center;">
 			<img src="{% static 'assets/img/img-avatar1.png' %}" style="border-radius: 50%; width: 40%; margin-left: 30%; margin-top: 15px">
 			<div class="card-body float-right">
-				<div class="card-title" style="font-size: 120%"><strong>Name: {{data.StudentName}}</strong></div>
-				<div class="card-text" style="font-size: 120%"><strong>Grade: {{data.Grade}}</strong></div>
+				<div class="card-title" style="font-size: 120%"><strong>Name: {{data.0.StudentName}}</strong></div>
+				<div class="card-text" style="font-size: 120%"><strong>Grade: {{data.0.Grade}}</strong></div>
 				<a href="#" class="btn btn-primary stretched-link mt-3" style="font-size: 120%">See Profile</a>
 			</div>
 		</div>
@@ -82,7 +82,7 @@
 		<div class="card float-right" style="width: 65%">
 			<div class="card-body">
 				<div class="card-title text-center" style="font-size: 140%"><strong>Alert Description</strong></div>
-				<div class="card-text" style="font-size: 120%;font-weight: bold;">{{data.comment}}</div>
+				<div class="card-text" style="font-size: 120%;font-weight: bold;">{{data.0.comment}}</div>
 			</div>
 		</div>
 		<br>
@@ -90,10 +90,10 @@
 			<h4 style="font-size: 140%"><strong>Overall Status :</strong>
 			<div class="dropdown pull-right" style="margin-right: 45%">
 							<select class="selectpicker" id = "alert_status">
-								<option {% if data.status == 0 %}
+								<option {% if data.0.status == 0 %}
 								selected
 								{% endif %} value = "0">Pending</option>
-								<option {% if data.status == 1 %}
+								<option {% if data.0.status == 1 %}
 								selected
 								{% endif %} value = "1">Completed</option>
 							</select>
@@ -164,14 +164,16 @@
 <div class="container">
 	<button class="btn btn-primary btn-md" style="margin-top: 2%;font-size: 100%" id="cmt-btn"><i class="fa fa-comments" style="margin-right: 2%"></i>comment</button>
 	<br>
-	<form id="form1" style="display: none;">
+	<form id="form1">
+	{% for comm in data.1 %}
+    <p><span id="display">Time:{{comm.time_stamp}} :: {{comm.text}}</span></p>
+	{% endfor %}
     	<div class="form-group" id="reply1">
       	<label for="comment" style="font-size: 100%">Comment:</label>
       	<textarea class="form-control" rows="5" id="comment" name="text" id="user_input"></textarea>
     	</div>
-    	<button type="submit" class="btn btn-primary btn-md" style="float: right;font-size: 100%">post</button>
+    	<button type="submit" class="btn btn-primary btn-md" style="float: right;font-size: 100%" onclick = "post_comment()">post</button>
     </form>
-    <p><span id="display"></span></p>
 </div>
 <br><br>
 
@@ -185,7 +187,7 @@ $('#alert_status').on('change', function() {
 		data: {
 			"alert_id": this.value,
 			"update_alert_id" : "1",
-			"id" : '{{data.id}}',
+			"id" : '{{data.0.id}}',
 			csrfmiddlewaretoken : '{{ csrf_token }}'
 		},
 		success: function(data){
@@ -199,6 +201,29 @@ $('#alert_status').on('change', function() {
 		},
 	});
 });
+function post_comment(){
+		$.ajax({
+		type: "POST",
+		url: "http://127.0.0.1:8000/alerts/",
+		dataType: 'json',
+		async: true,
+		data: {
+			"post" : "1",
+			"comment" : $("#comment").val(),
+			"id" : '{{data.0.id}}',
+			csrfmiddlewaretoken : '{{ csrf_token }}'
+		},
+		success: function(data){
+			console.log("post alerts");
+			console.log("success");
+			console.log(data);
+		},
+		failure: function(data){
+			console.log("failure");
+			console.log(data);
+		},
+	});	
+}
 </script>
 
 {% include "template_footer.html" %}
