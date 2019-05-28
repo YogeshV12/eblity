@@ -24,7 +24,6 @@ def schedule(request):
         'time_series_start': row.time_series_start,
         'time_series_stop': row.time_series_stop
     }
-    print(data)
     return render(request, 'schedule.html', data)
 
 @csrf_exempt

@@ -170,8 +170,11 @@
 
 		        </td>
 		        <td class="justify-content-center" class="col6">
-		        	<span class="badge badge-pill mr-3 bg-success text-white">
-		        		Completed
+					{% if row.status == 0 %}
+		        	<span class="badge badge-pill mr-3 bg-danger text-white">Pending</span>
+					{% else %}
+		        	<span class="badge badge-pill mr-3 bg-success text-white">Completed</span>
+					{% endif %}
 		        	</span>
 		            <!-- <div class="dropdown">
 		                <a class="text-white" href="#" role="button" data-toggle="dropdown">
