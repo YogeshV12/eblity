@@ -88,15 +88,15 @@
 		<br>
 		<div style="width: 50%; margin-left: 36%; margin-top: 15%">
 			<h4 style="font-size: 140%"><strong>Overall Status :</strong>
-				<span class="badge badge-lg badge-pill bg-success ml-2 text-white" id="status" style="width: 20%;font-size: 60%">completed</span>
 			<div class="dropdown pull-right" style="margin-right: 45%">
-                <a class="text-default" href="#" role="button" data-toggle="dropdown">
-                  <i class="material-icons">expand_more</i>
-
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                    <a class="badge badge-pill bg-success text-white mb-2 dropdown-item" href="#" >COMPLETED</a>
-                    <a class="badge badge-pill bg-danger text-white dropdown-item" href="#">PENDING</a>
-                </div>
+							<select class="selectpicker" id = "alert_status">
+								<option {% if data.status == 0 %}
+								selected
+								{% endif %} value = "0">Pending</option>
+								<option {% if data.status == 1 %}
+								selected
+								{% endif %} value = "1">Completed</option>
+							</select>
             </div>
 	        </h4>	
 		</div>
@@ -174,5 +174,31 @@
     <p><span id="display"></span></p>
 </div>
 <br><br>
+
+<script>
+$('#alert_status').on('change', function() {
+					$.ajax({
+		type: "POST",
+		url: "http://127.0.0.1:8000/alerts/",
+		dataType: 'json',
+		async: true,
+		data: {
+			"alert_id": this.value,
+			"update_alert_id" : "1",
+			"id" : '{{data.id}}',
+			csrfmiddlewaretoken : '{{ csrf_token }}'
+		},
+		success: function(data){
+			console.log("post alerts");
+			console.log("success");
+			console.log(data);
+		},
+		failure: function(data){
+			console.log("failure");
+			console.log(data);
+		},
+	});
+});
+</script>
 
 {% include "template_footer.html" %}

@@ -32,7 +32,15 @@ def alert(request):
     # df = pd.read_csv('all_alerts.csv').to_dict('r')
     data = Alerts.objects.all()
     if request.method == 'POST':
-        print(request.POST.get('alert'))
+        if (str(request.POST.get('update_alert_id')) == "1"):
+            # print(request.POST.get('id'))
+            # print(request.POST.get('alert_id'))
+            obj = Alerts.objects.get(id=int(request.POST.get('id')))
+            print(obj)
+            obj.status = int(request.POST.get('alert_id'))
+            obj.save()
+            return 
+        # print(request.POST.get('alert'))
         print("post method called")
         # print(df[int(request.POST.get('alert'))])
         # return HttpResponse("alert details page")
