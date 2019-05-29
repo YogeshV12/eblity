@@ -2,16 +2,8 @@ from django.db import models
 from django.utils import timezone
 
 # Create your models here.
-
-class Buttons(models.Model):
-    stitched_start = models.BooleanField(default=True)
-    stitched_stop = models.BooleanField(default=True)
-    time_series_start = models.BooleanField(default=True)
-    time_series_stop = models.BooleanField(default=True)
-
-
-
 class Alerts(models.Model):
+    UserName = models.TextField()
     StudentName = models.TextField()
     Grade = models.IntegerField()
     Date = models.TextField()

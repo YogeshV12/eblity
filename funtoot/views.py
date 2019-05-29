@@ -5,7 +5,6 @@ import os
 import signal
 import subprocess
 
-from funtoot.models import Buttons
 import pandas as pd
 from django.views.decorators.csrf import csrf_exempt
 
@@ -16,15 +15,15 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
-def schedule(request):
-    row = Buttons.objects.get(id=1)
-    data = {
-        'stitched_start': row.stitched_start,
-        'stitched_stop': row.stitched_stop,
-        'time_series_start': row.time_series_start,
-        'time_series_stop': row.time_series_stop
-    }
-    return render(request, 'schedule.html', data)
+# def schedule(request):
+#     row = Buttons.objects.get(id=1)
+#     data = {
+#         'stitched_start': row.stitched_start,
+#         'stitched_stop': row.stitched_stop,
+#         'time_series_start': row.time_series_start,
+#         'time_series_stop': row.time_series_stop
+#     }
+#     return render(request, 'schedule.html', data)
 
 @csrf_exempt
 def alert(request):
@@ -68,6 +67,11 @@ def alert(request):
         print(data)
         return render(request, 'alert_details.html', {'data' : data})
     else:
+        df = pd.read_csv('all_alerts.csv')
+        for UserName, StudentName, Grade, Date, Concept, ConceptProgress, SubConcept, SubConceptProgress, PerSolved, AverageTimePerQuestion, LGD, LGR, PerLearningGapResolved, comment in zip(df['UserName'], df['StudentName'], df['Grade'], df['TimeSeries'], df['Concept'], df['ConceptProgress'], df['SubConcept'], df['SubConceptProgress'], df['PerSolved'], df['AverageTimePerQuestion'], df['LGD'], df['LGR'], df['PerLearningGapResolved'], df['comment']):
+            if not (Alerts.objects.filter(UserName=str(UserName), SubConcept=str(SubConcept), comment=str(comment)).exists()):
+                print("data doesnot exists")
+                Alerts(UserName = str(UserName), StudentName = str(StudentName), Grade = int(Grade), Date = str(Date), Concept = str(Concept), ConceptProgress = int(ConceptProgress), SubConcept = str(SubConcept), SubConceptProgress = int(SubConceptProgress), PerSolved = int(PerSolved), AverageTimePerQuestion = int(AverageTimePerQuestion), LGD = int(LGD), LGR = int(LGR), PerLearningGapResolved = str(PerLearningGapResolved), comment = str(comment)).save()
         data = Alerts.objects.all()
         paginator = Paginator(data,10)
         page = request.GET.get('page')
@@ -88,15 +92,6 @@ def stitched_start(request):
     # return HttpResponse("Hello, world. You're at the polls index.")
     # print("killing the process")
     # os.killpg(os.getpgid(pro.pid), signal.SIGTERM)  # Send the signal to all the process groups
-import json
-def create_dict(data_rec):
-    diction = {}
-    for val in data_rec:
-        if(val['name'] =='' or val['value'] ==''):
-            continue
-        diction[val['name']] = val['value']
-    
-    return diction
 
 def show_alerts_views(request):
     if request.method == 'POST':
