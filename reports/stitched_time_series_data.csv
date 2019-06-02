@@ -1,68 +1,125 @@
 Time Stamp,Grade,UserName,StudentName,Subject,Subj Progress (%),Concept,Concept Progress (%),Sub Concept,SubConcept Progress (%),Total Session Time(Minutes),Total Problem Solving Time(Minutes),Questions Attempted(Learning),Questions Solved(Learning),Questions Not Solved(Learning),% Solved(Learning),Average Time/Question (Minutes) (Learning),Revision Questions attempted,Test Questions attempted,CCLP Questions attempted,Learning Gaps Detected,Learning Gaps Resolved,Top 3 Learning Gaps,Subtopic Lock,Teacher Lock,Games Played,Site Name
-'29-May-2019 15:05:42,5,ebl113,Harshit ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:05:42,5,ebl113,Harshit ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:05:42,5,ebl128,Ansh Tandon,Mathematics,4,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:05:42,5,ebl128,Ansh Tandon,Mathematics,4,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl127,Nupur Chauhuan ,Mathematics,14,Factors and Multiples,17,Introduction to factors and multiples,100,160,136,23.0,23.0,0.0,100,6,0,0,0,11.0,11.0,"1.Difference between factors and multiples 
-2.Reduction of fraction not to lowest form 
-3.Relation between LCM and HCF 
+'01-Jun-2019 15:38:24,5,ebl113,Harshit ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:24,5,ebl113,Harshit ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:24,5,ebl128,Ansh Tandon,Mathematics,4,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:24,5,ebl128,Ansh Tandon,Mathematics,4,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Prime and Composite numbers,100,186,20,2.0,2.0,0.0,100,10,11,0,0,0.0,0.0,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Prime and Composite numbers,100,0,0,2.0,2.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Test of Divisibility,83,186,62,38.0,37.0,1.0,97,2,11,0,0,15.0,13.0,"1.Careless Mistake 
+2.Divisibility of a number by 11 
+3.Divisibility of a number by 7 
 ",0,0,0,Home
-'29-May-2019 15:06:20,6,ebl127,Nupur Chauhuan ,Mathematics,14,Factors and Multiples,17,Introduction to factors and multiples,100,0,0,23.0,23.0,0.0,100,0,0,0,0,11.0,11.0,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl123,Agam Singh ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl123,Agam Singh ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl104,Tanisha ,Mathematics,87,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl104,Tanisha ,Mathematics,87,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:55,7,ebl105,Harshal ,Mathematics,68,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:55,7,ebl105,Harshal ,Mathematics,68,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:55,7,ebl103,Advait ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:55,7,ebl103,Advait ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:55,7,ebl118,Akruti ,Mathematics,16,Data Handling,35,Mean,9,164,104,6.0,5.0,1.0,83,21,0,0,0,10.0,7.0,"1.Identification of parts of decimals 
-2.Incorrect Units 
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Test of Divisibility,83,0,0,38.0,37.0,1.0,97,0,0,0,0,15.0,13.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Number Names,100,119,83,5.0,5.0,0.0,100,17,0,0,0,6.0,6.0,"1.Number names in International System 
 ",0,0,0,Home
-'29-May-2019 15:06:55,7,ebl118,Akruti ,Mathematics,16,Data Handling,35,Mean,9,0,0,6.0,5.0,1.0,83,0,0,0,0,10.0,7.0,,0,0,0,School
-'29-May-2019 15:06:55,7,ebl121,Devshi Girdhar ,Mathematics,13,Exponents,53,Laws of Exponents,58,201,138,52.0,47.0,5.0,90,3,0,0,0,42.0,29.0,"1.Careless Mistake 
-2.Identification of coefficients 
-3.Product of exponents with same power 
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Number Names,100,0,0,5.0,5.0,0.0,100,0,0,0,0,6.0,6.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Place Value of Numbers,0,119,23,9.0,8.0,1.0,89,3,0,0,0,5.0,2.0,"1.Generic multiplication 
+2.Subtraction of numbers 
 ",0,0,0,Home
-'29-May-2019 15:06:55,7,ebl121,Devshi Girdhar ,Mathematics,13,Exponents,53,Laws of Exponents,58,0,0,52.0,47.0,5.0,90,0,0,0,0,42.0,29.0,,0,0,0,School
-'29-May-2019 15:06:55,7,ebl121,Devshi Girdhar ,Mathematics,13,Real Numbers,0,Concept of Rational Numbers,0,201,0,1.0,1.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,Home
-'29-May-2019 15:06:55,7,ebl121,Devshi Girdhar ,Mathematics,13,Real Numbers,0,Concept of Rational Numbers,0,0,0,1.0,1.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,School
-'29-May-2019 15:06:55,7,ebl124,Sadiya ,Mathematics,9,Fractions,77,Multiple operations on  fractions,64,0,0,5.0,2.0,3.0,40,0,0,0,0,10.0,1.0,"1.Simplification Error 
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Place Value of Numbers,0,0,0,9.0,8.0,1.0,89,0,0,0,0,5.0,2.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Expansions and Factorization,100,Factorization of algebraic expressions,100,274,14,8.0,7.0,1.0,88,2,0,0,0,4.0,1.0,"1.Algebraic Simplification 
 ",0,0,0,Home
-'29-May-2019 15:06:55,7,ebl124,Sadiya ,Mathematics,9,Fractions,77,Multiple operations on  fractions,64,0,0,5.0,2.0,3.0,40,0,0,0,0,10.0,1.0,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl119,Arpan ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:07:34,8,ebl119,Arpan ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl120,Divyanshi ,Mathematics,36,Polygons,74,Classification of polygons,100,143,67,6.0,6.0,0.0,100,11,0,0,0,1.0,1.0,"1.Number of diagonals 
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Expansions and Factorization,100,Factorization of algebraic expressions,100,0,0,8.0,7.0,1.0,88,0,0,0,0,4.0,1.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,HCF of numbers,100,274,20,18.0,18.0,0.0,100,1,0,0,0,8.0,8.0,"1.Finding HCF using Prime Factorisation 
+2.HCF by writing factors 
+3.Simplification Error 
 ",0,0,0,Home
-'29-May-2019 15:07:34,8,ebl120,Divyanshi ,Mathematics,36,Polygons,74,Classification of polygons,100,0,0,6.0,6.0,0.0,100,0,0,0,0,1.0,1.0,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl120,Divyanshi ,Mathematics,36,Polygons,74,Properties of polygons,23,143,58,8.0,8.0,0.0,100,7,0,0,0,2.0,2.0,"1.Sum of interior angles 
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,HCF of numbers,100,0,0,18.0,18.0,0.0,100,0,0,0,0,8.0,8.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Introduction to factors and multiples,100,274,99,15.0,15.0,0.0,100,7,0,0,0,4.0,4.0,"1.Application of the concept of multiples 
 ",0,0,0,Home
-'29-May-2019 15:07:34,8,ebl120,Divyanshi ,Mathematics,36,Polygons,74,Properties of polygons,23,0,0,8.0,8.0,0.0,100,0,0,0,0,2.0,2.0,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl115,Soumya ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:07:34,8,ebl115,Soumya ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl102,Akshaya tripathi ,Mathematics,47,Exponents,100,Exponential Expressions and Equations,100,182,135,22.0,21.0,1.0,95,6,0,0,0,7.0,5.0,"1.Division of exponents with same power 
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Introduction to factors and multiples,100,0,0,15.0,15.0,0.0,100,0,0,0,0,4.0,4.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM and HCF of numbers,0,274,20,4.0,4.0,0.0,100,5,0,0,0,2.0,2.0,"1.Least Common Multiple 
+2.Relation between LCM and HCF 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM and HCF of numbers,0,0,0,4.0,4.0,0.0,100,0,0,0,0,2.0,2.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM of numbers,100,274,10,5.0,5.0,0.0,100,2,0,0,0,0.0,0.0,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM of numbers,100,0,0,5.0,5.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Prime and Composite numbers,100,274,50,7.0,6.0,1.0,86,8,0,0,0,7.0,4.0,"1.Concept of Co-primes 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Prime and Composite numbers,100,0,0,7.0,6.0,1.0,86,0,0,0,0,7.0,4.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl105,Harshal ,Mathematics,68,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl105,Harshal ,Mathematics,68,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl103,Advait ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl103,Advait ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl118,Akruti ,Mathematics,17,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl118,Akruti ,Mathematics,17,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Angles,0,Introduction to Angles,0,149,0,1.0,0.0,1.0,0,0,0,0,0,1.0,0.0,"1.Angle measures in terms of Turns 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Angles,0,Introduction to Angles,0,0,0,1.0,0.0,1.0,0,0,0,0,0,1.0,0.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Area and Perimeter,2,Area and Perimeter of Rectangles and Squares,8,149,0,1.0,1.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Area and Perimeter,2,Area and Perimeter of Rectangles and Squares,8,0,0,1.0,1.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Parallel Lines,0,Concepts and properties of parallel lines,0,149,1,1.0,0.0,1.0,0,0,0,0,0,1.0,0.0,"1.Concept of vertically opposite angles 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Parallel Lines,0,Concepts and properties of parallel lines,0,0,0,1.0,0.0,1.0,0,0,0,0,0,1.0,0.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Properties of addition,100,149,13,11.0,11.0,0.0,100,1,0,0,0,2.0,2.0,"1.Careless Mistake 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Properties of addition,100,0,0,11.0,11.0,0.0,100,0,0,0,0,2.0,2.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Properties of multiplication,100,149,28,8.0,7.0,1.0,88,4,0,0,0,3.0,1.0,"1.Distributive property of Multiplication over addition 
+2.Incorrect Input 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Properties of multiplication,100,0,0,8.0,7.0,1.0,88,0,0,0,0,3.0,1.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Properties of Rational Numbers,0,149,18,1.0,0.0,1.0,0,0,0,0,0,2.0,0.0,"1.Concept of terminating decimals 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Properties of Rational Numbers,0,0,0,1.0,0.0,1.0,0,0,0,0,0,2.0,0.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Rational Numbers on the Number Line,100,149,28,7.0,6.0,1.0,86,5,0,0,0,6.0,2.0,"1.Representation on number line 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Real Numbers,56,Rational Numbers on the Number Line,100,0,0,7.0,6.0,1.0,86,0,0,0,0,6.0,2.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Symmetry,0,Line and Reflection Symmetry,0,149,0,1.0,0.0,1.0,0,0,0,0,0,1.0,0.0,"1.Line Symmetry 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Symmetry,0,Line and Reflection Symmetry,0,0,0,1.0,0.0,1.0,0,0,0,0,0,1.0,0.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Triangles,19,Congruence of triangles,13,149,0,1.0,0.0,1.0,0,0,0,0,0,2.0,0.0,"1.Concept of congruence 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl121,Devshi Girdhar ,Mathematics,22,Triangles,19,Congruence of triangles,13,0,0,1.0,0.0,1.0,0,0,0,0,0,2.0,0.0,,0,0,0,School
+'01-Jun-2019 15:39:34,7,ebl124,Sadiya ,Mathematics,9,Fractions,83,Multiple operations on  fractions,100,126,117,6.0,5.0,1.0,83,23,0,0,0,9.0,4.0,"1.Simplification Error 
+",0,0,0,Home
+'01-Jun-2019 15:39:34,7,ebl124,Sadiya ,Mathematics,9,Fractions,83,Multiple operations on  fractions,100,0,0,6.0,5.0,1.0,83,0,0,0,0,9.0,4.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl119,Arpan ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl119,Arpan ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Addition of Expressions and Polynomials,100,158,62,17.0,17.0,0.0,100,4,0,0,0,7.0,7.0,"1.Adding the given polynomials 
+",0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Addition of Expressions and Polynomials,100,0,0,17.0,17.0,0.0,100,0,0,0,0,7.0,7.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Algebraic Expressions,100,158,9,3.0,3.0,0.0,100,3,0,0,0,0.0,0.0,,0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Algebraic Expressions,100,0,0,3.0,3.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Multiplication of Expressions and Polynomials,10,158,30,7.0,6.0,1.0,86,5,0,0,0,7.0,4.0,"1.Algebraic Simplification 
+2.Product of polynomials 
+",0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Multiplication of Expressions and Polynomials,10,0,0,7.0,6.0,1.0,86,0,0,0,0,7.0,4.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Subtraction of Expressions and Polynomials,100,158,35,14.0,14.0,0.0,100,2,0,0,0,3.0,3.0,"1.Subtracting the given polynomials 
+",0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl120,Divyanshi ,Mathematics,44,Concepts of Algebra,62,Subtraction of Expressions and Polynomials,100,0,0,14.0,14.0,0.0,100,0,0,0,0,3.0,3.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl115,Soumya ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl115,Soumya ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl102,Akshaya tripathi ,Mathematics,53,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl102,Akshaya tripathi ,Mathematics,53,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl101,Anushka ,Mathematics,18,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl101,Anushka ,Mathematics,18,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Parallelogram,100,198,39,9.0,8.0,1.0,89,5,0,0,0,5.0,4.0,"1.Concept of Parallelogram 
+",0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Parallelogram,100,0,0,9.0,8.0,1.0,89,0,0,0,0,5.0,4.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Quadrilaterals,100,198,27,3.0,3.0,0.0,100,9,0,0,0,2.0,2.0,"1.Angle sum property of quadrilaterals 
+",0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Quadrilaterals,100,0,0,3.0,3.0,0.0,100,0,0,0,0,2.0,2.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Rectangles,100,198,38,13.0,13.0,0.0,100,3,0,0,0,6.0,6.0,"1.Concept of rectangles 
+2.Properties of diagonals of rectangles 
+",0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Rectangles,100,0,0,13.0,13.0,0.0,100,0,0,0,0,6.0,6.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Rhombus,58,198,40,7.0,7.0,0.0,100,6,0,0,0,2.0,2.0,"1.Concept of Rhombus 
+",0,0,0,Home
+'01-Jun-2019 15:40:06,8,ebl126,DN Paavni ,Mathematics,12,Quadrilaterals,60,Introduction to Rhombus,58,0,0,7.0,7.0,0.0,100,0,0,0,0,2.0,2.0,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl122,Jaimeet singh somal ,Mathematics,21,Exponents,66,Exponential Expressions and Equations,31,164,131,14.0,11.0,3.0,79,12,0,0,0,11.0,5.0,"1.Algebraic Simplification 
 2.Following the order of operations 
 3.Solving exponential equations 
 ",0,0,0,Home
-'29-May-2019 15:07:34,8,ebl102,Akshaya tripathi ,Mathematics,47,Exponents,100,Exponential Expressions and Equations,100,0,0,22.0,21.0,1.0,95,0,0,0,0,7.0,5.0,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl102,Akshaya tripathi ,Mathematics,47,Exponents,100,Introduction to Exponents,100,182,18,9.0,9.0,0.0,100,2,0,0,0,1.0,1.0,"1.Result of negative integers with exponents 
-",0,0,0,Home
-'29-May-2019 15:07:34,8,ebl102,Akshaya tripathi ,Mathematics,47,Exponents,100,Introduction to Exponents,100,0,0,9.0,9.0,0.0,100,0,0,0,0,1.0,1.0,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl101,Anushka ,Mathematics,18,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:07:34,8,ebl101,Anushka ,Mathematics,18,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl126,DN Paavni ,Mathematics,10,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:07:34,8,ebl126,DN Paavni ,Mathematics,10,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:07:34,8,ebl122,Jaimeet singh somal ,Mathematics,20,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:07:34,8,ebl122,Jaimeet singh somal ,Mathematics,20,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:40:06,8,ebl122,Jaimeet singh somal ,Mathematics,21,Exponents,66,Exponential Expressions and Equations,31,0,0,14.0,11.0,3.0,79,0,0,0,0,11.0,5.0,,0,0,0,School

@@ -82,7 +82,7 @@
 		<div class="card float-right" style="width: 65%">
 			<div class="card-body">
 				<div class="card-title text-center" style="font-size: 140%"><strong>Alert Description</strong></div>
-				<div class="card-text" style="font-size: 120%;font-weight: bold;">{{data.0.comment}}</div>
+				<div class="card-text" style="font-size: 120%;font-weight: bold;">{{data.0.comment}} <br> %LearningGapResolved: {{data.0.PerLearningGapResolved}} <br> AverageTimePerQuestion: {{data.0.AverageTimePerQuestion}}</div>
 			</div>
 		</div>
 		<br>
@@ -107,7 +107,7 @@
 	<input class="form-control float-right" id="myInput" type="text" placeholder="Search.." style="width: 30%; margin-bottom: 10px;font-size: 120%">
 	<br>
 	<div class="table-responsive">
-		<table id="table" class="table align-items-center table-light table-hover">
+		<table id="table" class="table align-items-center table-light">
 		<thead class="tablehead">
 		    <tr class="filters">
 		        <th scope="col">Intervention</th>
@@ -198,7 +198,7 @@
 	<br>
 	<form id="form1">
 	{% for comm in data.1 %}
-    <p><span id="display">Time:{{comm.time_stamp}} :: {{comm.text}}</span></p>
+    <h3><span id="display">Time:{{comm.time_stamp}} :: {{comm.text}}</span></h3>
 	{% endfor %}
     	<div class="form-group" id="reply1">
       	<label for="comment" style="font-size: 100%">Comment:</label>

@@ -93,7 +93,7 @@ for UserName, StudentName, Grade, TimeSeries, Concept, ConceptProgress, SubConce
             alert.append(LGD)
             alert.append(LGR)
             alert.append(str((int(LGR) / int(LGD))*100) + "%")
-            alert.append("Percentage Learning gap is below 75%")
+            alert.append("Percentage Learning gap resolved below 75%")
             list_of_alerts.append(alert)
 
     # if average time per question  is greater than 10 minutes % ^-^ alert
@@ -116,5 +116,4 @@ for UserName, StudentName, Grade, TimeSeries, Concept, ConceptProgress, SubConce
                     list_of_alerts.append(alert)
 
 alert_df = pd.DataFrame(data = np.array(list_of_alerts), columns = ["UserName", "StudentName", "Grade", "TimeSeries", "Concept", "ConceptProgress", "SubConcept", "SubConceptProgress", "PerSolved", "AverageTimePerQuestion", "LGD", "LGR", "PerLearningGapResolved", "comment"])
-
 alert_df.to_csv("all_alerts.csv", index = False)

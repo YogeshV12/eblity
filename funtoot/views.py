@@ -13,7 +13,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("Hello, world. You're at the polls index. webpack")
 
 # def schedule(request):
 #     row = Buttons.objects.get(id=1)
@@ -64,7 +64,6 @@ def alert(request):
         data.append(Alerts.objects.get(id=int(request.POST.get('alert'))))
         data.append(Comments.objects.filter(cmt_id=int(request.POST.get('alert'))))
         data.append(Interventions.objects.filter(alert_id=int(request.POST.get('alert'))))
-        print(data)
         return render(request, 'alert_details.html', {'data' : data})
     else:
         df = pd.read_csv('all_alerts.csv')
@@ -72,7 +71,7 @@ def alert(request):
             if not (Alerts.objects.filter(UserName=str(UserName), SubConcept=str(SubConcept), comment=str(comment)).exists()):
                 print("data doesnot exists")
                 Alerts(UserName = str(UserName), StudentName = str(StudentName), Grade = int(Grade), Date = str(Date), Concept = str(Concept), ConceptProgress = int(ConceptProgress), SubConcept = str(SubConcept), SubConceptProgress = int(SubConceptProgress), PerSolved = int(PerSolved), AverageTimePerQuestion = int(AverageTimePerQuestion), LGD = int(LGD), LGR = int(LGR), PerLearningGapResolved = str(PerLearningGapResolved), comment = str(comment)).save()
-        data = Alerts.objects.all()
+        data = Alerts.objects.all().order_by('Date').reverse()
         paginator = Paginator(data,10)
         page = request.GET.get('page')
         data_var = paginator.get_page(page)

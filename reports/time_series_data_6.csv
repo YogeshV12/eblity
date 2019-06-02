@@ -1,22 +1,47 @@
 Time Stamp,Grade,UserName,StudentName,Subject,Subj Progress (%),Concept,Concept Progress (%),Sub Concept,SubConcept Progress (%),Total Session Time(Minutes),Total Problem Solving Time(Minutes),Questions Attempted(Learning),Questions Solved(Learning),Questions Not Solved(Learning),% Solved(Learning),Average Time/Question (Minutes) (Learning),Revision Questions attempted,Test Questions attempted,CCLP Questions attempted,Learning Gaps Detected,Learning Gaps Resolved,Top 3 Learning Gaps,Subtopic Lock,Teacher Lock,Games Played,Site Name
-'29-May-2019 15:06:20,6,ebl127,Nupur Chauhuan ,Mathematics,14,Factors and Multiples,17,Introduction to factors and multiples,100,160,136,23.0,23.0,0.0,100,6,0,0,0,11.0,11.0,"1.Difference between factors and multiples 
-2.Reduction of fraction not to lowest form 
-3.Relation between LCM and HCF 
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Prime and Composite numbers,100,186,20,2.0,2.0,0.0,100,10,11,0,0,0.0,0.0,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Prime and Composite numbers,100,0,0,2.0,2.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Test of Divisibility,83,186,62,38.0,37.0,1.0,97,2,11,0,0,15.0,13.0,"1.Careless Mistake 
+2.Divisibility of a number by 11 
+3.Divisibility of a number by 7 
 ",0,0,0,Home
-'29-May-2019 15:06:20,6,ebl127,Nupur Chauhuan ,Mathematics,14,Factors and Multiples,17,Introduction to factors and multiples,100,0,0,23.0,23.0,0.0,100,0,0,0,0,11.0,11.0,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl123,Agam Singh ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl123,Agam Singh ,Mathematics,1,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl104,Tanisha ,Mathematics,87,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl104,Tanisha ,Mathematics,87,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
-'29-May-2019 15:06:20,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
-'29-May-2019 15:06:20,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl127,Nupur Chauhuan ,Mathematics,16,Factors and Multiples,47,Test of Divisibility,83,0,0,38.0,37.0,1.0,97,0,0,0,0,15.0,13.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl114,Riddhi Anand ,Mathematics,2,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl125,Tejas ,Mathematics,0,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl117,Ayan ,Mathematics,5,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl106,Divyansh ,Mathematics,6,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Number Names,100,119,83,5.0,5.0,0.0,100,17,0,0,0,6.0,6.0,"1.Number names in International System 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Number Names,100,0,0,5.0,5.0,0.0,100,0,0,0,0,6.0,6.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Place Value of Numbers,0,119,23,9.0,8.0,1.0,89,3,0,0,0,5.0,2.0,"1.Generic multiplication 
+2.Subtraction of numbers 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl123,Agam Singh ,Mathematics,1,Number System,29,Place Value of Numbers,0,0,0,9.0,8.0,1.0,89,0,0,0,0,5.0,2.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Expansions and Factorization,100,Factorization of algebraic expressions,100,274,14,8.0,7.0,1.0,88,2,0,0,0,4.0,1.0,"1.Algebraic Simplification 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Expansions and Factorization,100,Factorization of algebraic expressions,100,0,0,8.0,7.0,1.0,88,0,0,0,0,4.0,1.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,HCF of numbers,100,274,20,18.0,18.0,0.0,100,1,0,0,0,8.0,8.0,"1.Finding HCF using Prime Factorisation 
+2.HCF by writing factors 
+3.Simplification Error 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,HCF of numbers,100,0,0,18.0,18.0,0.0,100,0,0,0,0,8.0,8.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Introduction to factors and multiples,100,274,99,15.0,15.0,0.0,100,7,0,0,0,4.0,4.0,"1.Application of the concept of multiples 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Introduction to factors and multiples,100,0,0,15.0,15.0,0.0,100,0,0,0,0,4.0,4.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM and HCF of numbers,0,274,20,4.0,4.0,0.0,100,5,0,0,0,2.0,2.0,"1.Least Common Multiple 
+2.Relation between LCM and HCF 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM and HCF of numbers,0,0,0,4.0,4.0,0.0,100,0,0,0,0,2.0,2.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM of numbers,100,274,10,5.0,5.0,0.0,100,2,0,0,0,0.0,0.0,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,LCM of numbers,100,0,0,5.0,5.0,0.0,100,0,0,0,0,0.0,0.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Prime and Composite numbers,100,274,50,7.0,6.0,1.0,86,8,0,0,0,7.0,4.0,"1.Concept of Co-primes 
+",0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl104,Tanisha ,Mathematics,99,Factors and Multiples,83,Prime and Composite numbers,100,0,0,7.0,6.0,1.0,86,0,0,0,0,7.0,4.0,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl107,Praveen ,Mathematics,9,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School
+'01-Jun-2019 15:38:59,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,Home
+'01-Jun-2019 15:38:59,6,ebl116,Naman ,Mathematics,3,,0,,0,0,0,,,,0,0,0,0,0,,,,0,0,0,School

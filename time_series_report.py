@@ -3,7 +3,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.action_chains import ActionChains
-
 import time
 import os
 import datetime
@@ -14,9 +13,6 @@ from pandas.io.excel import ExcelWriter
 import time
 import numpy as np
 
-# os.system('rm *.xlsx')
-# os.system('rm *.csv')
-
 download_dir = "."
 chrome_options = webdriver.ChromeOptions()
 preferences = {"download.default_directory": download_dir ,
@@ -26,8 +22,6 @@ preferences = {"download.default_directory": download_dir ,
                "profile.default_content_settings.popups": False
                }
 chrome_options.add_experimental_option("prefs", preferences)
-
-
 browser = webdriver.Chrome(chrome_options=chrome_options,executable_path='chromedriver')
 browser.get('https://www.funtoot.com/funtoot/#/app/login')
 time.sleep(2)
@@ -51,14 +45,14 @@ def pre_process_data(cls):
     df = []
 
     for file in files:
-        temp_df = pd.read_csv(file)
-        Time_stamp = []
-        for i in range(len(temp_df)):
-            Time_stamp.append(str(datetime.datetime.now().strftime("'%d-%b-%Y %H:%M:%S")))
-        temp_df.insert(0, "Time Stamp", Time_stamp, True)
-        temp_df.rename(columns = {"Subj Progress": "Subj Progress (%)", "Concept Progress": "Concept Progress (%)", "SubConcept Progress": "SubConcept Progress (%)"}, inplace = True)
-        df.append(temp_df)
-
+        if file[0] != 'a':
+            temp_df = pd.read_csv(file)
+            Time_stamp = []
+            for i in range(len(temp_df)):
+                Time_stamp.append(str(datetime.datetime.now().strftime("'%d-%b-%Y %H:%M:%S")))
+            temp_df.insert(0, "Time Stamp", Time_stamp, True)
+            temp_df.rename(columns = {"Subj Progress": "Subj Progress (%)", "Concept Progress": "Concept Progress (%)", "SubConcept Progress": "SubConcept Progress (%)"}, inplace = True)
+            df.append(temp_df)
 
     df[0].drop(['Start Date', 'End Date'], axis=1, inplace=True)
     df[0].drop([], axis=1, inplace=True)
@@ -66,7 +60,6 @@ def pre_process_data(cls):
     # old_data = pd.read_csv('./reports/old_data_' + cls + '.csv')
     # new_df = pd.concat([df[0], old_data]) 
     df[0].to_csv('./reports/time_series_data_' + cls + '.csv', index=False)
-
 
 def stitch_all_classes():
     files = glob.glob('./reports/*.csv')
@@ -115,7 +108,12 @@ for j in range(2, 6):
     convert_xlsx_to_csv()
     os.system('rm *.xlsx')
     pre_process_data(str(j + 3))
-    os.system('rm *.csv')
+    files = glob.glob('*.csv')
+    for file in files:
+        if file[0] != 'a':
+            os.system('rm ' + file)
+ 
+    # os.system('rm *.csv')
     if (j == 5):
         time.sleep(2)
         browser.quit()
