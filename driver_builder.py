@@ -40,7 +40,7 @@ class DriverBuilder():
           chrome_options.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        driver_path = os.path.join(dir_path, "drivers/chromedriver")
+        driver_path = os.path.join(dir_path, "/chromedriver")
 
         if sys.platform.startswith("win"):
             driver_path += ".exe"
