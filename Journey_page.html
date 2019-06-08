@@ -11,7 +11,42 @@
   <link rel="icon" href="./assets/img/brand/favicon.png" type="image/png">
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="./assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Purpose CSS -->
+  <link rel="stylesheet" href="../../assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="./assets/css/purpose.css" id="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+      .modal-content iframe{
+          margin: 0 auto;
+          display: block;
+      }
+      .md-cnt {
+        max-width : 800px;
+        margin : 30px auto;
+      }
+
+  </style>
+  <script type="text/javascript">
+  $(document).ready(function(){
+      /* Get iframe src attribute value i.e. YouTube video url
+      and store it in a variable */
+      var url = $("#cartoonVideo").attr('src');
+      
+      /* Assign empty url value to the iframe src attribute when
+      modal hide, which stop the video playing */
+      $("#exampleModal").on('hide.bs.modal', function(){
+          $("#cartoonVideo").attr('src', '');
+      });
+      
+      /* Assign the initially stored url back to the iframe src
+      attribute when modal is displayed again */
+      $("#exampleModal").on('show.bs.modal', function(){
+          $("#cartoonVideo").attr('src', url);
+      });
+  });
+  </script>
+
 </head>
 
 <body class="application application-offset">
@@ -1212,7 +1247,7 @@
           </div>
           <!-- Table -->
           <div class="table-responsive">
-            <table class="table align-items-center table-bordered">
+            <table class="table align-items-center table-bordered" id = "journey_table">
               <thead>
                 <tr>
                   <th scope="col" class="sort text-center" data-sort="name">To-do</th>
@@ -1221,7 +1256,7 @@
               </thead>
               <tbody class="list">
                 <tr>
-                  <th scope="row">
+                  <td scope="row" id="col1">
                     <div class="card hover-shadow-lg hover-translate-y-n10">
                       <div class="card-header border-0 pb-0">
                       <div class="d-flex justify-content-between align-items-center">
@@ -1245,23 +1280,34 @@
                   </div>
 
                       <div class="card-body text-center">
-                      <img alt="Image placeholder" src="./assets/img/icons/movies.png" class="avatar rounded-circle avatar-lg hover-translate-y-n3 icon" data-toggle="modal"
-                      data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#modal">
-                          <h5 class="h6 my-4"><a href="#">Video Name</a></h5>
+                      <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox class="btn btn-animated btn-dark btn-animated-y btn-sm rounded-pill">
+                        <span class="btn-inner--visible">
+                            <i class="fas fa-play"></i>
+                        </span>
+                        <span class="btn-inner--hidden">
+                            <i class="fas fa-pause"></i>
+                        </span>
+                      </a>
+                          <h5 class="h6 my-4">Video Name</h5>
                       </div>
-                      <div>
-                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill ml-2" style = "float : left">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
                             <span class="btn-inner--visible">Skip this</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
-                        </button> 
-                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2 mr-2" style = "float : right">
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
                             <span class="btn-inner--visible">Completed</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
                         </button> 
+                        </div>
                       </div>
                       <div class="card-footer">
                           <div class="actions d-flex justify-content-between px-4">
@@ -1277,8 +1323,8 @@
                           </div>
                       </div>
                   </div>
-                  </th>
-                  <td>
+                  </td>
+                  <td id="col2">
                     <div class="card hover-shadow-lg ">
                       <div class="card-header border-0 pb-0">
                       <div class="d-flex justify-content-between align-items-center">
@@ -1301,23 +1347,35 @@
                       </div>
                   </div>
 
-                      <div class="card-body text-center"><a href="#" class="avatar rounded-circle avatar-lg hover-translate-y-n3">
-                      <img alt="Image placeholder" src="./assets/img/icons/movies.png" class=""></a>
-                          <h5 class="h6 my-4"><a href="#">Video Name</a></h5>
+                      <div class="card-body text-center">
+                     <button type="button" class="btn btn-animated btn-sm btn-dark rounded-pill">
+                          <span class="btn-inner--visible">
+                              <i class="fas fa-play"></i>
+                          </span>
+                          <span class="btn-inner--hidden">
+                              <i class="fas fa-pause"></i>
+                          </span>
+                      </button>
+                          <h5 class="h6 my-4">Video Name</h5>
                       </div>
-                      <div>
-                         <button type="button" class="btn btn-animated btn-primary btn-sm rounded-pill ml-2 disabled" style = "float : left">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm rounded-pill ml-2 mr-2 mb-2 disabled">
                             <span class="btn-inner--visible">Skip this</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
-                        </button> 
-                        <button type="button" class="btn btn-animated btn-success btn-sm rounded-pill mb-2 mr-2 disabled" style = "float : right">
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm rounded-pill mb-2 disabled">
                             <span class="btn-inner--visible">Completed</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
                         </button> 
+                        </div>
                       </div>
                       <div class="card-footer">
                           <div class="actions d-flex justify-content-between px-4">
@@ -1336,7 +1394,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">
+                  <td scope="row">
                     <div class="card hover-shadow-lg hover-translate-y-n10">
                       <div class="card-header border-0 pb-0">
                       <div class="d-flex justify-content-between align-items-center">
@@ -1359,23 +1417,28 @@
                       </div>
                   </div>
 
-                      <div class="card-body text-center"><a href="#" class="avatar rounded-circle avatar-lg hover-translate-y-n3">
-                      <img alt="Image placeholder" src="./assets/img/icons/pdf-icon.png" class=""></a>
-                          <h5 class="h6 my-4"><a href="#">Pdf Title</a></h5>
+                      <div class="card-body text-center"><a href="javascript:;"  data-fancybox data-type="iframe" data-src="Rational-numbers.pdf">
+                      <img alt="Image placeholder" src="./assets/img/icons/pdf-icon.png" class="icon"></a>
+                          <h5 class="h6 my-4">Rational Numbers</h5>
                       </div>
-                      <div>
-                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill ml-2" style = "float : left">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
                             <span class="btn-inner--visible">Skip this</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
-                        </button> 
-                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2 mr-2" style = "float : right">
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
                             <span class="btn-inner--visible">Completed</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
                         </button> 
+                        </div>
                       </div>
                       <div class="card-footer">
                           <div class="actions d-flex justify-content-between px-4">
@@ -1391,12 +1454,13 @@
                           </div>
                       </div>
                   </div>
+                  </td>
                   <td>
                     
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">
+                  <td scope="row">
                     <div class="card hover-shadow-lg hover-translate-y-n10">
                       <div class="card-header border-0 pb-0">
                       <div class="d-flex justify-content-between align-items-center">
@@ -1419,23 +1483,29 @@
                       </div>
                   </div>
 
-                      <div class="card-body text-center"><a href="https://www.funtoot.com" class="avatar rounded-circle avatar-lg hover-translate-y-n3">
-                      <img alt="Image placeholder" src="./assets/img/icons/funtoot.png" class=""></a>
-                          <h5 class="h6 my-4"><a href="https://www.funtoot.com">Funtoot</a></h5>
+                      <div class="card-body text-center">
+                      <a href="javascript:;" data-fancybox data-type="iframe" data-src="https://www.funtoot.com">
+                      <img alt="Image placeholder" src="./assets/img/icons/funtoot.png" class="icon"></a>
+                          <h5 class="h6 my-4">Funtoot</h5>
                       </div>
-                      <div>
-                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill ml-2" style = "float : left">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
                             <span class="btn-inner--visible">Skip this</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
-                        </button> 
-                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2 mr-2" style = "float : right">
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
                             <span class="btn-inner--visible">Completed</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
                         </button> 
+                        </div>
                       </div>
                       <div class="card-footer">
                           <div class="actions d-flex justify-content-between px-4">
@@ -1451,13 +1521,13 @@
                           </div>
                       </div>
                   </div>
-                  </th>
+                  </td>
                   <td class>
                     
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">
+                  <td scope="row">
                     <div class="card hover-shadow-lg hover-translate-y-n10">
                       <div class="card-header border-0 pb-0">
                       <div class="d-flex justify-content-between align-items-center">
@@ -1481,22 +1551,27 @@
                   </div>
 
                       <div class="card-body text-center"><a href="#" class="avatar rounded-circle avatar-lg hover-translate-y-n3">
-                      <img alt="Image placeholder" src="./assets/img/icons/ppt-icon.png" class=""></a>
-                          <h5 class="h6 my-4"><a href="#">Ppt Tiile</a></h5>
+                      <img alt="Image placeholder" src="./assets/img/icons/ppt-icon.png" class="icon"></a>
+                          <h5 class="h6 my-4">Ppt Tiile</h5>
                       </div>
-                      <div>
-                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill ml-2" style = "float : left">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
                             <span class="btn-inner--visible">Skip this</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
-                        </button> 
-                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2 mr-2" style = "float : right">
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
                             <span class="btn-inner--visible">Completed</span>
                             <span class="btn-inner--hidden">
                                 <i class="fas fa-arrow-right"></i>
                             </span>
                         </button> 
+                        </div>
                       </div>
                       <div class="card-footer">
                           <div class="actions d-flex justify-content-between px-4">
@@ -1512,14 +1587,32 @@
                           </div>
                       </div>
                   </div>
-                  </th>
+                  </td>
                   <td>
-                    
                   </td>
                 </tr>
-                
               </tbody>
             </table>
+          </div>
+        </div> 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="completed_confirm">Confirm</button>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Load more -->
@@ -1567,10 +1660,58 @@
   <!-- Page JS -->
   <script src="./assets/libs/autosize/dist/autosize.min.js"></script>
   <script src="./assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../../assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
   <!-- Purpose JS -->
   <script src="./assets/js/purpose.js"></script>
   <!-- Demo JS - remove it when starting your project -->
   <script src="./assets/js/demo.js"></script>
+  <script>
+    var empty_row = 0
+    var id = ""
+    $("table tr").click(function(){
+        var row = $(this).find("td:nth-child(1)").html();
+        var which_row = $(this).find("td:nth-child(1)");
+        $("#completed_confirm").click(function(){
+            $("table tr td:nth-child(2)").each(function () {
+              // console.log($(this).html());
+              var col = $(this);
+              if($(this).text().trim() != ""){
+                console.log("something")
+              }else{
+                  which_row.html("");
+                  col.html(row); 
+                  $("table tr").each(function(index, val){
+                    if($(val).find("td:nth-child(1)").text().trim() == ""){
+                      // console.log("this is the index: " + index);
+                      empty_row = index;
+                      id = val;
+
+                    }
+                    // console.log("index: " + index, " val: " + $(val).find("td:nth-child(1)").html());
+                  });
+                  console.log(empty_row);
+                  $("table tr").each(function(index, val){
+
+                    if(index == empty_row + 1){
+                      $(id).find("td:nth-child(1)").html($(val).find("td:nth-child(1)").html())
+                      $(val).find("td:nth-child(1)").html("");
+                      empty_row = index;
+                      id = val;
+                      // console.log("empty row : " + index)
+                    }
+                  })
+                  return false;
+              }
+        });
+      });
+});
+//   $('#journey_table tr').each(function() {
+//     // var customerId = $(this).find("td").eq().html();  
+//         var customerId = $(this).find("td:nth-child(2)").;    
+//     console.log(customerId);  
+// });
+  </script>
+  
 </body>
 
 </html>
