@@ -8,12 +8,28 @@
   <meta name="author" content="Webpixels">
   <title>Purpose – Application UI Kit</title>
   <!-- Favicon -->
-  <link rel="stylesheet" href="./assets/libs/flatpickr/dist/flatpickr.min.css">
   <link rel="icon" href="./assets/img/brand/favicon.png" type="image/png">
+  <!--CSS Starts-->
   <!-- Font Awesome 5 -->
-  <link rel="stylesheet" href="./assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Purpose CSS -->
+  <link rel="stylesheet" href="./assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="./assets/css/purpose.css" id="stylesheet">
-    <link rel="stylesheet" href="../../assets/libs/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="./assets/libs/animate.css/animate.min.css">
+  <style type="text/css">
+      .modal-content iframe{
+          margin: 0 auto;
+          display: block;
+      }
+      .md-cnt {
+        max-width : 800px;
+        margin : 30px auto;
+      }
+      .table thead th {
+        font-size : 1em;
+      }
+  </style>
+  <!--CSS Ends-->
 </head>
 
 <body class="application application-offset">
@@ -38,7 +54,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-1-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -134,7 +150,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-2-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -150,7 +166,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-3-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -166,7 +182,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-4-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -182,7 +198,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-5-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-5-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -198,7 +214,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-1-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -214,7 +230,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-2-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -230,7 +246,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-3-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -246,7 +262,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-4-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -262,7 +278,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-5-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-5-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -278,7 +294,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-1-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -294,7 +310,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-2-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -310,7 +326,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-3-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -326,7 +342,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-4-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -342,7 +358,7 @@
               <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                 <div>
                   <div class="avatar-parent-child">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-5-800x800.jpg" class="avatar  rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-5-800x800.jpg" class="avatar  rounded-circle">
                     <span class="avatar-child avatar-badge bg-warning"></span>
                   </div>
                 </div>
@@ -371,7 +387,7 @@
     <div class="sidenav" id="sidenav-main">
       <!-- Sidenav header -->
       <div class="sidenav-header d-flex align-items-center">
-        <a class="navbar-brand" href="../../index.html">
+        <a class="navbar-brand" href="./index.html">
           <img src="./assets/img/brand/white.png" class="navbar-brand-img" alt="...">
         </a>
         <div class="ml-auto">
@@ -410,7 +426,7 @@
           <a href="#modal-chat" class="action-item action-item-lg text-white" data-toggle="modal">
             <i class="fas fa-comment-alt"></i>
           </a>
-          <a href="../../application/shop/invoices.html" class="action-item action-item-lg text-white pr-0">
+          <a href="./application/shop/invoices.html" class="action-item action-item-lg text-white pr-0">
             <i class="fas fa-receipt"></i>
           </a>
         </div>
@@ -446,9 +462,6 @@
             <ul class="navbar-nav flex-row align-items-center">
               <li class="nav-item">
                 <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i class="fas fa-search"></i></a>
               </li>
               <li class="nav-item dropdown dropdown-animate">
                 <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i></a>
@@ -536,24 +549,24 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
                   <h6 class="dropdown-header px-0">Hi, Heather!</h6>
-                  <a href="../../application/user/profile.html" class="dropdown-item">
+                  <a href="./application/user/profile.html" class="dropdown-item">
                     <i class="fas fa-user"></i>
                     <span>My profile</span>
                   </a>
-                  <a href="../../application/account/settings.html" class="dropdown-item">
+                  <a href="./application/account/settings.html" class="dropdown-item">
                     <i class="fas fa-cog"></i>
                     <span>Settings</span>
                   </a>
-                  <a href="../../application/account/billing.html" class="dropdown-item">
+                  <a href="./application/account/billing.html" class="dropdown-item">
                     <i class="fas fa-credit-card"></i>
                     <span>Billing</span>
                   </a>
-                  <a href="../../application/shop/orders.html" class="dropdown-item">
+                  <a href="./application/shop/orders.html" class="dropdown-item">
                     <i class="fas fa-shopping-basket"></i>
                     <span>Orders</span>
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="../../application/authentication/login.html" class="dropdown-item">
+                  <a href="./application/authentication/login.html" class="dropdown-item">
                     <i class="fas fa-sign-out-alt"></i>
                     <a href="./login.html"><span>Logout</span></a>
                   </a>
@@ -589,9 +602,6 @@
             <ul class="navbar-nav ml-lg-auto align-items-center d-none d-lg-flex">
               <li class="nav-item">
                 <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i class="fas fa-search"></i></a>
               </li>
               <li class="nav-item">
                 <a href="#modal-chat" class="nav-link nav-link-icon" data-toggle="modal"><i class="fas fa-comment-alt"></i></a>
@@ -714,223 +724,297 @@
           </div>
         </div>
       </nav>
-         <!-- Page content -->
+    
+      <!-- Page content -->
       <div class="page-content">
-        <!-- Modals -->
-        <div class="modal fade" id="modal-users" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header align-items-center">
-                <div class="modal-title">
-                  <h6 class="mb-0">Select team</h6>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <!-- Connections -->
-                <div class="row">
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-success"></span>
-                        </div>
-                        <h6 class="text-sm my-3">John Sullivan</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-warning"></span>
-                        </div>
-                        <h6 class="text-sm my-3">Heather Wright</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-danger"></span>
-                        </div>
-                        <h6 class="text-sm my-3">James Lewis</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-success"></span>
-                        </div>
-                        <h6 class="text-sm my-3">Martin Gray</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-5-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-success"></span>
-                        </div>
-                        <h6 class="text-sm my-3">John Snow</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-6-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-success"></span>
-                        </div>
-                        <h6 class="text-sm my-3">John Michael</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-7-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-warning"></span>
-                        </div>
-                        <h6 class="text-sm my-3">Monroe Parker</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <div class="avatar-parent-child">
-                          <a href="#" class="avatar avatar-lg rounded-circle">
-                            <img alt="Image placeholder" src="../../assets/img/theme/light/team-8-800x800.jpg">
-                          </a>
-                          <span class="avatar-child avatar-badge bg-danger"></span>
-                        </div>
-                        <h6 class="text-sm my-3">Danielle Levin</h6>
-                        <button type="button" class="btn btn-xs btn-secondary">Add</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Create task modal -->
+        <!-- Create project modal -->
         <div class="modal fade" id="modal-task-create" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-body">
+
                 <!-- Project name -->
                 <div class="form-group">
                   <label class="form-control-label">
-                    Task name
+                    <h3><strong>Topic Name</strong></h3>
                   </label>
-                  <input type="text" class="form-control">
                 </div>
                 <!-- Project description -->
                 <div class="form-group">
                   <label class="form-control-label mb-0">
-                    Task description
+                    <h4>Sub Topic</h4>
                   </label>
-                  <small class="form-text text-muted mb-2 mt-0">
-                    This textarea will autosize while you type
-                  </small>
-                  <textarea class="form-control" data-toggle="autosize" rows="1"></textarea>
                 </div>
-                <!-- Project members -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Task members
-                  </label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="list-group list-group-flush mb-4">
-                  <div class="list-group-item px-0">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <a href="#" class="avatar avatar-sm rounded-circle">
-                          <img alt="Image placeholder" src="../..//assets/img/theme/light/team-1-800x800.jpg">
-                        </a>
-                      </div>
-                      <div class="col ml-n2">
-                        <a href="#!" class="d-block h6 text-sm mb-0">John Sullivan</a>
-                        <p class="card-text text-sm text-muted mb-0">
-                          john@example.com
-                        </p>
-                      </div>
-                      <div class="col-auto text-right">
-                        <span class="text-sm text-info">Team Leader</span>
+
+                <!-- colapse -->
+                  <div id="accordion-2" class="accordion accordion-spaced">
+      
+                    <!-- Accordion pdf -->
+                    <!-- <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-file-pdf mr-3"></i>Which PDF you want to add?
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          Pdf One
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          Pdf Two
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          Pdf Three
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          Pdf Four
+                        </button>
+                          
                       </div>
                     </div>
-                  </div>
-                  <div class="list-group-item px-0">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <a href="#" class="avatar avatar-sm rounded-circle">
-                          <img alt="Image placeholder" src="../..//assets/img/theme/light/team-2-800x800.jpg">
-                        </a>
+                    <br>
+                    <br> -->
+                    <div class="card">
+                      <div class="card-header py-4" id="heading-2-1" data-toggle="collapse" role="button" data-target="#collapse-2-1" aria-expanded="false" aria-controls="collapse-2-1">
+                          <h6 class="mb-0"><i class="fas fa-file-pdf mr-3"></i>Which Pdf you want to add?</h6>
                       </div>
-                      <div class="col ml-n2">
-                        <a href="#!" class="d-block h6 text-sm mb-0">Martin Lawrence</a>
-                        <p class="card-text text-sm text-muted mb-0">
-                          martin@example.com
-                        </p>
-                      </div>
-                      <div class="col-auto text-right">
-                        <span class="text-sm text-info">Manager</span>
+                      <div id="collapse-2-1" class="collapse" aria-labelledby="heading-2-1" data-parent="#accordion-2">
+                          <div class="card-body">
+                            <div class="row">
+                                <div class="col-9">
+                                  <h6 class="mb-0">Pdf One Name</h6>
+                                </div>
+                                <div class="col-3">
+                                    <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-9">
+                                  <h6 class="mb-0">Pdf Two Name</h6>
+                                </div>
+                                <div class="col-3">
+                                    <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-9">
+                                  <h6 class="mb-0">Pdf Three Name</h6>
+                                </div>
+                                <div class="col-3">
+                                    <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                              <label class="form-control-label mb-0">
+                                Add Text Content Here:
+                              </label>
+                              <small class="form-text text-muted mb-1 mt-0">
+                                Textarea with editing toolbar
+                              </small>
+                              <div data-toggle="quill"></div>
+                            </div> -->
+                          </div>
                       </div>
                     </div>
+
+
+
+                    <!-- Accordion Video -->
+                    <div class="card">
+                        <div class="card-header py-4" id="heading-2-2" data-toggle="collapse" role="button" data-target="#collapse-2-2" aria-expanded="false" aria-controls="collapse-2-2">
+                            <h6 class="mb-0"><i class="fas fa-play-circle mr-3"></i>Add Videos Over here</h6>
+                        </div>
+                        <div id="collapse-2-2" class="collapse" aria-labelledby="heading-2-2" data-parent="#accordion-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-9">
+                                      <h6 class="mb-0">Video One Name</h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-9">
+                                      <h6 class="mb-0">Video Two Name</h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-9">
+                                      <h6 class="mb-0">Video Three Name</h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+
+                              <!-- <div class="form-group">
+                                <label class="form-control-label mb-0">
+                                  Task attachments
+                                </label>
+                                <small class="form-text text-muted mb-2 mt-0">
+                                  Drag and drop related task files
+                                </small>
+                                <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-dropzone-url="http://" data-dropzone-multiple>
+                                  <div class="fallback">
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="dropzone-1" multiple>
+                                      <label class="custom-file-label" for="customFileUpload">Choose file</label>
+                                    </div>
+                                  </div>
+                                  <ul class="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
+                                    <li class="list-group-item px-0">
+                                      <div class="row align-items-center">
+                                        <div class="col-auto">
+                                          <div class="avatar">
+                                            <img class="rounded" src="" alt="Image placeholder" data-dz-thumbnail>
+                                          </div>
+                                        </div>
+                                        <div class="col">
+                                          <h6 class="text-sm mb-1" data-dz-name>...</h6>
+                                          <p class="small text-muted mb-0" data-dz-size></p>
+                                        </div>
+                                        <div class="col-auto">
+                                          <a href="#" class="dropdown-item" data-dz-remove>
+                                            <i class="fas fa-trash-alt"></i>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                                <div class="form-group">
+                                  <label class="form-control-label mb-0">
+                                    Or Add Link?
+                                  </label>
+                                  <small class="form-text text-muted mb-2 mt-0">
+                                    Paste Here
+                                  </small>
+                                  <textarea class="form-control" data-toggle="autosize" rows="1"></textarea>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-play-circle mr-3"></i>Which Video you want to add?
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          Vid One
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          Vid Two
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          vid Three
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          Vid Four
+                        </button>
+                          
+                      </div>
+                    </div>
+                    <br>
+                    <br> -->
+
+                    <!-- Accordion card 3 -->
+                    <div class="card">
+                        <div class="card-header py-4" id="heading-2-3" data-toggle="collapse" role="button" data-target="#collapse-2-3" aria-expanded="false" aria-controls="collapse-2-3">
+                            <h6 class="mb-0"><i class="fas fa-gamepad mr-3"></i>Add Some Game?</h6>
+                        </div>
+                        <div id="collapse-2-3" class="collapse" aria-labelledby="heading-2-3" data-parent="#accordion-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-9">
+                                      <h6 class="mb-0">Game One Name</h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-9">
+                                      <h6 class="mb-0">Game Two Name</h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-9">
+                                      <h6 class="mb-0">Game Three Name</h6>
+                                    </div>
+                                    <div class="col-3">
+                                        <button type="button" class=" btn btn-soft-success btn-xs" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                                            Add
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label class="form-control-label mb-0">
+                                      Or Add Link?
+                                    </label>
+                                    <small class="form-text text-muted mb-2 mt-0">
+                                      Paste Here
+                                    </small>
+                                    <textarea class="form-control" data-toggle="autosize" rows="1"></textarea>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-gamepad mr-3"></i>Want to add some Games?
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          G One
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          G Two
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          G Three
+                        </button>
+                        <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#exampleModalvid" data-dismiss="modal">
+                          G Four
+                        </button>
+                          
+                      </div>
+                    </div>
+                    <br>
+                    <br> -->
+
                   </div>
-                </div>
-                <!-- Project tags -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Task tags
-                  </label>
-                  <input type="text" class="form-control" value="HTML, CSS3, Bootstrap, Photoshop, VueJS" data-toggle="tags" placeholder="Type here..." />
-                </div>
-                <!-- Due date -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Due date
-                  </label>
-                  <input type="date" class="form-control">
-                </div>
+
+                <!-- Save/Delete -->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-sm btn-primary rounded-pill mr-auto" data-dismiss="modal">Save</button>
@@ -940,1301 +1024,461 @@
             </div>
           </div>
         </div>
-        <!-- Show task modal -->
-        <div class="modal fade fixed-right" id="modal-task-view" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-vertical modal-lg" role="document">
+
+        <!-- Modal alert for addition -->
+        <div class="modal fade" id="exampleModalvid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-              <div class="modal-header row">
-                <div class="col d-flex align-items-center">
-                  <div class="custom-control custom-checkbox mt-n1">
-                    <input type="checkbox" class="custom-control-input" id="check-modal-task">
-                    <label class="custom-control-label" for="check-modal-task"></label>
-                  </div>
-                  <h6 class="mb-0">Finish the logo design</h6>
-                </div>
-                <div class="col-auto">
-                  <div class="actions text-right">
-                    <a href="#" class="action-item action-favorite active" data-toggle="tooltip" data-original-title="Mark as favorite">
-                      <i class="fas fa-star"></i>
-                    </a>
-                  </div>
-                </div>
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-              <div class="modal-body">
-                <!-- Task date -->
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <!-- Start date -->
-                    <div class="form-group mb-0">
-                      <label class="form-control-label">
-                        Start date
-                      </label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <!-- Start date -->
-                    <div class="form-group mb-0">
-                      <label class="form-control-label">
-                        End date
-                      </label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                </div>
-                <hr />
-                <div class="row mb-4 align-items-center">
-                  <div class="col-6">
-                    <label class="form-control-label mb-0">
-                      Checklist
-                    </label>
-                  </div>
-                  <div class="col-6 text-right">
-                    <a href="#" class="btn btn-xs btn-secondary btn-icon rounded-pill">
-                      <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-                      <span class="btn-inner--text">Add item</span>
-                    </a>
-                  </div>
-                </div>
-                <!-- Dragable checklist -->
-                <div class="checklist" data-toggle="dragula">
-                  <div class="card border draggable-item shadow-none">
-                    <div class="px-3 py-2 row align-items-center">
-                      <div class="col-10">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="check-item-1" checked>
-                          <label class="custom-control-label h6 text-sm" for="check-item-1">Call with Dave</label>
-                        </div>
-                      </div>
-                      <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card border draggable-item shadow-none">
-                    <div class="px-3 py-2 row align-items-center">
-                      <div class="col-10">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="check-item-2">
-                          <label class="custom-control-label h6 text-sm" for="check-item-2">Lunch meeting</label>
-                        </div>
-                      </div>
-                      <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card border draggable-item shadow-none">
-                    <div class="px-3 py-2 row align-items-center">
-                      <div class="col-10">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="check-item-3">
-                          <label class="custom-control-label h6 text-sm" for="check-item-3">Webpixels website redesign</label>
-                        </div>
-                      </div>
-                      <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card border draggable-item shadow-none">
-                    <div class="px-3 py-2 row align-items-center">
-                      <div class="col-10">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="check-item-4" checked>
-                          <label class="custom-control-label h6 text-sm" for="check-item-4">Dashboard cards</label>
-                        </div>
-                      </div>
-                      <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card border draggable-item shadow-none">
-                    <div class="px-3 py-2 row align-items-center">
-                      <div class="col-10">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="check-item-5" checked>
-                          <label class="custom-control-label h6 text-sm" for="check-item-5">Call with Dave</label>
-                        </div>
-                      </div>
-                      <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-                <!-- Tab title -->
-                <label class="form-control-label mb-4">
-                  Attachments
-                </label>
-                <!-- Files -->
-                <div class="card mb-3 border shadow-none">
-                  <div class="px-3 py-3">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <img alt="Image placeholder" src="../../assets/img/icons/files/pdf.png" class="img-fluid" style="width: 40px;">
-                      </div>
-                      <div class="col ml-n2">
-                        <h6 class="text-sm mb-0">
-                          <a href="#!">design-principles.pdf</a>
-                        </h6>
-                        <p class="card-text small text-muted">
-                          189 KB
-                        </p>
-                      </div>
-                      <div class="col-auto actions">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3 border shadow-none">
-                  <div class="px-3 py-3">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <img alt="Image placeholder" src="../../assets/img/icons/files/psd.png" class="img-fluid" style="width: 40px;">
-                      </div>
-                      <div class="col ml-n2">
-                        <h6 class="text-sm mb-0">
-                          <a href="#!">website-wireframe.psd</a>
-                        </h6>
-                        <p class="card-text small text-muted">
-                          45.9 MB
-                        </p>
-                      </div>
-                      <div class="col-auto actions">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3 border shadow-none">
-                  <div class="px-3 py-3">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <img alt="Image placeholder" src="../../assets/img/icons/files/doc.png" class="img-fluid" style="width: 40px;">
-                      </div>
-                      <div class="col ml-n2">
-                        <h6 class="text-sm mb-0">
-                          <a href="#!">product-guidelines.doc</a>
-                        </h6>
-                        <p class="card-text small text-muted">
-                          87 KB
-                        </p>
-                      </div>
-                      <div class="col-auto actions">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3 border shadow-none">
-                  <div class="px-3 py-3">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <img alt="Image placeholder" src="../../assets/img/icons/files/avi.png" class="img-fluid" style="width: 40px;">
-                      </div>
-                      <div class="col ml-n2">
-                        <h6 class="text-sm mb-0">
-                          <a href="#!">banner-video.avi</a>
-                        </h6>
-                        <p class="card-text small text-muted">
-                          23 MB
-                        </p>
-                      </div>
-                      <div class="col-auto actions">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3 border shadow-none">
-                  <div class="px-3 py-3">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <img alt="Image placeholder" src="../../assets/img/icons/files/png.png" class="img-fluid" style="width: 40px;">
-                      </div>
-                      <div class="col ml-n2">
-                        <h6 class="text-sm mb-0">
-                          <a href="#!">logo.png</a>
-                        </h6>
-                        <p class="card-text small text-muted">
-                          189 kb
-                        </p>
-                      </div>
-                      <div class="col-auto actions">
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr />
-                <label class="form-control-label mb-4">
-                  Activity
-                </label>
-                <div class="list-group list-group-flush mb-0">
-                  <div class="list-group-item px-0">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <a href="#" class="avatar avatar-sm rounded-circle">
-                          <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg" class="">
-                        </a>
-                      </div>
-                      <div class="col ml-n2">
-                        <a href="#!" class="d-block h6 text-sm font-weight-light mb-0">Martin added a new task to <strong>To Do</strong> list</a>
-                        <small class="d-block">20 min ago</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="list-group-item px-0">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <a href="#" class="avatar avatar-sm rounded-circle">
-                          <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg" class="">
-                        </a>
-                      </div>
-                      <div class="col ml-n2">
-                        <a href="#!" class="d-block h6 text-sm font-weight-light mb-0">Jessie added <strong>Checklist</strong> to this card</a>
-                        <small class="d-block">2 hours ago</small>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="list-group-item px-0">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <a href="#" class="avatar avatar-sm rounded-circle">
-                          <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg" class="">
-                        </a>
-                      </div>
-                      <div class="col ml-n2">
-                        <a href="#!" class="d-block h6 text-sm font-weight-light mb-0">Martin added <strong>Jessie</strong> to the team</a>
-                        <small class="d-block">1 day ago</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer align-items-center">
-                <div class="col-8 col-md-9 d-flex align-items-center">
-                  <div class="pr-3">
-                    <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg" class="avatar rounded-circle avatar-sm">
-                  </div>
-                  <form class="card-comment-box" role="form">
-                    <textarea rows="1" class="form-control" data-toggle="autosize" placeholder="Add a comment..."></textarea>
-                  </form>
-                </div>
-                <div class="col-4 col-md-3 text-right">
-                  <div class="actions">
-                    <a href="#!" class="action-item"><i class="fas fa-smile-wink"></i></a>
-                    <a href="#!" class="action-item"><i class="fas fa-camera"></i></a>
-                    <div class="dropdown">
-                      <a href="#" class="action-item" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Open post</a>
-                        <a class="dropdown-item" href="#">Report inappropriate</a>
-                        <a class="dropdown-item" href="#">Get the embed code</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Add Changes</button>
               </div>
             </div>
           </div>
         </div>
+
         <!-- Page title -->
         <div class="page-title">
           <div class="row justify-content-between align-items-center">
             <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
               <!-- Page title + Go Back button -->
               <div class="d-inline-block">
-                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Tasks</h5>
+                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Journey</h5>
               </div>
               <!-- Additional info -->
               <div class="align-items-center ml-4 d-inline-flex">
                 <span class="h4 text-info mb-0 mr-2">9</span>
-                <span class="text-sm opacity-7 text-white">New tasks</span>
+                <span class="text-sm opacity-7 text-white">Items remaining in to-do</span>
               </div>
               <!-- Optional link -->
-              <a href="table-listing.html" class="text-sm text-info d-none d-lg-inline-block ml-4">See table</a>
+              
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
-              <div class="actions actions-dark d-inline-block">
-                <a href="#" class="action-item ml-md-4">
-                  <i class="fas fa-file-export mr-2"></i>Export
-                </a>
-                <a href="#" class="action-item ml-3">
-                  <i class="fas fa-cog mr-2"></i>Settings
-                </a>
-              </div>
+              
               <a href="#modal-task-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
                 <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
               </a>
             </div>
           </div>
         </div>
-        <!-- Kanban board -->
-        <div class="card overflow-hidden">
-          <div class="container-kanban">
-            <div class="kanban-board" data-toggle="dragula" data-containers='["kanban-blacklist", "kanban-to-do", "kanban-in-progress", "kanban-testing", "kanban-done"]'>
-              <div class="kanban-col px-0">
-                <div class="card-list card-list-flush">
-                  <div class="card-list-title row align-items-center mb-3">
-                    <div class="col">
-                      <h6 class="mb-0">Blacklist</h6>
-                    </div>
-                    <div class="col text-right">
-                      <div class="actions">
-                        <a class="action-item mr-2" href="#modal-task-create" data-toggle="modal"><i class="fas fa-plus"></i></a>
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-list-body" id="kanban-blacklist">
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-success">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Call with Dave</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-warning">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Lunch meeting</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-info">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Webpixels website redesign</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-danger">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Dashboard cards</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-success">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Call with Dave</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-5-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-warning">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Lunch meeting</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-6-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Empty container -->
-                    <span class="empty-container" data-placeholder="Empty"></span>
-                  </div>
+        <!-- Listing -->
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header actions-toolbar border-0">
+            <div class="actions-search" id="actions-search">
+              <div class="input-group input-group-merge input-group-flush">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+                </div>
+                <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ...">
+                <div class="input-group-append">
+                  <a href="#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="fas fa-times"></i></a>
                 </div>
               </div>
-              <div class="kanban-col px-0">
-                <div class="card-list card-list-flush">
-                  <div class="card-list-title row align-items-center mb-3">
-                    <div class="col">
-                      <h6 class="mb-0">To do</h6>
+            </div>
+            <div class="row justify-content-between align-items-center">
+              <div class="col-sm-12 col-lg-4">
+                <!--<h6 class="d-inline-block mb-0">Subtopic</h6>-->
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb breadcrumb-links">
+                    <li class="breadcrumb-item"><a href="#">Topic</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Subtopic</li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                <div class="progress-wrapper">
+                    <span class="progress-percentage text-muted">40%</span>
+                    <div class="progress" style="height: 5px;">
+                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
                     </div>
-                    <div class="col text-right">
-                      <div class="actions">
-                        <a class="action-item mr-2" href="#modal-task-create" data-toggle="modal"><i class="fas fa-plus"></i></a>
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-list-body" id="kanban-to-do">
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-success">Urgent</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Application wireframe</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-warning">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Lunch meeting</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-info">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Webpixels website redesign</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-success">Urgent</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Application wireframe</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-warning">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Lunch meeting</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-5-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-info">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Webpixels website redesign</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-6-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Empty container -->
-                    <span class="empty-container" data-placeholder="Empty"></span>
-                  </div>
                 </div>
               </div>
-              <div class="kanban-col px-0">
-                <div class="card-list card-list-flush">
-                  <div class="card-list-title row align-items-center mb-3">
-                    <div class="col">
-                      <h6 class="mb-0">In progress</h6>
-                    </div>
-                    <div class="col text-right">
-                      <div class="actions">
-                        <a class="action-item mr-2" href="#modal-task-create" data-toggle="modal"><i class="fas fa-plus"></i></a>
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-list-body" id="kanban-in-progress">
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-success">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Call with Dave</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-warning">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Lunch meeting</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-info">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Webpixels website redesign</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-danger">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Dashboard cards</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Empty container -->
-                    <span class="empty-container" data-placeholder="Empty"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="kanban-col px-0">
-                <div class="card-list card-list-flush">
-                  <div class="card-list-title row align-items-center mb-3">
-                    <div class="col">
-                      <h6 class="mb-0">Testing</h6>
-                    </div>
-                    <div class="col text-right">
-                      <div class="actions">
-                        <a class="action-item mr-2" href="#modal-task-create" data-toggle="modal"><i class="fas fa-plus"></i></a>
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-list-body" id="kanban-testing">
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-success">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Call with Dave</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-warning">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Lunch meeting</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Empty container -->
-                    <span class="empty-container" data-placeholder="Empty"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="kanban-col px-0">
-                <div class="card-list card-list-flush">
-                  <div class="card-list-title row align-items-center mb-3">
-                    <div class="col">
-                      <h6 class="mb-0">Done</h6>
-                    </div>
-                    <div class="col text-right">
-                      <div class="actions">
-                        <a class="action-item mr-2" href="#modal-task-create" data-toggle="modal"><i class="fas fa-plus"></i></a>
-                        <div class="dropdown" data-toggle="dropdown">
-                          <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-h"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#" class="dropdown-item">Refresh</a>
-                            <a href="#" class="dropdown-item">Manage Widgets</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-list-body" id="kanban-done">
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-success">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Call with Dave</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-warning">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Lunch meeting</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-2-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-info">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Webpixels website redesign</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-3-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-danger">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Dashboard cards</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-info">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Webpixels website redesign</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-5-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card card-progress draggable-item border shadow-none">
-                      <div class="card-body">
-                        <div class="row align-items-center mb-2">
-                          <div class="col-6">
-                            <span class="badge badge-pill badge-xs badge-danger">Priority</span>
-                          </div>
-                          <div class="col-6 text-right">
-                            <span class="text-sm">70%</span>
-                          </div>
-                        </div>
-                        <a class="h6" href="#modal-task-view" data-toggle="modal">Dashboard cards</a>
-                        <div class="row align-items-center">
-                          <div class="col-8">
-                            <div class="actions d-inline-block">
-                              <div class="action-item mr-2">
-                                <i class="fas fa-paperclip mr-2"></i>4
-                              </div>
-                              <div class="action-item mr-3">
-                                <i class="fas fa-comment-alt mr-2"></i>6
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4 text-right">
-                            <a href="#" class="avatar avatar-sm rounded-circle m-0">
-                              <img alt="Image placeholder" src="../../assets/img/theme/light/team-6-800x800.jpg">
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Empty container -->
-                    <span class="empty-container" data-placeholder="Empty"></span>
-                  </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 text-right">
+                <div class="actions"><a href="#" class="action-item" data-action="search-open" data-target="#actions-search"><i class="fas fa-search"></i></a>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table align-items-center table-bordered" id = "journey_table">
+              <thead>
+                <tr>
+                  <th scope="col" class=" text-center" data-sort="name">To-do</th>
+                  <th scope="col" class=" text-center" data-sort="budget">Completed</th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <td scope="row" id="col1">
+                    <div class="card hover-shadow-lg hover-translate-y-n10">
+                      <div class="card-header border-0 pb-0">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                              <h6 class="mb-0">Start Date and time</h6>
+                          </div>
+                          <!--<div class="text-right">
+                              <div class="actions">
+                                  <a href="#" class="action-item"><i class="fas fa-sync"></i></a>
+                                  <div class="dropdown action-item" data-toggle="dropdown">
+                                      <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
+                                      <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Refresh</a>
+                                          <a href="#" class="dropdown-item">Manage Widgets</a>
+                                          <a href="#" class="dropdown-item">Settings</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>-->
+                      </div>
+                  </div>
+
+                      <div class="card-body text-center">
+                      <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox class="btn btn-animated btn-dark btn-animated-y btn-sm rounded-pill" data-toggle="tooltip" data-placement="top" title="Play Video">
+                        <span class="btn-inner--visible">
+                            <i class="fas fa-play"></i>
+                        </span>
+                        <span class="btn-inner--hidden">
+                            <i class="fas fa-pause"></i>
+                        </span>
+                      </a>
+                          <h5 class="h6 my-4">Video Name</h5>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                            <span class="btn-inner--visible">Skip this</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
+                            <span class="btn-inner--visible">Completed</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button> 
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                          <div class="actions d-flex justify-content-between px-4">
+                              <a href="#" class="action-item">
+                                  <i class="fas fa-plus"></i>
+                              </a>
+                              <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
+                                  <i class="fas fa-comment"></i>
+                              </a>
+                              <a href="#" class="action-item text-danger"  data-toggle="tooltip" data-placement="left" title="Help">
+                                  <i class="fas fa-question-circle"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td id="col2">
+                    <div class="card hover-shadow-lg ">
+                      <div class="card-header border-0 pb-0">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                              <h6 class="mb-0">Start Date and time</h6>
+                          </div>
+                          <!--<div class="text-right">
+                              <div class="actions">
+                                  <a href="#" class="action-item"><i class="fas fa-sync"></i></a>
+                                  <div class="dropdown action-item" data-toggle="dropdown">
+                                      <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
+                                      <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Refresh</a>
+                                          <a href="#" class="dropdown-item">Manage Widgets</a>
+                                          <a href="#" class="dropdown-item">Settings</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>-->
+                      </div>
+                  </div>
+
+                      <div class="card-body text-center">
+                     <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox class="btn btn-animated btn-dark btn-sm rounded-pill" data-toggle="tooltip" data-placement="top" title="Play Video">
+                        <span class="btn-inner--visible">
+                            <i class="fas fa-play"></i>
+                        </span>
+                        <span class="btn-inner--hidden">
+                            <i class="fas fa-pause"></i>
+                        </span>
+                      </a>
+                          <h5 class="h6 my-4">Video Name</h5>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm rounded-pill ml-2 mr-2 mb-2 disabled">
+                            <span class="btn-inner--visible">Skip this</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm rounded-pill mb-2 disabled">
+                            <span class="btn-inner--visible">Completed</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button> 
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                          <div class="actions d-flex justify-content-between px-4">
+                              <a href="#" class="action-item">
+                                  <i class="fas fa-plus"></i>
+                              </a>
+                              <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
+                                  <i class="fas fa-comment"></i>
+                              </a>
+                              <a href="#" class="action-item text-danger"  data-toggle="tooltip" data-placement="left" title="Help">
+                                  <i class="fas fa-question-circle"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">
+                    <div class="card hover-shadow-lg hover-translate-y-n10">
+                      <div class="card-header border-0 pb-0">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                              <h6 class="mb-0">Start Date and time</h6>
+                          </div>
+                          <!--<div class="text-right">
+                              <div class="actions">
+                                  <a href="#" class="action-item"><i class="fas fa-sync"></i></a>
+                                  <div class="dropdown action-item" data-toggle="dropdown">
+                                      <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
+                                      <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Refresh</a>
+                                          <a href="#" class="dropdown-item">Manage Widgets</a>
+                                          <a href="#" class="dropdown-item">Settings</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>-->
+                      </div>
+                  </div>
+
+                      <div class="card-body text-center"><a href="javascript:;"  data-fancybox data-type="iframe" data-src="Rational-numbers.pdf" data-toggle="tooltip" data-placement="top" title="Open Pdf">
+                      <img alt="Image placeholder" src="./assets/img/icons/pdf-icon.png" class="icon"></a>
+                          <h5 class="h6 my-4">Rational Numbers</h5>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                            <span class="btn-inner--visible">Skip this</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
+                            <span class="btn-inner--visible">Completed</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button> 
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                          <div class="actions d-flex justify-content-between px-4">
+                              <a href="#" class="action-item">
+                                  <i class="fas fa-plus"></i>
+                              </a>
+                              <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window"> 
+                                  <i class="fas fa-comment"></i>
+                              </a>
+                              <a href="#" class="action-item text-danger">
+                                  <i class="fas fa-question-circle"  data-toggle="tooltip" data-placement="left" title="Help"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">
+                    <div class="card hover-shadow-lg hover-translate-y-n10">
+                      <div class="card-header border-0 pb-0">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                              <h6 class="mb-0">Start Date and time</h6>
+                          </div>
+                          <!--<div class="text-right">
+                              <div class="actions">
+                                  <a href="#" class="action-item"><i class="fas fa-sync"></i></a>
+                                  <div class="dropdown action-item" data-toggle="dropdown">
+                                      <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
+                                      <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Refresh</a>
+                                          <a href="#" class="dropdown-item">Manage Widgets</a>
+                                          <a href="#" class="dropdown-item">Settings</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>-->
+                      </div>
+                  </div>
+
+                      <div class="card-body text-center">
+                      <a href="javascript:;" data-fancybox data-type="iframe" data-src="https://www.funtoot.com" data-toggle="tooltip" data-placement="top" title="Go to funtoot">
+                      <img alt="Image placeholder" src="./assets/img/icons/funtoot.png" class="icon"></a>
+                          <h5 class="h6 my-4">Funtoot</h5>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                            <span class="btn-inner--visible">Skip this</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
+                            <span class="btn-inner--visible">Completed</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button> 
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                          <div class="actions d-flex justify-content-between px-4">
+                              <a href="#" class="action-item">
+                                  <i class="fas fa-plus"></i>
+                              </a>
+                              <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
+                                  <i class="fas fa-comment"></i>
+                              </a>
+                              <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
+                                  <i class="fas fa-question-circle"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td class>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">
+                    <div class="card hover-shadow-lg hover-translate-y-n10">
+                      <div class="card-header border-0 pb-0">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                              <h6 class="mb-0">Start Date and time</h6>
+                          </div>
+                          <!--<div class="text-right">
+                              <div class="actions">
+                                  <a href="#" class="action-item"><i class="fas fa-sync"></i></a>
+                                  <div class="dropdown action-item" data-toggle="dropdown">
+                                      <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
+                                      <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Refresh</a>
+                                          <a href="#" class="dropdown-item">Manage Widgets</a>
+                                          <a href="#" class="dropdown-item">Settings</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>-->
+                      </div>
+                  </div>
+
+                      <div class="card-body text-center"><a href="javascript:;"  data-fancybox data-type="iframe" data-src="Rational-numbers.pdf" data-toggle="tooltip" data-placement="top" title="Open Pdf">
+                      <img alt="Image placeholder" src="./assets/img/icons/ppt-icon.png" class="icon"></a>
+                          <h5 class="h6 my-4">Ppt Tiile</h5>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                         <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                            <span class="btn-inner--visible">Skip this</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button>
+                        </div> 
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                        <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal">
+                            <span class="btn-inner--visible">Completed</span>
+                            <span class="btn-inner--hidden">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </button> 
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                          <div class="actions d-flex justify-content-between px-4">
+                              <a href="#" class="action-item">
+                                  <i class="fas fa-plus"></i>
+                              </a>
+                              <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
+                                  <i class="fas fa-comment"></i>
+                              </a>
+                              <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
+                                  <i class="fas fa-question-circle"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+i              </tbody>
+            </table>
+          </div>
+        </div> 
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmation Needed</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div id="myrating"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="completed_confirm">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Load more -->
+        <div class="mt-4 text-center">
+          <a href="#" class="btn btn-sm btn-neutral rounded-pill shadow hover-translate-y-n3">Load more ...</a>
         </div>
       </div>
       <!-- Footer -->
@@ -2247,13 +1491,13 @@
             <ul class="nav justify-content-center justify-content-md-end">
               <li class="nav-item dropdown border-right">
                 <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img alt="Image placeholder" src="../../assets/img/icons/flags/ro.svg">
-                  <span class="h6 text-sm mb-0">RO</span>
+                  <img alt="Image placeholder" src="./assets/img/icons/flags/in.svg">
+                  <span class="h6 text-sm mb-0">INDIA</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                  <a href="#" class="dropdown-item"><img alt="Image placeholder" src="../../assets/img/icons/flags/es.svg" class="mr-2">Spanish</a>
-                  <a href="#" class="dropdown-item"><img alt="Image placeholder" src="../../assets/img/icons/flags/us.svg" class="mr-2">English</a>
-                  <a href="#" class="dropdown-item"><img alt="Image placeholder" src="../../assets/img/icons/flags/gr.svg" class="mr-2">Greek</a>
+                  <a href="#" class="dropdown-item"><img alt="Image placeholder" src="./assets/img/icons/flags/es.svg" class="mr-2">Spanish</a>
+                  <a href="#" class="dropdown-item"><img alt="Image placeholder" src="./assets/img/icons/flags/us.svg" class="mr-2">English</a>
+                  <a href="#" class="dropdown-item"><img alt="Image placeholder" src="./assets/img/icons/flags/gr.svg" class="mr-2">Greek</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -2273,16 +1517,94 @@
   </div>
   <!-- Scripts -->
   <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
-  <script src="../../assets/js/purpose.core.js"></script>
+  <script src="./assets/js/purpose.core.js"></script>
   <!-- Page JS -->
-  <script src="../../assets/libs/dragula/dist/dragula.min.js"></script>
-  <script src="../../assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-  <script src="../../assets/libs/autosize/dist/autosize.min.js"></script>
-  <script src="../../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/autosize/dist/autosize.min.js"></script>
+  <script src="./assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/dragula/dist/dragula.min.js"></script>
+  <script src="./assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="./assets/libs/autosize/dist/autosize.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/select2/dist/js/select2.min.js"></script>
+  <script src="./assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+  <script src="./assets/libs/bootstrap-notify/bootstrap-notify.min.js"></script>
   <!-- Purpose JS -->
-  <script src="../../assets/js/purpose.js"></script>
+  <script src="./assets/js/purpose.js"></script>
+  <script src="./Rating/dist/emotion-ratings.js"></script>
+
   <!-- Demo JS - remove it when starting your project -->
-  <script src="../../assets/js/demo.js"></script>
+  <script src="./assets/js/demo.js"></script>
+  <!--Script for move columns-->
+  <script>
+    var empty_row = 0
+    var id = ""
+    $("table tr").click(function(){
+        var row = $(this).find("td:nth-child(1)").html();
+        var which_row = $(this).find("td:nth-child(1)");
+        $("#completed_confirm").click(function(){
+          $.notify({
+            // options
+            message: 'Congratulations! You have completed this video.' 
+          },{
+            // settings
+            type: 'dark',
+            placement: {
+              from:"top",
+              align: "center"
+            },
+            delay : 1000,
+            animate: {
+              enter : "animated flipInX",
+              exit : "animated flipOutX"
+            },
+          });
+            $("table tr td:nth-child(2)").each(function () {
+              // console.log($(this).html());
+              var col = $(this);
+              if($(this).text().trim() != ""){
+                console.log("something")
+              }else{
+                  which_row.html("");
+                  col.html(row); 
+                  $("table tr").each(function(index, val){
+                    if($(val).find("td:nth-child(1)").text().trim() == ""){
+                      // console.log("this is the index: " + index);
+                      empty_row = index;
+                      id = val;
+
+                    }
+                    // console.log("index: " + index, " val: " + $(val).find("td:nth-child(1)").html());
+                  });
+                  console.log(empty_row);
+                  $("table tr").each(function(index, val){
+
+
+                    if(index == empty_row + 1){
+                      $(id).find("td:nth-child(1)").html($(val).find("td:nth-child(1)").html())
+                      $(val).find("td:nth-child(1)").html("");
+                      empty_row = index;
+                      id = val;
+                      // console.log("empty row : " + index)
+                    }
+                  })
+                  return false;
+              }
+        });
+      });
+});
+
+//   $('#journey_table tr').each(function() {
+//     // var customerId = $(this).find("td").eq().html();  
+//         var customerId = $(this).find("td:nth-child(2)").;    
+//     console.log(customerId);  
+// });
+  </script>
+  <!--Script Ends-->
+  
 </body>
 
 </html>
