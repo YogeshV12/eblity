@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button id="mybutton">Click me</button>
+
+	<script type="text/javascript">
+		var buttonclicked;
+		$("#mybutton").click(function(){
+		if( buttonclicked!= true ) {
+		    buttonclicked= true;
+		    alert("Button is clicked for first time");
+		}else{
+		    alert("Button was clicked before");
+		}
+		});
+	</script>
+</body>
+</html>
