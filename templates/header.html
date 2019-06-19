@@ -1,0 +1,128 @@
+{%load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
+  <meta name="author" content="Webpixels">
+  <title>Eblity-Raising The Aspirants</title>
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'assets/img/brand/favicon.png' %}" type="image/png">
+  <!--CSS Starts-->
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="{% static 'assets/libs/@fortawesome/fontawesome-free/css/all.min.css' %}">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/libs/select2/dist/css/select2.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/purpose.css' %}" id="stylesheet">
+  <link rel="stylesheet" href="{% static 'assets/libs/animate.css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" type="text/css">
+  <!--fortawesome/fontawesome-->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+      .modal-content iframe{
+          margin: 0 auto;
+          display: block;
+      }
+      .md-cnt {
+        max-width : 800px;
+        margin : 30px auto;
+      }
+      .table thead th {
+        font-size : 1em;
+      }
+      
+      .rating {
+        position : absolute;
+        bottom : 1.2rem;
+        left : 13.5rem;
+        transform : translate(-50%,50%) rotateY(180deg);
+        display : flex;
+      }
+      .rating input {
+        display : none          
+      }
+      .rating label {
+        display : block;
+        cursor : pointer;
+        width : 5rem;
+        
+      }
+      .rating label:before {
+        content : '\f005';
+        font-family : fontAwesome;
+        position : relative;
+        display : block;
+        font-size : 1.5em;
+        color : #5F6A6A;
+      }
+     .rating label:after {
+        content : '\f005';
+        font-family : fontAwesome;
+        position : relative;
+        display : block;
+        font-size : 1.5em;
+        color : #1f9cff;
+        position : absolute;
+        top : 0;
+        opacity : 0;
+        transition : .5s;
+        text-shadow : 0 2px 5px rgba(0,0,0,.5);
+      }
+      .rating label:hover:after,
+      .rating label:hover ~ label:after,
+       .rating input:checked ~ label:after {
+         opacity : 1;
+       } 
+    @media (min-width: 320px) and (max-width: 350px) {
+      .rating {
+        bottom : 1.2rem;
+        left : 8rem;
+      }
+      .rating label {
+        width : 3.5rem;
+      }
+      .rating label:before {
+        font-size : 1.5em;
+      }
+     .rating label:after {
+        font-size : 1.5em;
+      }
+    }
+    @media (min-width: 360px) and (max-width: 400px) {
+      .rating {
+        bottom : 1.2rem;
+        left : 9.5rem;
+      }
+      .rating label {
+        width : 4rem;
+      }
+      .rating label:before {
+        font-size : 1.5em;
+      }
+     .rating label:after {
+        font-size : 1.5em;
+      }
+    }
+    @media (min-width: 410px) and (max-width: 450px) {
+      .rating {
+        bottom : 1.2rem;
+        left : 10.5rem;
+      }
+      .rating label {
+        width : 4rem;
+      }
+      .rating label:before {
+        font-size : 1.5em;
+      }
+     .rating label:after {
+        font-size : 1.5em;
+      }
+    }
+  </style>
+  <!--CSS Ends-->
+</head>
+
+<body class="application application-offset">
