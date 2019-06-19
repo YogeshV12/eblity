@@ -1,5 +1,7 @@
 {% include "header.html" %}
+{% if user.is_authenticated %}
 {% include "navbar.html" %}
+
 {% load static %}
 
 <div class="page-content">
@@ -1123,6 +1125,14 @@
   </div>
 </div>
 </div>
+{% else %}
+  <h2 style="text-align: center">Register or Login if you'd like to</h2>
+  <br>
+  
+  <a href="/login"><h3 style="text-align: center">Click here to Login or Register</h3></a>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endif %}
 
 {% include "footer.html" %}
 <script>

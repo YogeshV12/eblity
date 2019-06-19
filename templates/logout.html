@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Logout-eblity</title>
-</head>
-<body>
-    <h1>You have been successfully logged out!</h1>
-    <a href="/login"><h3>Click here to login again.</h3></a>
-</body>
-</html>
+{% include "header.html" %}
+
+{% load static %}
+
+{% load my_tags %} 
+    <h1 style="text-align: center">You have been successfully logged out!</h1>
+    <a href="/login"><h3 style="text-align: center">Click here to login again.</h3></a>
+    <!-- <div class="container">
+        <div class="jumbotron">
+          <h1>Welcome to the Eblity!</h1>
+          {% if user.is_authenticated %}
+              <h2>Hello {{ user.username }}</h2>
+          {% else %}
+              <h2>Register or Login if you'd like to</h2>
+          {% endif %}
+        </div>
+      </div> -->
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% include "footer.html" %}  
