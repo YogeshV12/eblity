@@ -5,12 +5,11 @@
 {% load static %}
 
 {% load my_tags %}
-
-<style>
-    #journey_table tr td:nth-child(1), td:nth-child(2){
-        width: 50%;
-      }
-</style>
+      <style>
+        #journey_table tr td:nth-child(1), td:nth-child(2){
+          width: 50%;
+        }
+      </style>
 
       <!-- Page content -->
       <div class="page-content">
@@ -39,9 +38,9 @@
                   <div id="collapse-2-1" class="collapse" aria-labelledby="heading-2-1" data-parent="#accordion-2">
                       <div class="list-group">
                         {% for data in all_obj %}
-                        {% if data.resource_id.resource_type == "videos" %}
-                        <a href="#" class="list-group-item list-group-item-action active" id="choose-{{data.resource_id.resource_id}}-{{data.topic_id.topic_id}}-{{data.subtopic_id}}">
-                          {{data.resource_id.resource_link}}
+                        {% if data.resource_type == "videos" %}
+                        <a href="#" class="list-group-item list-group-item-action active" id="choose-{{data.resource_id}}-{{data.topic_id.topic_id}}-{{data.subtopic_id}}">
+                          {{data.resource_link}}
                         </a>
                         {% endif %}
                         {% endfor %}
@@ -57,9 +56,9 @@
                   <div id="collapse-2-2" class="collapse" aria-labelledby="heading-2-2" data-parent="#accordion-2">
                       <div class="list-group">
                         {% for data in all_obj %}
-                        {% if data.resource_id.resource_type == "pdf" %}
-                        <a href="#" class="list-group-item list-group-item-action active" id="choose-{{data.resource_id.resource_id}}-{{data.topic_id.topic_id}}-{{data.subtopic_id}}">
-                          {{data.resource_id.resource_link}}
+                        {% if data.resource_type == "pdf" %}
+                        <a href="" class="list-group-item list-group-item-action active" id="choose-{{data.resource_id}}-{{data.topic_id.topic_id}}-{{data.subtopic_id}}">
+                          {{data.resource_link}}
                         </a>
                         {% endif %}
                         {% endfor %}
@@ -75,9 +74,9 @@
                   <div id="collapse-2-3" class="collapse" aria-labelledby="heading-2-3" data-parent="#accordion-2">
                       <div class="list-group">
                         {% for data in all_obj %}
-                        {% if data.resource_id.resource_type == "game link" %}
-                        <a href="#" class="list-group-item list-group-item-action active" id="choose-{{data.resource_id.resource_id}}-{{data.topic_id.topic_id}}-{{data.subtopic_id}}">
-                          {{data.resource_id.resource_link}}
+                        {% if data.resource_type == "game link" %}
+                        <a href="#" class="list-group-item list-group-item-action active" id="choose-{{data.resource_id}}-{{data.topic_id.topic_id}}-{{data.subtopic_id}}">
+                          {{data.resource_link}}
                         </a>
                         {% endif %}
                         {% endfor %}
@@ -175,7 +174,7 @@
                   <tr id="{{ forloop.counter0 }}" class="tableRow">
                      {% if i < pending|length %}
                         {% if pending|get_resource_type:i == 'videos' %}
-                          <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}" name="{{pending|get_status:i}}">
+                          <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}-{{pending|get_journey_template_key:i}}" name="{{pending|get_status:i}}">
                             <div class="card hover-shadow-lg hover-translate-y-n10">
                               <div class="card-header border-0 pb-0">
                               <div class="d-flex justify-content-between align-items-center">
@@ -197,7 +196,7 @@
                                 </div>
                                 <div class="row">
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                   <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                   <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}"  data-toggle="modal" data-target="#skipModal-{{forloop.counter0}}">
                                       <span class="btn-inner--visible" >Skip this</span>
                                       <span class="btn-inner--hidden">
                                           <i class="fas fa-arrow-right"></i>
@@ -231,7 +230,7 @@
                           </td>
                         {% endif %}  
                         {% if pending|get_resource_type:i == 'pdf' %}
-                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}" name="{{pending|get_status:i}}">
+                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}-{{pending|get_journey_template_key:i}}" name="{{pending|get_status:i}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                 <div class="card-header border-0 pb-0">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -247,7 +246,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}"  data-toggle="modal" data-target="#skipModal-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -281,7 +280,7 @@
                             </td>
                         {% endif %}    
                         {% if pending|get_resource_type:i == 'study material' %}
-                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}" name="{{pending|get_status:i}}">
+                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}-{{pending|get_journey_template_key:i}}" name="{{pending|get_status:i}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                 <div class="card-header border-0 pb-0">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -297,7 +296,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}"  data-toggle="modal" data-target="#skipModal-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -331,7 +330,7 @@
                             </td>
                         {% endif %}    
                         {% if pending|get_resource_type:i == 'funtoot' %}
-                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}" name="{{pending|get_status:i}}">
+                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}-{{pending|get_journey_template_key:i}}" name="{{pending|get_status:i}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
                                   <div class="d-flex justify-content-between align-items-center">
@@ -348,7 +347,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}"  data-toggle="modal" data-target="#skipModal-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -367,22 +366,18 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
-                                              <i class="fas fa-question-circle"></i>
-                                          </a>
+                                          <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" data-toggle="tooltip" data-placement="bottom" title="Open chat window"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
                             </td> 
                         {% endif %}    
                         {% if pending|get_resource_type:i == 'game link' %}
-                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}" name="{{pending|get_status:i}}">
+                            <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}-{{pending|get_journey_template_key:i}}" name="{{pending|get_status:i}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
                                   <div class="d-flex justify-content-between align-items-center">
@@ -399,7 +394,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}"  data-toggle="modal" data-target="#skipModal-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -418,15 +413,11 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
-                                              <i class="fas fa-question-circle"></i>
-                                          </a>
+                                          <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" data-toggle="tooltip" data-placement="bottom" title="Open chat window"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
@@ -436,7 +427,7 @@
                         {% with variable=pending|length %}
                         {% with subtraction=i|sub:variable %}
                         {% if skipped|get_resource_type:subtraction == 'videos' %}
-                          <td scope="row" id="{{skipped|get_resource_id:i}}-{{skipped|get_topic_id:i}}-{{skipped|get_subtopic_id:i}}" name="{{skipped|get_status:i}}">
+                          <td scope="row" id="{{skipped|get_resource_id:subtraction}}-{{skipped|get_topic_id:subtraction}}-{{skipped|get_subtopic_id:subtraction}}-{{skipped|get_journey_template_key:subtraction}}" name="{{skipped|get_status:subtraction}}">
                             <div class="card hover-shadow-lg hover-translate-y-n10">
                               <div class="card-header border-0 pb-0">
                               <div class="d-flex justify-content-between align-items-center">
@@ -459,7 +450,7 @@
                                 <div class="row">
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
                                    <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
-                                      <span class="btn-inner--visible">Skip this</span>
+                                      <span class="btn-inner--visible"  data-toggle="modal" data-target="#skipModal-{{forloop.counter0}}">Skip this</span>
                                       <span class="btn-inner--hidden">
                                           <i class="fas fa-arrow-right"></i>
                                       </span>
@@ -491,7 +482,7 @@
                             </div>
                           </td>
                         {% elif skipped|get_resource_type:subtraction == 'pdf' %}
-                            <td scope="row" id="{{skipped|get_resource_id:i}}-{{skipped|get_topic_id:i}}-{{skipped|get_subtopic_id:i}}" name="{{skipped|get_status:i}}">
+                            <td scope="row" id="{{skipped|get_resource_id:subtraction}}-{{skipped|get_topic_id:subtraction}}-{{skipped|get_subtopic_id:subtraction}}-{{skipped|get_journey_template_key:subtraction}}" name="{{skipped|get_status:subtraction}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                 <div class="card-header border-0 pb-0">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -501,13 +492,13 @@
                                 </div>
                               </div>
 
-                                  <div class="card-body text-center"><a href="javascript:;"  data-fancybox data-type="iframe" data-src="{{skipped|get_resource_link:i}}" data-toggle="tooltip" data-placement="top" title="Open Pdf">
+                                  <div class="card-body text-center"><a href="javascript:;"  data-fancybox data-type="iframe" data-src="{{skipped|get_resource_link:subtraction}}" data-toggle="tooltip" data-placement="top" title="Open Pdf">
                                   <img alt="Image placeholder" src="{% static 'assets/img/icons/pdf-icon.png' %}" class="icon"></a>
                                       <h5 class="h6 my-4">Pdf</h5>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}" disabled="true">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -540,7 +531,7 @@
                               </div>
                             </td>
                         {% elif skipped|get_resource_type:subtraction == 'study material' %}
-                            <td scope="row" id="{{skipped|get_resource_id:i}}-{{skipped|get_topic_id:i}}-{{skipped|get_subtopic_id:i}}" name="{{skipped|get_status:i}}">
+                            <td scope="row" id="{{skipped|get_resource_id:subtraction}}-{{skipped|get_topic_id:subtraction}}-{{skipped|get_subtopic_id:subtraction}}-{{skipped|get_journey_template_key:subtraction}}" name="{{skipped|get_status:subtraction}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                 <div class="card-header border-0 pb-0">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -550,13 +541,13 @@
                                 </div>
                               </div>
 
-                                  <div class="card-body text-center"><a href="javascript:;"  data-fancybox data-type="iframe" data-src="{{skipped|get_resource_link:i}}" data-toggle="tooltip" data-placement="top" title="Open study material">
+                                  <div class="card-body text-center"><a href="javascript:;"  data-fancybox data-type="iframe" data-src="{{skipped|get_resource_link:subtraction}}" data-toggle="tooltip" data-placement="top" title="Open study material">
                                   <img alt="Image placeholder" src="{% static 'assets/img/icons/pdf-icon.png' %}" class="icon"></a>
                                       <h5 class="h6 my-4">Study Material</h5>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}" disabled="true">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -589,7 +580,7 @@
                               </div>
                             </td>
                         {% elif skipped|get_resource_type:subtraction == 'funtoot' %}
-                            <td scope="row" id="{{skipped|get_resource_id:i}}-{{skipped|get_topic_id:i}}-{{skipped|get_subtopic_id:i}}" name="{{skipped|get_status:i}}">
+                            <td scope="row" id="{{skipped|get_resource_id:subtraction}}-{{skipped|get_topic_id:subtraction}}-{{skipped|get_subtopic_id:subtraction}}-{{skipped|get_journey_template_key:subtraction}}" name="{{skipped|get_status:subtraction}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
                                   <div class="d-flex justify-content-between align-items-center">
@@ -606,7 +597,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm  rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}" disabled="true">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -615,7 +606,7 @@
                                     </div> 
                                     
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                    <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}" id="completed-{{forloop.counter0}}">
+                                    <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" id="completed-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Completed</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -625,21 +616,17 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
-                                              <i class="fas fa-question-circle"></i>
-                                          </a>
+                                          <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" data-toggle="tooltip" data-placement="bottom" title="Open chat window"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
                             </td> 
                         {% elif skipped|get_resource_type:subtraction == 'game link' %}
-                            <td scope="row" id="{{skipped|get_resource_id:i}}-{{skipped|get_topic_id:i}}-{{skipped|get_subtopic_id:i}}" name="{{skipped|get_status:i}}">
+                            <td scope="row" id="{{skipped|get_resource_id:subtraction}}-{{skipped|get_topic_id:subtraction}}-{{skipped|get_subtopic_id:subtraction}}-{{skipped|get_journey_template_key:subtraction}}" name="{{skipped|get_status:subtraction}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
                                   <div class="d-flex justify-content-between align-items-center">
@@ -650,13 +637,13 @@
                               </div>
 
                                   <div class="card-body text-center">
-                                  <a href="javascript:;" data-fancybox data-type="iframe" data-src="{{skipped|get_resource_link:i}}}" data-toggle="tooltip" data-placement="top" title="Play this game">
+                                  <a href="javascript:;" data-fancybox data-type="iframe" data-src="{{skipped|get_resource_link:subtraction}}}" data-toggle="tooltip" data-placement="top" title="Play this game">
                                   <img alt="Image placeholder" src="{% static 'assets/img/icons/game-icon.png' %}" class="icon"></a>
                                       <h5 class="h6 my-4">Game</h5>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm rounded-pill mr-2 ml-2 mb-2" id="skip-{{forloop.counter0}}" disabled="true">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -675,15 +662,11 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
-                                              <i class="fas fa-question-circle"></i>
-                                          </a>
+                                          <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" data-toggle="tooltip" data-placement="bottom" title="Open chat window"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
@@ -697,8 +680,9 @@
                         {% endwith %}
                       {% endif %} 
                       {% if i < completed|length %}  
+
                         {% if completed|get_resource_type:i == 'videos' %}
-                          <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}" name="{{completed|get_status:i}}">
+                          <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" name="{{completed|get_status:i}}" data-locations='[{"rating" : "{{completed|get_rating:i}}", "feedback" : "{{completed|get_feedback:i}}" }]'>
                             <div class="card hover-shadow-lg hover-translate-y-n10">
                               <div class="card-header border-0 pb-0">
                               <div class="d-flex justify-content-between align-items-center">
@@ -720,7 +704,7 @@
                                 </div>
                                 <div class="row">
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                   <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                                   <button type="button" class="btn btn-animated btn-primary btn-sm disabled rounded-pill mr-2 ml-2 mb-2" id="skipc-{{forloop.counter0}}">
                                       <span class="btn-inner--visible">Skip this</span>
                                       <span class="btn-inner--hidden">
                                           <i class="fas fa-arrow-right"></i>
@@ -729,7 +713,7 @@
                                   </div> 
                                   
                                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                  <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}">
+                                  <button type="button" class="btn btn-animated btn-success btn-sm disabled rounded-pill mb-2" id="completedc-{{forloop.counter0}}">
                                       <span class="btn-inner--visible">Completed</span>
                                       <span class="btn-inner--hidden">
                                           <i class="fas fa-arrow-right"></i>
@@ -739,21 +723,18 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="actions d-flex justify-content-between px-4">
-                                        <a href="#" class="action-item">
+                                        
                                             <i class="fas fa-plus"></i>
-                                        </a>
-                                        <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
-                                            <i class="fas fa-comment"></i>
-                                        </a>
-                                        <a href="#" class="action-item text-danger"  data-toggle="tooltip" data-placement="left" title="Help">
-                                            <i class="fas fa-question-circle"></i>
-                                        </a>
+
+                                            <i class="fas fa-comment" id="com_{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                     </div>
                                 </div>
                             </div>
                           </td>
                         {% elif completed|get_resource_type:i == 'pdf' %}
-                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}" name="{{completed|get_status:i}}">
+                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" name="{{completed|get_status:i}}" data-locations='[{"rating" : "{{completed|get_rating:i}}", "feedback" : "{{completed|get_feedback:i}}" }]'>
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                 <div class="card-header border-0 pb-0">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -769,7 +750,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm disabled rounded-pill mr-2 ml-2 mb-2" id="skipc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -778,7 +759,7 @@
                                     </div> 
                                     
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                    <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}">
+                                    <button type="button" class="btn btn-animated btn-success btn-sm disabled rounded-pill mb-2" id="completedc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Completed</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -788,21 +769,17 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window"> 
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger">
-                                              <i class="fas fa-question-circle"  data-toggle="tooltip" data-placement="left" title="Help"></i>
-                                          </a>
+                                            <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" id="com_{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
                             </td>
                         {% elif completed|get_resource_type:i == 'study material' %}
-                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}" name="{{completed|get_status:i}}">
+                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" name="{{completed|get_status:i}}" data-locations='[{"rating" : "{{completed|get_rating:i}}", "feedback" : "{{completed|get_feedback:i}}" }]'>
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                 <div class="card-header border-0 pb-0">
                                 <div class="d-flex justify-content-between align-items-center">
@@ -818,7 +795,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm disabled rounded-pill mr-2 ml-2 mb-2" id="skipc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -827,7 +804,7 @@
                                     </div> 
                                     
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                    <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}">
+                                    <button type="button" class="btn btn-animated btn-success btn-sm disabled rounded-pill mb-2" id="completedc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Completed</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -837,21 +814,17 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window"> 
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger">
-                                              <i class="fas fa-question-circle"  data-toggle="tooltip" data-placement="left" title="Help"></i>
-                                          </a>
+                                            <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" id="com_{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
                             </td>
                         {% elif completed|get_resource_type:i == 'funtoot' %}
-                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}" name="{{completed|get_status:i}}">
+                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" name="{{completed|get_status:i}}" data-locations='[{"rating" : "{{completed|get_rating:i}}", "feedback" : "{{completed|get_feedback:i}}" }]'>
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
                                   <div class="d-flex justify-content-between align-items-center">
@@ -868,7 +841,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm disabled rounded-pill mr-2 ml-2 mb-2" id="skipc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -877,7 +850,7 @@
                                     </div> 
                                     
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                    <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}">
+                                    <button type="button" class="btn btn-animated btn-success btn-sm disabled rounded-pill mb-2" id="completedc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Completed</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -887,21 +860,17 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
-                                              <i class="fas fa-question-circle"></i>
-                                          </a>
+                                            <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" id="com_{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
                             </td> 
-                            {% elif completed|get_resource_type:i == 'game link' %}
-                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}" name="{{completed|get_status:i}}">
+                        {% elif completed|get_resource_type:i == 'game link' %}
+                            <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" name="{{completed|get_status:i}}" data-locations='[{"rating" : "{{completed|get_rating:i}}", "feedback" : "{{completed|get_feedback:i}}"" }]'>
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
                                   <div class="d-flex justify-content-between align-items-center">
@@ -918,7 +887,7 @@
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                     <button type="button" class="btn btn-animated btn-primary btn-sm btn-animated-x rounded-pill mr-2 ml-2 mb-2">
+                                     <button type="button" class="btn btn-animated btn-primary btn-sm disabled rounded-pill mr-2 ml-2 mb-2" id="skipc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Skip this</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -927,7 +896,7 @@
                                     </div> 
                                     
                                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
-                                    <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x rounded-pill mb-2" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}">
+                                    <button type="button" class="btn btn-animated btn-success btn-sm disabled rounded-pill mb-2" id="completedc-{{forloop.counter0}}">
                                         <span class="btn-inner--visible">Completed</span>
                                         <span class="btn-inner--hidden">
                                             <i class="fas fa-arrow-right"></i>
@@ -937,15 +906,11 @@
                                   </div>
                                   <div class="card-footer">
                                       <div class="actions d-flex justify-content-between px-4">
-                                          <a href="#" class="action-item">
-                                              <i class="fas fa-plus"></i>
-                                          </a>
-                                          <a href="#" class="action-item" data-toggle="tooltip" data-placement="bottom" title="Open chat window">
-                                              <i class="fas fa-comment"></i>
-                                          </a>
-                                          <a href="#" class="action-item text-danger" data-toggle="tooltip" data-placement="left" title="Help">
-                                              <i class="fas fa-question-circle"></i>
-                                          </a>
+                                            <i class="fas fa-plus"></i>
+
+                                            <i class="fas fa-comment" id="com_{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" data-toggle="modal" data-target="#exampleModal-{{forloop.counter0}}"></i>
+                                        
+                                            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="left" title="Help"></i>
                                       </div>
                                   </div>
                               </div>
@@ -963,7 +928,7 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel-{{forloop.counter0}}">Pleasa Rate and give Feedback</h5>
+                            <h5 class="modal-title" id="exampleModalLabel-{{forloop.counter0}}">Please Rate and give Feedback</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -980,13 +945,34 @@
                         </div>
                         <hr style="border : 1px solid; width : 90%; opacity : 0.7; margin-top : 1.5%">
                         <div class="text-center"><h5>Feedback Area</h5></div>
-                        <textarea class="form-control" placeholder="Write your feedback hre..." rows="3"></textarea>
+                        <textarea class="form-control" id="text-{{forloop.counter0}}" placeholder="Write your feedback hre..." rows="3"></textarea>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary btn-sm complete" data-dismiss="modal" id="completed_confirm-{{forloop.counter0}}">Submit</button>
+                            <a href=""><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button></a>
+                            <a href=""><button type="button" class="btn btn-primary btn-sm complete" data-dismiss="modal" id="completed_confirm-{{forloop.counter0}}">Submit</button></a>
                         </div>
                         </div>
                     </div>
+                    </div>
+
+                    <!--Skip-Modal -->
+                    <div class="modal fade" id="skipModal-{{forloop.counter0}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="skipModalLabel-{{forloop.counter0}}">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                           Please confirm by pressing confirm button... 
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" id="skipconfirm-{{forloop.counter0}}">Confirm</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   {% endfor %}
               </tbody>
@@ -994,6 +980,31 @@
 
           </div>
         </div> 
+
+        <div class="modal fade" id="rfModal" tabindex="-1" role="dialog" aria-labelledby="rfModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="rfModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div id="division_1">
+                  
+                </div>
+                <div id="division_2">
+                  
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Load more -->
         <div class="mt-4 text-center">
           <a href="#" class="btn btn-sm btn-neutral rounded-pill shadow hover-translate-y-n3">Load more ...</a>
@@ -1003,60 +1014,93 @@
 {% include "footer.html" %}      
  
 <script>
-/*var totalRows = $("#journey_table >tbody >tr").length;
-
-console.log(totalRows);*/
-
 var pendingIds = [];
 var skippedIds = [];
 var completedIds = [];
 var infoDict = {};
+/*var count=0;*/
 
 $("#journey_table tr").each(function(){
   var columnId = $(this).find("td").attr("id");
   var status = $(this).find("td").attr("name");
-  /*console.log(status,columnId);*/
+  /*var columnId2 = $(this).find("td-nth:child(1)").attr("id");*/
+  /*console.log(status,columnId,columnId2);*/
   if (status=='pending'&& columnId!=undefined) {
     columnId=columnId.split("-");
     infoDict['resource_id'] = columnId[0];
     infoDict['topic_id'] = columnId[1];
     infoDict['subtopic_id'] = columnId[2];
+    infoDict['journey_template_key'] = columnId[3];
     infoDict['status'] = status;
+    console.log("pending");
     pendingIds.push(infoDict);
-    infoDict={}
+    infoDict={};
   }
-  if (status=='completed'&& columnId!=undefined) {
+  /*if (status=='completed'&& columnId!=undefined) {
     columnId=columnId.split("-");
     infoDict['resource_id'] = columnId[0];
     infoDict['topic_id'] = columnId[1];
     infoDict['subtopic_id'] = columnId[2];
+    infoDict['journey_template_key'] = columnId[3];
     infoDict['status'] = status;
     completedIds.push(infoDict);
-    infoDict={}
-  }
+    infoDict={};
+  }*/
   if (status=='skipped'&& columnId!=undefined) {
     columnId=columnId.split("-");
     infoDict['resource_id'] = columnId[0];
     infoDict['topic_id'] = columnId[1];
     infoDict['subtopic_id'] = columnId[2];
+    infoDict['journey_template_key'] = columnId[3];
     infoDict['status'] = status;
     skippedIds.push(infoDict);
-    infoDict={}
+    infoDict={};
+    /*console.log("skipping");*/
   }
-  /*console.log(columnId);*/
+
 });
 
+/*console.log(skippedIds.length);
+var count = 0;*/
 
+/*$("#journey_table tr td:nth-child(2)").each(function () {
+  var columnId = $(this).attr("id");
+  var status = $(this).attr("name");
+  console.log($(this).attr("id"));
+  if (status=='completed'&& columnId!=undefined) {
+    columnId=columnId.split("-");
+    infoDict['resource_id'] = columnId[0];
+    infoDict['topic_id'] = columnId[1];
+    infoDict['subtopic_id'] = columnId[2];
+    infoDict['journey_template_key'] = columnId[3];
+    infoDict['status'] = status;
+    completedIds.push(infoDict);
+    infoDict={};
+    count++;
+  }
+});*/
 
-$("[id^='skip-'").click(function(){
+/*for(m=0;m<count;m++) {
+  $("#skipc-"+m).attr('disabled',true);
+  $("#skipc-"+m).removeClass('btn-animated-x');
+  $("#completedc-"+m).attr('disabled',true);
+  $("#completedc-"+m).removeClass('btn-animated-x');
+}*/
+
+/*console.log(count);*/
+
+$("[id^='skipconfirm-']").click(function(){
   var index = $(this).attr("id").split("-");
-  $(this).attr("disabled",true); 
-  $(this).removeClass('btn-animated-x');
+/*  console.log("index: ",index);*/
+/*  $(this).attr("disabled",true); 
+  $(this).removeClass('btn-animated-x');*/
   var rowIndex=parseInt(index[1]);
   var pass_index = rowIndex+1;
-
+/*  console.log("pass_index: ",pass_index);*/
   var get_columnId = $("#journey_table tr:eq("+pass_index+") td").attr("id").split("-");
   var get_resource = parseInt(get_columnId[0]);
+/*  console.log(get_resource);
+  console.log(pendingIds[0].resource_id);*/
   for(j=0;j<pendingIds.length;j++) {
     if(pendingIds[j].resource_id==get_resource) {
       skippedIds.push(pendingIds[j]);
@@ -1064,17 +1108,16 @@ $("[id^='skip-'").click(function(){
       break;
     }
   }
-  /*var rowIndex=index[1];
-  skippedIds.push(pendingIds[rowIndex]);
+
+  $("#skip-"+rowIndex).attr('disabled',true);
+  $("#skip-"+rowIndex).removeClass('btn-animated-x');
+
   for(i=0;i<skippedIds.length;i++){
     if (skippedIds[i].status=='pending')
     {
       skippedIds[i].status='skipped';
     }
-  }*/
-/*  console.log(pendingIds);
-  console.log(skippedIds);*/
-
+  }
   	$.ajax({
 		type: "POST",
 		url: "http://127.0.0.1:8000/journey/",
@@ -1082,8 +1125,8 @@ $("[id^='skip-'").click(function(){
 		async: true,
 		data: {
 			"skipped_ids": JSON.stringify(skippedIds) ,
-            "pending_ids" : JSON.stringify(pendingIds),
-            "completed_ids" : JSON.stringify(completedIds),
+      "pending_ids" : JSON.stringify(pendingIds),
+      "completed_ids" : JSON.stringify(completedIds),
 			csrfmiddlewaretoken : '{{ csrf_token }}'
 		},
 		success: function(data){
@@ -1110,17 +1153,21 @@ $("[id^='skip-'").click(function(){
   var flag=0;
   var rowIndex=parseInt(index[1]);
   var pass_index = rowIndex+1;
-
+  console.log("pass_index: ",pass_index);
   var get_columnId = $("#journey_table tr:eq("+pass_index+") td").attr("id").split("-");
+  console.log("get_columnId: ",get_columnId);
   var get_resource = parseInt(get_columnId[0]);
   feedback = $('textarea').val(); 
-  console.log(feedback);
+  console.log(rowIndex);
   for(j=0;j<pendingIds.length;j++) {
     if(pendingIds[j].resource_id==get_resource) {
-      completedIds.push(pendingIds[j]);
-      completedIds[j].rating = checked;
-      completedIds[j].feedback = feedback;
+      var dup = pendingIds[j];
+      dup.rating = checked;
+      dup.feedback = feedback;
+      completedIds.push(dup);
       pendingIds.splice(j,1);
+      console.log(completedIds);
+      console.log("Inside"+j);/*count++;*/
       flag=1;
       break;
     }
@@ -1129,10 +1176,12 @@ $("[id^='skip-'").click(function(){
     for(j=0;j<skippedIds.length;j++) 
     {
       if(skippedIds[j].resource_id==get_resource) {
-        completedIds.push(skippedIds[j]);
-        completedIds[j].rating = checked;
-        completedIds[j].feedback = feedback;
+        var dup = skippedIds[j];
+        dup.rating = checked;
+        dup.feedback = feedback;
+        completedIds.push(dup);
         skippedIds.splice(j,1);
+        /*count++;*/
         flag=1;
         break;
       }
@@ -1145,8 +1194,17 @@ $("[id^='skip-'").click(function(){
     }
   }
 
+  /*console.log("count: ",count);*/
+
+  $("#completed-"+rowIndex).attr('disabled',true);
+  $("#completed-"+rowIndex).removeClass('btn-animated-x');
+  $("#skip-"+rowIndex).attr('disabled',true);
+  $("#skip-"+rowIndex).removeClass('btn-animated-x');
+
 /*  console.log("clicked on completed confirm");
   console.log()*/
+    console.log("completedIds: ",completedIds);
+    console.log("pendingIds: ",pendingIds);
 
     $.ajax({
 		type: "POST",
@@ -1155,8 +1213,8 @@ $("[id^='skip-'").click(function(){
 		async: true,
 		data: {
 			"skipped_ids": JSON.stringify(skippedIds) ,
-            "pending_ids" : JSON.stringify(pendingIds),
-            "completed_ids" : JSON.stringify(completedIds),
+      "pending_ids" : JSON.stringify(pendingIds),
+      "completed_ids" : JSON.stringify(completedIds),
 			csrfmiddlewaretoken : '{{ csrf_token }}'
 		},
 		success: function(data){
@@ -1170,6 +1228,8 @@ $("[id^='skip-'").click(function(){
 		},
 	});
 });
+    /*console.log(completedIds.length);*/
+  /*for(i=0;i<completedIds.length;i++)*/
 
 $('a[id^="choose"]').click(function(){
   infoDict={}
@@ -1205,4 +1265,43 @@ $('a[id^="choose"]').click(function(){
     },
   });
 });
+
+$("[id^='com_']").click(function(){
+  var get_id = $(this).attr("id").split("_");
+  console.log(get_id);
+  var data_array = $("#"+get_id[1]).data('locations');
+  console.log(data_array);
+  console.log(data_array[0].rating );
+  console.log(data_array[0].feedback);
+  if(data_array[0].rating=='5') {
+    $("#star1").prop("checked",true);
+  }
+    if(data_array[0].rating=='4') {
+      $("#star2").prop("checked",true);
+  }
+    if(data_array[0].rating=='3') {
+      $("#star3").prop("checked",true);
+  }
+    if(data_array[0].rating=='2') {
+      $("#star4").prop("checked",true);
+  }
+    if(data_array[0].rating=='1') {
+      $("#star5").prop("checked",true);
+  }
+  var data_target = $(this).attr("data-target").split("-");
+  console.log(data_target);
+  $("#completed_confirm-"+data_target[1]).remove();
+  var feedback = data_array[0].feedback;
+  if(data_array[0].feedback == ""){
+    feedback = "It seems, You did not give feedback!!!"
+  }
+  $("#text-"+data_target[1]).text(feedback);
+  $("#text-"+data_target[1]).prop('disabled',true);
+/*  $('.rating label:hover:after').css('opacity',0);
+  $('.rating label:hover ~ label:after').css('opacity',0);
+  $('.rating input:checked ~ label:after').css('opacity',0);*/
+ 
+})
+
+/*console.log(completedIds);*/
 </script>

@@ -48,12 +48,12 @@ def Journey_view(request):
             topic_id = int(json.loads(request.POST.get('journey'))[1])
             subtopic_id = int(json.loads(request.POST.get('journey'))[2])
             print(student_id, topic_id, subtopic_id)
-            if (Journey_template.objects.filter(student_id = student_id, topic_id = topic_id, subtopic_id=subtopic_id).exists()):
+            if (Journey_template.objects.filter(student_id = student_id, topic_id = Topic_Table.objects.get(topic_id=topic_id), subtopic_id=subtopic_id).exists()):
                 print("second time")
                 return view_journey_page(request, student_id, topic_id, subtopic_id)
             else:
                 print("first time")
-                obj = Resources.objects.filter(topic_id=topic_id, subtopic_id=subtopic_id)
+                obj = Resources.objects.filter(topic_id=Topic_Table.objects.get(topic_id=topic_id), subtopic_id=subtopic_id)
                 for resource in obj:
                     Journey_template(student_id = student_id, subtopic_id=resource.subtopic_id, resource_id=resource,
                                      topic_id=Topic_Table.objects.get(topic_id=topic_id)).save()
@@ -71,15 +71,15 @@ def Journey_view(request):
             skipped_info =json.loads(request.POST.get('skipped_ids'))
             completed_info = json.loads(request.POST.get('completed_ids'))
             for data in pending_info:
-                obj = Journey_template.objects.get(student_id=student_id, resource_id=int(data['resource_id']), topic_id=int(data['topic_id']), subtopic_id=int(data['subtopic_id']))
+                obj = Journey_template.objects.get(journey_template_key=int(data['journey_template_key']))
                 obj.status = str(data['status'])
                 obj.save()
             for data in skipped_info:
-                obj = Journey_template.objects.get(student_id=student_id, resource_id=int(data['resource_id']), topic_id=int(data['topic_id']), subtopic_id=int(data['subtopic_id']))
+                obj = Journey_template.objects.get(journey_template_key=int(data['journey_template_key']))
                 obj.status = str(data['status'])
                 obj.save()
             for data in completed_info:
-                obj = Journey_template.objects.get(student_id=student_id, resource_id=int(data['resource_id']), topic_id=int(data['topic_id']), subtopic_id=int(data['subtopic_id']))
+                obj = Journey_template.objects.get(journey_template_key=int(data['journey_template_key']))
                 obj.status = str(data['status'])
                 obj.rating = int(data['rating'])
                 obj.feedback = str(data['feedback'])
@@ -97,11 +97,15 @@ def view_journey_page(request, student_id, topic_id, subtopic_id):
         completed_obj = Journey_template.objects.filter(student_id = student_id, topic_id = topic_id, subtopic_id=subtopic_id, status='completed')
         pending_obj = Journey_template.objects.filter(student_id = student_id, topic_id = topic_id,subtopic_id=subtopic_id, status='pending')
         skipped_obj = Journey_template.objects.filter(student_id = student_id, topic_id = topic_id,subtopic_id=subtopic_id, status='skipped')
-        all_obj = Journey_template.objects.filter(student_id = student_id, topic_id = topic_id,subtopic_id=subtopic_id)
+        all_obj = Resources.objects.filter(topic_id = Topic_Table.objects.get(topic_id=topic_id),subtopic_id=subtopic_id)
         maximum = max([completed_obj.count(),pending_obj.count()+skipped_obj.count()])
-        print("return here")
+        # print("return here")
+        print(skipped_obj)
+        print("max : ",maximum)
         return render(request,'journey-page.html',{'completed' : completed_obj, 'pending' : pending_obj, 'skipped' : skipped_obj, 'all_obj' : all_obj, 'max_length' : range(maximum), 'topic_name': topic_name, 'subtopic_name' : subtopic_name} )
 
+def attendance_view(request):
+  return render(request,'attendance.html')
 
 def login_view(request):
     return render(request, "login.html",{})
@@ -109,5 +113,3 @@ def login_view(request):
 
 def logout_view(request):
     return render(request, "logout.html",{})
-
-

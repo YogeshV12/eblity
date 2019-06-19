@@ -4,6 +4,13 @@ from django.contrib.auth.models import User
 import pandas as pd
 
 
+import pandas as pd
+
+from datetime import date
+
+from django.utils import timezone
+
+
 # import os
 # Create your models here.
 class Resources(models.Model):
@@ -67,12 +74,12 @@ class Plan_Table(models.Model):
     hours = models.IntegerField(null=True)
     subject = models.CharField(max_length=20, blank=True)
 
-class UserProfileInfo(models.Model):
-    user = models.OneToOneField(User,on_delete=models.CASCADE)
-    portfolio_site = models.URLField(blank=True)
-    profile_pic = models.ImageField(upload_to='profile_pics',blank=True)
-    def __str__(self):
-        return self.user.username
+# class UserProfileInfo(models.Model):
+#     user = models.OneToOneField(User,on_delete=models.CASCADE)
+#     portfolio_site = models.URLField(blank=True)
+#     profile_pic = models.ImageField(upload_to='profile_pics',blank=True)
+#     def __str__(self):
+#         return self.user.username
 
 # class Student_Table(models.Model):
 #     student_id = models.IntegerField(default=1)
@@ -88,6 +95,16 @@ class UserProfileInfo(models.Model):
 #     Student_Table(student_id=int(student_id), student_name=str(student_name), grade=int(grade), parent_id=int(parent_id), parent_email=str(parent_email), status=str(status)).save()
 
 
+class Attendance_Table(models.Model):
+    student_id = models.IntegerField(default=1)
+    date = models.DateField(default=date.today)    
+    check_in = models.DateTimeField(default=timezone.now)
+    check_out = models.DateTimeField(default=timezone.now)
+    tutor_time = models.DateTimeField(default=timezone.now)
+    intention = models.CharField(max_length=100);
+    absent_present = models.CharField(max_length=15)
+    reasonOfAbsence = models.CharField(max_length=100)
+
 # df = pd.read_csv('Plan_Table.csv')
 # for topic_id, topic_name, weightage, sequence, month, hours, subject in zip(df['topic_id'], df['topic_name'], df['weightage'], df['sequence'], df['month'], df['hours'], df['subject']):
 #     Id = Topic_Table.objects.get(topic_id=topic_id)
@@ -102,6 +119,12 @@ class UserProfileInfo(models.Model):
 # 	Id = Topic_Table.objects.get(topic_id=topic_id)
 # 	Resources(resource_id=int(resource_id), topic_id=Id, subtopic_id=int(subtopic_id), resource_type=str(resource_type),
 # 		resource_link=str(resource_link), tags=str(tags)).save()
+#     df['resource_type'], df['resource_link'], df['tags']) :
+#     # print("Printing")
+#     Id = Topic_Table.objects.get(topic_id=topic_id)
+#     if str(resource_link) != 'nan':
+#         Resources(resource_id=int(resource_id), topic_id=Id, subtopic_id=int(subtopic_id), resource_type=str(resource_type),
+#         resource_link=str(resource_link), tags=str(tags)).save()
 
 # df = pd.read_csv('Topic_Table.csv')
 # df['mean_hours'].fillna(float(0), inplace=True)
