@@ -1,0 +1,1182 @@
+{% include "header.html" %}
+{% include "navbar.html" %}
+{% load static %}
+
+<div class="page-content">
+  <!-- Modals -->
+  <!-- Create task modal -->
+  <div class="modal fade" id="modal-task-create" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <h5 class="m-0 mb-2">
+                This is why I need
+                <span class="text-info typed" id="type-example" data-type-this="creativity., imagination., energy., inspiration.">creativity.</span>
+            </h5>
+          <!-- Project name -->
+          <div class="form-group">
+            <label class="form-control-label">
+              Topic Name
+            </label>
+            <input type="text" class="form-control">
+          </div>
+          <!-- Project description -->
+          <div class="form-group">
+            <label class="form-control-label mb-0">
+              Sub Topic
+            </label>
+            <small class="form-text text-muted mb-2 mt-0">
+              This textarea will autosize while you type
+            </small>
+            <textarea class="form-control" data-toggle="autosize" rows="1"></textarea>
+          </div>
+          <!-- colapse -->
+            <div id="accordion-2" class="accordion accordion-spaced">
+
+              <!-- Accordion card 1 -->
+              <div class="card">
+                  <div class="card-header py-4" id="heading-2-1" data-toggle="collapse" role="button" data-target="#collapse-2-1" aria-expanded="false" aria-controls="collapse-2-1">
+                      <h6 class="mb-0"><i class="fas fa-file-pdf mr-3"></i>Which Pdf you want to add?</h6>
+                  </div>
+                  <div id="collapse-2-1" class="collapse" aria-labelledby="heading-2-1" data-parent="#accordion-2">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label class="form-control-label mb-0">
+                            Add Text Content Here:
+                          </label>
+                          <small class="form-text text-muted mb-1 mt-0">
+                            Textarea with editing toolbar
+                          </small>
+                          <div data-toggle="quill"></div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Accordion card 2 -->
+              <div class="card">
+                  <div class="card-header py-4" id="heading-2-2" data-toggle="collapse" role="button" data-target="#collapse-2-2" aria-expanded="false" aria-controls="collapse-2-2">
+                      <h6 class="mb-0"><i class="fas fa-play-circle mr-3"></i>Add Videos Over here</h6>
+                  </div>
+                  <div id="collapse-2-2" class="collapse" aria-labelledby="heading-2-2" data-parent="#accordion-2">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label class="form-control-label mb-0">
+                            Task attachments
+                          </label>
+                          <small class="form-text text-muted mb-2 mt-0">
+                            Drag and drop related task files
+                          </small>
+                          <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-dropzone-url="http://" data-dropzone-multiple>
+                            <div class="fallback">
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="dropzone-1" multiple>
+                                <label class="custom-file-label" for="customFileUpload">Choose file</label>
+                              </div>
+                            </div>
+                            <ul class="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
+                              <li class="list-group-item px-0">
+                                <div class="row align-items-center">
+                                  <div class="col-auto">
+                                    <div class="avatar">
+                                      <img class="rounded" src="" alt="Image placeholder" data-dz-thumbnail>
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <h6 class="text-sm mb-1" data-dz-name>...</h6>
+                                    <p class="small text-muted mb-0" data-dz-size></p>
+                                  </div>
+                                  <div class="col-auto">
+                                    <a href="#" class="dropdown-item" data-dz-remove>
+                                      <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                          <div class="form-group">
+                            <label class="form-control-label mb-0">
+                              Or Add Link?
+                            </label>
+                            <small class="form-text text-muted mb-2 mt-0">
+                              Paste Here
+                            </small>
+                            <textarea class="form-control" data-toggle="autosize" rows="1"></textarea>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Accordion card 3 -->
+              <div class="card">
+                  <div class="card-header py-4" id="heading-2-3" data-toggle="collapse" role="button" data-target="#collapse-2-3" aria-expanded="false" aria-controls="collapse-2-3">
+                      <h6 class="mb-0"><i class="fas fa-gamepad mr-3"></i>Share Some Game Links?</h6>
+                  </div>
+                  <div id="collapse-2-3" class="collapse" aria-labelledby="heading-2-3" data-parent="#accordion-2">
+                      <div class="card-body">
+                          <div class="form-group">
+                              <label class="form-control-label mb-0">
+                                Or Add Link?
+                              </label>
+                              <small class="form-text text-muted mb-2 mt-0">
+                                Paste Here
+                              </small>
+                              <textarea class="form-control" data-toggle="autosize" rows="1"></textarea>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+
+          <!-- Save/Delete -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-primary rounded-pill mr-auto" data-dismiss="modal">Save</button>
+          <button type="button" class="btn btn-sm btn-link text-muted px-2">Archive</button>
+          <button type="button" class="btn btn-sm btn-link text-danger px-2">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Show task modal -->
+  <div class="modal fade fixed-right" id="modal-task-view" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-vertical modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header row">
+          <div class="col d-flex align-items-center">
+            <div class="custom-control custom-checkbox mt-n1">
+              <input type="checkbox" class="custom-control-input" id="check-modal-task">
+              <label class="custom-control-label" for="check-modal-task"></label>
+            </div>
+            <h6 class="mb-0">Finish the logo design</h6>
+          </div>
+          <div class="col-auto">
+            <div class="actions text-right">
+              <a href="#" class="action-item action-favorite active" data-toggle="tooltip" data-original-title="Mark as favorite">
+                <i class="fas fa-star"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <!-- Task date -->
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <!-- Start date -->
+              <div class="form-group mb-0">
+                <label class="form-control-label">
+                  Start date
+                </label>
+                <input type="date" class="form-control">
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <!-- Start date -->
+              <div class="form-group mb-0">
+                <label class="form-control-label">
+                  End date
+                </label>
+                <input type="date" class="form-control">
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row mb-4 align-items-center">
+            <div class="col-6">
+              <label class="form-control-label mb-0">
+                Checklist
+              </label>
+            </div>
+            <div class="col-6 text-right">
+              <a href="#" class="btn btn-xs btn-secondary btn-icon rounded-pill">
+                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+                <span class="btn-inner--text">Add item</span>
+              </a>
+            </div>
+          </div>
+          <!-- Dragable checklist -->
+          <div class="checklist" data-toggle="dragula">
+            <div class="card border draggable-item shadow-none">
+              <div class="px-3 py-2 row align-items-center">
+                <div class="col-10">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="check-item-1" checked>
+                    <label class="custom-control-label h6 text-sm" for="check-item-1">Call with Dave</label>
+                  </div>
+                </div>
+                <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border draggable-item shadow-none">
+              <div class="px-3 py-2 row align-items-center">
+                <div class="col-10">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="check-item-2">
+                    <label class="custom-control-label h6 text-sm" for="check-item-2">Lunch meeting</label>
+                  </div>
+                </div>
+                <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border draggable-item shadow-none">
+              <div class="px-3 py-2 row align-items-center">
+                <div class="col-10">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="check-item-3">
+                    <label class="custom-control-label h6 text-sm" for="check-item-3">Webpixels website redesign</label>
+                  </div>
+                </div>
+                <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border draggable-item shadow-none">
+              <div class="px-3 py-2 row align-items-center">
+                <div class="col-10">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="check-item-4" checked>
+                    <label class="custom-control-label h6 text-sm" for="check-item-4">Dashboard cards</label>
+                  </div>
+                </div>
+                <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card border draggable-item shadow-none">
+              <div class="px-3 py-2 row align-items-center">
+                <div class="col-10">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="check-item-5" checked>
+                    <label class="custom-control-label h6 text-sm" for="check-item-5">Call with Dave</label>
+                  </div>
+                </div>
+                <div class="col-auto card-meta d-inline-flex align-items-center ml-sm-auto">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <!-- Tab title -->
+          <label class="form-control-label mb-4">
+            Attachments
+          </label>
+          <!-- Files -->
+          <div class="card mb-3 border shadow-none">
+            <div class="px-3 py-3">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <img alt="Image placeholder" src="./assets/img/icons/files/pdf.png" class="img-fluid" style="width: 40px;">
+                </div>
+                <div class="col ml-n2">
+                  <h6 class="text-sm mb-0">
+                    <a href="#!">design-principles.pdf</a>
+                  </h6>
+                  <p class="card-text small text-muted">
+                    189 KB
+                  </p>
+                </div>
+                <div class="col-auto actions">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 border shadow-none">
+            <div class="px-3 py-3">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <img alt="Image placeholder" src="./assets/img/icons/files/psd.png" class="img-fluid" style="width: 40px;">
+                </div>
+                <div class="col ml-n2">
+                  <h6 class="text-sm mb-0">
+                    <a href="#!">website-wireframe.psd</a>
+                  </h6>
+                  <p class="card-text small text-muted">
+                    45.9 MB
+                  </p>
+                </div>
+                <div class="col-auto actions">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 border shadow-none">
+            <div class="px-3 py-3">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <img alt="Image placeholder" src="./assets/img/icons/files/doc.png" class="img-fluid" style="width: 40px;">
+                </div>
+                <div class="col ml-n2">
+                  <h6 class="text-sm mb-0">
+                    <a href="#!">product-guidelines.doc</a>
+                  </h6>
+                  <p class="card-text small text-muted">
+                    87 KB
+                  </p>
+                </div>
+                <div class="col-auto actions">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 border shadow-none">
+            <div class="px-3 py-3">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <img alt="Image placeholder" src="./assets/img/icons/files/avi.png" class="img-fluid" style="width: 40px;">
+                </div>
+                <div class="col ml-n2">
+                  <h6 class="text-sm mb-0">
+                    <a href="#!">banner-video.avi</a>
+                  </h6>
+                  <p class="card-text small text-muted">
+                    23 MB
+                  </p>
+                </div>
+                <div class="col-auto actions">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 border shadow-none">
+            <div class="px-3 py-3">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <img alt="Image placeholder" src="./assets/img/icons/files/png.png" class="img-fluid" style="width: 40px;">
+                </div>
+                <div class="col ml-n2">
+                  <h6 class="text-sm mb-0">
+                    <a href="#!">logo.png</a>
+                  </h6>
+                  <p class="card-text small text-muted">
+                    189 kb
+                  </p>
+                </div>
+                <div class="col-auto actions">
+                  <div class="dropdown" data-toggle="dropdown">
+                    <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <label class="form-control-label mb-4">
+            Activity
+          </label>
+          <div class="list-group list-group-flush mb-0">
+            <div class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <!-- Avatar -->
+                  <a href="#" class="avatar avatar-sm rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-3-800x800.jpg" class="">
+                  </a>
+                </div>
+                <div class="col ml-n2">
+                  <a href="#!" class="d-block h6 text-sm font-weight-light mb-0">Martin added a new task to <strong>To Do</strong> list</a>
+                  <small class="d-block">20 min ago</small>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <!-- Avatar -->
+                  <a href="#" class="avatar avatar-sm rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-1-800x800.jpg" class="">
+                  </a>
+                </div>
+                <div class="col ml-n2">
+                  <a href="#!" class="d-block h6 text-sm font-weight-light mb-0">Jessie added <strong>Checklist</strong> to this card</a>
+                  <small class="d-block">2 hours ago</small>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <!-- Avatar -->
+                  <a href="#" class="avatar avatar-sm rounded-circle">
+                    <img alt="Image placeholder" src="./assets/img/theme/light/team-1-800x800.jpg" class="">
+                  </a>
+                </div>
+                <div class="col ml-n2">
+                  <a href="#!" class="d-block h6 text-sm font-weight-light mb-0">Martin added <strong>Jessie</strong> to the team</a>
+                  <small class="d-block">1 day ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer align-items-center">
+          <div class="col-8 col-md-9 d-flex align-items-center">
+            <div class="pr-3">
+              <img alt="Image placeholder" src="./assets/img/theme/light/team-2-800x800.jpg" class="avatar rounded-circle avatar-sm">
+            </div>
+            <form class="card-comment-box" role="form">
+              <textarea rows="1" class="form-control" data-toggle="autosize" placeholder="Add a comment..."></textarea>
+            </form>
+          </div>
+          <div class="col-4 col-md-3 text-right">
+            <div class="actions">
+              <a href="#!" class="action-item"><i class="fas fa-smile-wink"></i></a>
+              <a href="#!" class="action-item"><i class="fas fa-camera"></i></a>
+              <div class="dropdown">
+                <a href="#" class="action-item" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-ellipsis-h"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Open post</a>
+                  <a class="dropdown-item" href="#">Report inappropriate</a>
+                  <a class="dropdown-item" href="#">Get the embed code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- Page title -->
+ <div class="page-title">
+  <div class="row justify-content-between align-items-center">
+    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+      <!-- Page title + Go Back button -->
+      <div class="d-inline-block">
+        <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Tasks</h5>
+      </div>
+      <!-- Additional info -->
+      <div class="align-items-center ml-4 d-inline-flex">
+        <span class="h4 text-info mb-0 mr-2">9</span>
+        <span class="text-sm opacity-7 text-white">New tasks</span>
+      </div>
+      <!-- Optional link -->
+      <a href="kanban-board.html" class="text-sm text-info d-none d-lg-inline-block ml-4">Kanban Board</a>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+        <button type="button" class="btn btn-dark hover-scale-110 btn-icon-label" id="update_plan">
+            <span class="btn-inner--text">Update Plan</span>
+        </button>
+    </div>
+  </div>
+</div>
+<div class="card" data-toggle="dragula" data-containers='["card-list-1"]'>
+  <!-- Card header -->
+  <div class="card-header actions-toolbar">
+    <div class="actions-search" id="actions-search">
+      <div class="input-group input-group-merge input-group-flush">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ...">
+        <div class="input-group-append">
+          <a href="#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="fas fa-times"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-between align-items-center">
+      <div class="col">
+        <h6 class="d-inline-block mb-0">Tasks</h6>
+      </div>
+      <div class="col text-right">
+        <div class="actions"><a href="#" class="action-item mr-3" data-action="search-open" data-target="#actions-search"><i class="fas fa-search"></i></a>
+          <div class="dropdown mr-3">
+            <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-filter"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-sort-amount-down"></i>Newest
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-sort-alpha-down"></i>From A-Z
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-sort-alpha-up"></i>From Z-A
+              </a>
+            </div>
+          </div>
+          <div class="dropdown" data-toggle="dropdown">
+            <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="#" class="dropdown-item">Refresh</a>
+              <a href="#" class="dropdown-item">Manage Widgets</a>
+              <a href="#" class="dropdown-item">Settings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card body -->
+  
+  <div class="card-body">
+    <div class="mb-5" id="card-list-1">
+      {% for i in object %}
+      <div class="card card-progress border shadow-none draggable-item" style="touch-action: none" id = "div_items" name="{{i.topic_id.topic_id}}">
+          <div id="accordion-1" class="accordion accordion-stacked">
+              <!-- Accordion card 1 -->
+              <div class="card">
+                  <div class="progress">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                    
+                  <div class="card-header py-4" id="heading-1-{{ i.topic_id.topic_id }}" data-toggle="collapse" role="button" data-target="#collapse-1-{{ i.topic_id.topic_id }}" aria-expanded="false" aria-controls="collapse-1-{{ i.topic_id.topic_id }}">
+                      <h6 class="mb-0"><i class="fas fa-file-pdf mr-3"></i>{{ i.topic_name }}</h6>
+                  </div>
+                  <div id="collapse-1-{{ i.topic_id.topic_id }}" class="collapse" aria-labelledby="heading-1-{{ i.topic_id.topic_id }}" data-parent="#accordion-1">
+                      <div class="card-body">
+                        <div class="card" id = "table{{ forloop.counter }}">
+                          
+                          <!-- Table -->
+                          <div class="table-responsive">
+                            <table class="table align-items-center" id ="table{{ forloop.counter }}">
+                              <thead>
+                                <tr>
+                                  <th scope="col" class="sort" data-sort="budget">SubTopic Name</th>
+                                  <th scope="col" class="sort" data-sort="name">Status</th>
+                                  <th scope="col" class="sort" data-sort="status">Percentage Progress</th>
+                                  <th scope="col" class="sort" data-sort="status">Alerts</th>
+                                </tr>
+                              </thead>
+                              <tbody class="list">
+                                {% for j in object2 %}
+                                {% if j.topic_id == i.topic_id %}
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="/journey" class="name mb-0 h6 text-sm" id = "{{ 1 }}-{{ i.topic_id.topic_id }}-{{ j.subtopic_id }}" onclick="go_to_journey(this)">{{ j.subtopic_name }}</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-warning"></i>
+                                      <span class="status">{{ j.status }}</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">{{ j.percent_prog }}</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                         
+                                          <div class="progress-bar bg-info" role="progressbar" aria-valuenow=" {{ j.percent_prog }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ j.percent_prog }}%;"></div>
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>
+                                {% endif %}
+                                {% endfor %}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
+      <div class="card card-progress border shadow-none draggable-item">
+          <div id="accordion-1" class="accordion accordion-stacked">
+              <!-- Accordion card 1 -->
+              <div class="card">
+                  <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="card-header py-4" id="heading-1-2" data-toggle="collapse" role="button" data-target="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+                      <h6 class="mb-0"><i class="fas fa-file-pdf mr-3"></i>Topic Two</h6>
+                  </div>
+                  <div id="collapse-1-2" class="collapse" aria-labelledby="heading-1-2" data-parent="#accordion-1">
+                      <div class="card">
+                        <div class="card">
+                          
+                          <!-- Table -->
+                          <div class="table-responsive" id="table2">
+                            <table class="table align-items-center">
+                              <thead>
+                                <tr>
+                                  <th scope="col" class="sort" data-sort="budget">SubTopic Name</th>
+                                  <th scope="col" class="sort" data-sort="name">Status</th>
+                                  <th scope="col" class="sort" data-sort="status">Percentage Progress</th>
+                                  <th scope="col" class="sort" data-sort="status">Alerts</th>
+                                </tr>
+                              </thead>
+                              <tbody class="list">
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic One</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-warning"></i>
+                                      <span class="status">pending</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">60%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic Two</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-success"></i>
+                                      <span class="status">completed</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">100%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic Three</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-danger"></i>
+                                      <span class="status">delayed</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">72%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic Four</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-info"></i>
+                                      <span class="status">on schedule</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">90%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>                              
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card card-progress border shadow-none draggable-item">
+          <div id="accordion-1" class="accordion accordion-stacked">
+              <!-- Accordion card 1 -->
+              <div class="card">
+                  <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  
+                    
+                    <div class="card-header py-4" id="heading-1-3" data-toggle="collapse" role="button" data-target="#collapse-1-3" aria-expanded="false" aria-controls="collapse-1-3">
+                        <h6 class="mb-0"><i class="fas fa-file-pdf mr-3"></i>Topic Three</h6>
+                    </div>
+                    <div id="collapse-1-3" class="collapse" aria-labelledby="heading-1-3" data-parent="#accordion-1">
+                        <div class="card">
+                        <div class="card">
+                          
+                          <!-- Table -->
+                          <div class="table-responsive" id="table3">
+                            <table class="table align-items-center">
+                              <thead>
+                                <tr>
+                                  <th scope="col" class="sort" data-sort="budget">SubTopic Name</th>
+                                  <th scope="col" class="sort" data-sort="name">Status</th>
+                                  <th scope="col" class="sort" data-sort="status">Percentage Progress</th>
+                                  <th scope="col" class="sort" data-sort="status">Alerts</th>
+                                </tr>
+                              </thead>
+                              <tbody class="list">
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic One</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-warning"></i>
+                                      <span class="status">pending</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">60%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic Two</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-success"></i>
+                                      <span class="status">completed</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">100%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic Three</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-danger"></i>
+                                      <span class="status">delayed</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">72%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <div class="media align-items-center">
+                                      <div class="media-body ml-4">
+                                        <a href="overview.html" class="name mb-0 h6 text-sm">Subtopic Four</a>
+                                      </div>
+                                    </div>
+                                  </th>
+                                  
+                                  <td>
+                                    <span class="badge badge-dot mr-4">
+                                      <i class="bg-info"></i>
+                                      <span class="status">on schedule</span>
+                                    </span>
+                                  </td>
+                                  <td>
+                                    <div class="d-flex align-items-center">
+                                      <span class="completion mr-2">90%</span>
+                                      <div>
+                                        <div class="progress" style="width: 100px;">
+                                          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="text-left">
+                                      <div class="dropdown" data-toggle="dropdown">
+                                        <a href="#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-animated btn-success btn-sm btn-animated-x">
+                                                <span class="btn-inner--visible">View</span>
+                                                <span class="btn-inner--hidden">
+                                                    <i class="fas fa-arrow-right"></i>
+                                                </span>
+                                            </button>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a href="#" class="dropdown-item">Intervention1</a>
+                                          <a href="#" class="dropdown-item">Intervention2</a>
+                                          <a href="#" class="dropdown-item">Intervention3</a>
+                                        </div>
+                                      </div>
+                                    </td>
+                                </tr>                              
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Empty container -->
+      <span class="empty-container" data-placeholder="Empty"></span>
+    </div>
+  </div>
+</div>
+</div>
+
+{% include "footer.html" %}
+<script>
+$('#update_plan').click(function(){
+var topic_ids_array = []
+$('#card-list-1 > div[id="div_items"]').each(function(){
+var context = $(this);
+topic_ids_array.push(context.attr('name'));
+});
+console.log(topic_ids_array);
+
+$.ajax({
+  type: "POST",
+  url: "http://127.0.0.1:8000/plan/",
+  dataType: 'json',
+  async: true,
+  data: {
+    "sequence": JSON.stringify(topic_ids_array) ,
+    csrfmiddlewaretoken : '{{ csrf_token }}'
+  },
+  success: function(data){
+    console.log("post alerts");
+    console.log("success");
+    console.log(data);
+  },
+  failure: function(data){
+    console.log("failure");
+    console.log(data);
+  },
+});
+});
+function go_to_journey(obj){
+    var ids = $(obj).attr('id').split('-');
+    var ids_array = [ids[0], ids[1], ids[2]]
+    console.log(ids_array)
+    $.ajax({
+  type: "POST",
+  url: "http://127.0.0.1:8000/journey/",
+  dataType: 'json',
+  async: true,
+  data: {
+    "journey": JSON.stringify(ids_array) ,
+      "go_to_journey" : "1",
+    csrfmiddlewaretoken : '{{ csrf_token }}'
+  },
+  success: function(data){
+    console.log("post alerts");
+    console.log("success");
+    console.log(data);
+  },
+  failure: function(data){
+    console.log("failure");
+    console.log(data);
+  },
+});
+}
+</script>
