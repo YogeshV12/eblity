@@ -1,11 +1,16 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 import pandas as pd
-
 from datetime import date
-
 from django.utils import timezone
 
+#For Login Page
+class UserProfileInfo(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    portfolio_site = models.URLField(blank=True)
+    profile_pic = models.ImageField(upload_to='profile_pics',blank=True)
+    def __str__(self):
+        return self.user.username
 
 # import os
 # Create your models here.
@@ -78,6 +83,21 @@ class Student_Table(models.Model):
     parent_email = models.CharField(max_length=20, blank=True)
     status = models.CharField(max_length=15)    
 
+
+# class Student_Table(models.Model):
+#     student_id = models.IntegerField(default=1)
+#     student_name = models.CharField(max_length=30, blank=False)
+#     grade = models.IntegerField(blank=False)
+#     parent_id = models.IntegerField(blank=True)
+#     parent_email = models.CharField(max_length=20, blank=True)
+#     status = models.CharField()
+
+
+# df =  pd.read_csv('Student_table')
+# for student_id, student_name, grade, parent_id, parent_email, status in zip(df['student_id'], df['student_name'], df['grade'], df['parent_id'], df['parent_email'], df['status'],):
+#     Student_Table(student_id=int(student_id), student_name=str(student_name), grade=int(grade), parent_id=int(parent_id), parent_email=str(parent_email), status=str(status)).save()
+
+
 class Attendance_Table(models.Model):
     student_id = models.ForeignKey('Student_Table',on_delete=models.CASCADE)
     date = models.DateField(default=date.today)    
@@ -97,6 +117,11 @@ class Attendance_Table(models.Model):
 # Data insertion
 # df = pd.read_csv('Table.csv')
 # for resource_id, topic_id, subtopic_id, resource_type, resource_link, tags in zip(df['resource_id'], df['topic_id'], df['subtopic_id'],
+# 	df['resource_type'], df['resource_link'], df['tags']) :
+# 	# print("Printing")
+# 	Id = Topic_Table.objects.get(topic_id=topic_id)
+# 	Resources(resource_id=int(resource_id), topic_id=Id, subtopic_id=int(subtopic_id), resource_type=str(resource_type),
+# 		resource_link=str(resource_link), tags=str(tags)).save()
 #     df['resource_type'], df['resource_link'], df['tags']) :
 #     # print("Printing")
 #     Id = Topic_Table.objects.get(topic_id=topic_id)

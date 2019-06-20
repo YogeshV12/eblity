@@ -5,25 +5,21 @@ register = template.Library()
 @register.filter(name='get_resource_type')
 def get_resource_type(pending, index):
     index = int(index)
-
     return pending[index].resource_id.resource_type
 
 @register.filter(name='get_resource_id')
 def get_resource_id(pending, index):
     index = int(index)
-
     return pending[index].resource_id.resource_id
 
 @register.filter(name='get_topic_id')
 def get_topic_id(pending, index):
     index = int(index)
-
     return pending[index].topic_id.topic_id
 
 @register.filter(name='get_subtopic_id')
 def get_subtopic_id(pending, index):
     index = int(index)
-
     return pending[index].resource_id.subtopic_id            
 
 @register.filter(name='sub')
