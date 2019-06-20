@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect
-from .models import Plan_Table, Subtopic_Table, Topic_Table, Journey_template, Resources
+from .models import Plan_Table, Subtopic_Table, Topic_Table, Journey_template, Resources, Attendance_Table, Student_Table
 import json
 from django.http import HttpResponseRedirect, HttpResponse
+from datetime import datetime
+from datetime import date
+from django.http import JsonResponse
+from django.core import serializers
 # Create your views here.
 def plan_view(request):
    if (request.method == 'POST'):
@@ -105,4 +109,48 @@ def view_journey_page(request, student_id, topic_id, subtopic_id):
         return render(request,'journey-page.html',{'completed' : completed_obj, 'pending' : pending_obj, 'skipped' : skipped_obj, 'all_obj' : all_obj, 'max_length' : range(maximum), 'topic_name': topic_name, 'subtopic_name' : subtopic_name} )
 
 def attendance_view(request):
-  return render(request,'attendance.html')
+  student_obj = Student_Table.objects.all()
+  # Attendance_Table(student_id=student_obj[0], date="2016-06-20").save()
+  if(request.method == 'POST'):
+    if(request.POST.get("selected") == "1"):
+      global date
+      date = request.POST.get('select_date')
+      print("select_date: ",date)
+      check(date)
+      obj = Attendance_Table.objects.filter(date=date)
+      data = [d['fields'] for d in json.loads(serializers.serialize('json',obj))]
+      print("data : ",data)
+      # print("serialized data : ",serializers.serialize('json',obj))
+      
+      return JsonResponse({'obj' : data})
+      # return render(request,'attendance.html', {'obj' : data})
+  # elif request.method == 'GET':
+  #   print("get request---------------------")
+    elif (request.POST.get("update_data") == "1"):
+      date = request.POST.get("selected_date")
+      check(date)
+      attendance_obj = Attendance_Table.objects.filter(date=date)
+      print("attendance_obj : ",attendance_obj)
+      return render(request,'attendance_content.html', {'obj' : attendance_obj})
+
+
+  elif (request.method == 'GET'):
+    date = datetime.now().strftime("%Y-%m-%d")
+    print("date==============",date)
+    print("Type------------: " ,type(date))
+    check(date)
+  attendance_obj = Attendance_Table.objects.filter(date=date)
+  print("attendance_obj : ",attendance_obj)
+  return render(request,'attendance.html', {'obj' : attendance_obj})
+
+def check(date):
+  student_obj = Student_Table.objects.all()
+  for obj in student_obj:
+    if(Attendance_Table.objects.filter(student_id=obj.student_id, date=date).exists()):
+      print("exist")
+    else:
+      Attendance_Table(student_id=Student_Table.objects.get(student_id=obj.student_id), date=date).save() 
+
+
+def index(request, data):
+  print(date);

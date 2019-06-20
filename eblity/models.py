@@ -70,16 +70,23 @@ class Plan_Table(models.Model):
     hours = models.IntegerField(null=True)
     subject = models.CharField(max_length=20, blank=True)
 
+class Student_Table(models.Model):
+    student_id = models.IntegerField(primary_key=True)
+    student_name = models.CharField(max_length=30, blank=False)
+    grade = models.IntegerField()
+    parent_id = models.IntegerField()
+    parent_email = models.CharField(max_length=20, blank=True)
+    status = models.CharField(max_length=15)    
 
 class Attendance_Table(models.Model):
-    student_id = models.IntegerField(default=1)
+    student_id = models.ForeignKey('Student_Table',on_delete=models.CASCADE)
     date = models.DateField(default=date.today)    
     check_in = models.DateTimeField(default=timezone.now)
     check_out = models.DateTimeField(default=timezone.now)
     tutor_time = models.DateTimeField(default=timezone.now)
-    intention = models.CharField(max_length=100);
-    absent_present = models.CharField(max_length=15)
-    reasonOfAbsence = models.CharField(max_length=100)
+    intention = models.CharField(max_length=100, blank=True);
+    absent_present = models.CharField(max_length=15, blank=True)
+    reasonOfAbsence = models.CharField(max_length=100, blank=True)
 
 # df = pd.read_csv('Plan_Table.csv')
 # for topic_id, topic_name, weightage, sequence, month, hours, subject in zip(df['topic_id'], df['topic_name'], df['weightage'], df['sequence'], df['month'], df['hours'], df['subject']):
@@ -117,3 +124,7 @@ class Attendance_Table(models.Model):
 # for topic_id, subtopic_id, subtopic_name, sequence, min_hours, mean_hours, max_hours in zip(df['topic_id'], df['subtopic_id'], df['subtopic_name'], df['sequence'], df['min_hours'], df['mean_hours'], df['max_hours']):
 # 	Id = Topic_Table.objects.get(topic_id=topic_id)
 # 	Subtopic_Table(topic_id=Id, subtopic_id=int(subtopic_id), subtopic_name=str(subtopic_name), sequence=int(sequence), min_hours=int(min_hours), mean_hours=float(mean_hours), max_hours=int(max_hours)).save()
+
+# df =  pd.read_csv('Student.csv')
+# for student_id, student_name, grade, parent_id, parent_email, status in zip(df['student_id'], df['student_name'], df['grade'], df['parent_id'], df['parent_email'], df['status'],):
+#     Student_Table(student_id=int(student_id), student_name=str(student_name), grade=int(grade), parent_id=int(parent_id), parent_email=str(parent_email), status=str(status)).save()

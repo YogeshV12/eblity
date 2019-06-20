@@ -78,446 +78,72 @@
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
               <div class="actions actions-dark d-inline-block">
-                <input type="text" class="form-control" data-toggle="date" placeholder="Select date">
+                <input type="text" id="date-picker" class="form-control" data-toggle="date" placeholder="Select date">
               </div>
             </div>
           </div>
         </div>
         <!-- Project cards -->
-        <div class="row">
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
+        <div class="row" id="table_content">
+           {% for data in obj %}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+        <div class="card hover-shadow-lg">
+          <div class="card-header border-0 pb-0">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6 id="date-{{forloop.counter0}}" class="mb-0">{{data.date}}</h6>
+              </div>
+              <div class="text-right">
+                <div class="actions">
+                  
+                  <div class="dropdown action-item" data-toggle="dropdown">
+                    <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a href="#" class="dropdown-item">Refresh</a>
+                      <a href="#" class="dropdown-item">Manage Widgets</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
+
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+          <div class="card-body text-center">
+            <h5 id="student_name-{{forloop.counter0}}" class="h6 my-4"><a href="profile.html">{{data.student_id.student_name}}</a></h5>
+            <h6 id="grade-{{forloop.counter0}}" class="h6 my-4"><a href="#">{{data.student_id.grade}}</a></h6>
+            <div class="avatar-group hover-avatar-ungroup mb-3">
+              <a href="#" class="avatar rounded-circle avatar-sm">
+                <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
               </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
+              <a href="#" class="avatar rounded-circle avatar-sm">
+                <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
+              </a>
+              <a href="#" class="avatar rounded-circle avatar-sm">
+                <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
+              </a>
+            </div>
+            <span class="clearfix"></span>
+            <span id="status-{{forloop.counter0}}" class="badge badge-pill badge-success">Present</span>
+          </div>
+          <div class="card-footer">
+            <div class="actions d-flex justify-content-between px-4">
+              <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
+            <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+          </a>
+              <a href="#" class="action-item">
+                <i class="fas fa-comment"></i>
+              </a>
+              <a href="#" class="action-item text-danger">
+                <i class="fas fa-trash-alt"></i>
+              </a>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-sm-6">
-            <div class="card hover-shadow-lg">
-              <div class="card-header border-0 pb-0">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <h6 class="mb-0">20 Apr</h6>
-                  </div>
-                  <div class="text-right">
-                    <div class="actions">
-                      
-                      <div class="dropdown action-item" data-toggle="dropdown">
-                        <a href="#" class="action-item"><i class="fas fa-ellipsis-h"></i></a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="#" class="dropdown-item">Refresh</a>
-                          <a href="#" class="dropdown-item">Manage Widgets</a>
-                          <a href="#" class="dropdown-item">Settings</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="h6 my-4"><a href="profile.html">Student Name</a></h5>
-                <h6 class="h6 my-4"><a href="#">Grade</a></h6>
-                <div class="avatar-group hover-avatar-ungroup mb-3">
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-1-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-2-800x800.jpg' %}" class="">
-                  </a>
-                  <a href="#" class="avatar rounded-circle avatar-sm">
-                    <img alt="Image placeholder" src="{% static 'assets/img/theme/light/team-3-800x800.jpg' %}" class="">
-                  </a>
-                </div>
-                <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Present</span>
-              </div>
-              <div class="card-footer">
-                <div class="actions d-flex justify-content-between px-4">
-                  <a href="#modal-project-create" class="btn btn-sm btn-white btn-icon-only rounded-circle ml-4" data-toggle="modal">
-                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-              </a>
-                  <a href="#" class="action-item">
-                    <i class="fas fa-comment"></i>
-                  </a>
-                  <a href="#" class="action-item text-danger">
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        </div>
+      </div>
+
+      {% endfor %}
         </div>
         <!-- Load more -->
         <div class="mt-4 text-center">
@@ -525,7 +151,87 @@
         </div>
       </div>
       
-  
+ {% include "footer.html" %}
 
-      
-{% include "footer.html" %} 
+ <script type="text/javascript">
+  $("#date-picker").flatpickr({
+    defaultDate : new Date()
+  });
+
+  console.log($("#date-picker").val());
+
+  $("#date-picker").on('change',function(){
+      console.log($("#date-picker").val());
+      var select_date = $("#date-picker").val();
+      console.log("select_date : ",select_date);
+
+      $.ajax({
+      type: "POST",
+      url: "http://127.0.0.1:8000/attendance/",
+      dataType: 'json',
+      async: true,
+      data: {
+        "selected" : '1',  
+        "select_date" : select_date,
+        csrfmiddlewaretoken : '{{ csrf_token }}'
+      },
+      success: function(obj){
+        console.log("post alerts");
+        console.log("success");
+        console.log("size : ",obj.obj.length);
+        /*console.log(JSON.stringify(obj));*/
+        // console.log(obj);
+        // console.log(JSON.stringify(obj));
+        console.log(obj.obj[0].date);/**/
+        /*var data = JSON.stringify(obj);
+        var obj = JSON.parse(data);
+        console.log(obj);*/
+        var d = obj.obj[0].date
+        console.log(d);
+
+      $.ajax({
+      type: "POST",
+      url: "http://127.0.0.1:8000/attendance/",
+      dataType: 'json',
+      async: true,
+      data: {
+        "update_data" : '1',  
+        "selected_date" : d,
+        csrfmiddlewaretoken : '{{ csrf_token }}'
+      },
+      success: function(obj){
+        console.log("post alerts");
+        console.log("success");
+        console.log("size : ",obj.obj.length);
+        /*console.log(JSON.stringify(obj));*/
+        // console.log(obj);
+        // console.log(JSON.stringify(obj));
+        console.log(obj.obj[0].date);/**/
+        /*var data = JSON.stringify(obj);
+        var obj = JSON.parse(data);
+        console.log(obj);*/
+        var d = obj.obj[0].date
+        console.log(d);
+/*        for(i=;i<obj.obj.length;i++)
+        {
+          $("#student_name"+i).text(obj.obj[i].student_name);
+          $("#grade-"+i).text(obj.obj[i].grade)
+        }*/
+        
+      },
+      failure: function(data){
+        console.log("failure");
+        console.log(data);
+      },
+    });
+
+        
+      },
+      failure: function(data){
+        console.log("failure");
+        console.log(data);
+      },
+    });
+  })
+
+ </script> 

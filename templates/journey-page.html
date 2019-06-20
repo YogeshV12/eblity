@@ -324,7 +324,7 @@
                               </div>
                             </td>
                         {% endif %}    
-                        {% if pending|get_resource_type:i == 'funtoot' %}
+                        {% if pending|get_resource_type:i == 'Funtoot' %}
                             <td scope="row" id="{{pending|get_resource_id:i}}-{{pending|get_topic_id:i}}-{{pending|get_subtopic_id:i}}-{{pending|get_journey_template_key:i}}" name="{{pending|get_status:i}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
@@ -574,7 +574,7 @@
                                   </div>
                               </div>
                             </td>
-                        {% elif skipped|get_resource_type:subtraction == 'funtoot' %}
+                        {% elif skipped|get_resource_type:subtraction == 'Funtoot' %}
                             <td scope="row" id="{{skipped|get_resource_id:subtraction}}-{{skipped|get_topic_id:subtraction}}-{{skipped|get_subtopic_id:subtraction}}-{{skipped|get_journey_template_key:subtraction}}" name="{{skipped|get_status:subtraction}}">
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
@@ -818,7 +818,7 @@
                                   </div>
                               </div>
                             </td>
-                        {% elif completed|get_resource_type:i == 'funtoot' %}
+                        {% elif completed|get_resource_type:i == 'Funtoot' %}
                             <td scope="row" id="{{completed|get_resource_id:i}}-{{completed|get_topic_id:i}}-{{completed|get_subtopic_id:i}}-{{completed|get_journey_template_key:i}}" name="{{completed|get_status:i}}" data-locations='[{"rating" : "{{completed|get_rating:i}}", "feedback" : "{{completed|get_feedback:i}}" }]'>
                               <div class="card hover-shadow-lg hover-translate-y-n10">
                                   <div class="card-header border-0 pb-0">
@@ -929,7 +929,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                        <div class="text-center mb-4"><h5>Rate this video</h5></div>
+                        <div class="text-center mb-4"><h5 id="rate-{{forloop.counter0}}">Rate this video</h5></div>
                             <div class="rating">
                             <input type="radio" name="star" id="star1" value="5"><label for="star1"></label>
                             <input type="radio" name="star" id="star2" value="4"><label for="star2"></label>
@@ -939,7 +939,7 @@
                             </div>
                         </div>
                         <hr style="border : 1px solid; width : 90%; opacity : 0.7; margin-top : 1.5%">
-                        <div class="text-center"><h5>Feedback Area</h5></div>
+                        <div class="text-center"><h5 id="feed-{{forloop.counter0}}" >Feedback Area</h5></div>
                         <textarea class="form-control" id="text-{{forloop.counter0}}" placeholder="Write your feedback hre..." rows="3"></textarea>
                         <div class="modal-footer">
                             <a href=""><button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button></a>
@@ -1292,6 +1292,9 @@ $("[id^='com_']").click(function(){
   }
   $("#text-"+data_target[1]).text(feedback);
   $("#text-"+data_target[1]).prop('disabled',true);
+  $("#rate-"+data_target[1]).text("Rating");
+  $("#feed-"+data_target[1]).text("Feedback");
+  $('#exampleModalLabel-'+data_target[1]).text("Rating and Feedback")
 /*  $('.rating label:hover:after').css('opacity',0);
   $('.rating label:hover ~ label:after').css('opacity',0);
   $('.rating input:checked ~ label:after').css('opacity',0);*/

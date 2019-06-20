@@ -57,4 +57,14 @@ def get_rating(pending,index):
 @register.filter(name="get_feedback")
 def get_feedback(pending,index):
     index = int(index)
-    return pending[index].feedback         
+    return pending[index].feedback   
+
+@register.filter(name="get_range")
+def get_range(obj):
+    print("--------",range(obj.count()))
+    return range(obj.count())          
+
+@register.filter(name="get_date")
+def get_feedback(pending,index):
+    index = int(index)
+    return pending[index].date   
